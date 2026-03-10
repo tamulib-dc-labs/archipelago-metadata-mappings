@@ -28,7 +28,7 @@ fields:
       La Linda Poblana:
         - dc_abstract
       SciFi Exhibit 2021:
-        - dc_summary # summary of the book, not a description of the physical item
+        - dc_summary
       Time of Resolve:
         - dcterms_abstract
       Woellhof:
@@ -179,6 +179,58 @@ fields:
         - dc_date
       Time of Resolve:
         - dcterms_created
+  date_digital_creation:
+    Collections:
+      Aerial:
+        - fedora_created
+      Alice in Wonderland:
+        - fedora_created
+      Apfelbaum:
+        - fedora_created
+      Basbanes Texts:
+        - fedora_created
+      Berger-Cloonan:
+        - fedora_created
+      Brazos Maps:
+        - fedora_created
+      Bryan 150th:
+        - fedora_created
+      Building History:
+        - fedora_created
+      Charting Texas:
+        - fedora_created
+      Cherokee Freedmen:
+        - fedora_created
+      Cole Papers:
+        - fedora_created
+      College of Medicine:
+        - fedora_created
+      College of Veterinary Medicine:
+        - fedora_created
+      Gray Diary:
+        - fedora_created
+      Houston Oil Minutes:
+        - fedora_created
+      La Linda Poblana:
+        - fedora_created
+      London Maps:
+        - fedora_created
+      Lumpkin Papers:
+        - fedora_created
+      McInnis:
+        - fedora_created
+      NASA:
+        - fedora_created
+      SciFi Exhibit 2021:
+        - fedora_created
+      SciFi Radio Show:
+        - fedora_created
+      Time of Resolve:
+        - fedora_created
+      Woellhof:
+        - fedora_created
+      WW2 Maps:
+        - fedora_created
   date_issued:
     Collections:
       Brazos Maps:
@@ -423,93 +475,14 @@ fields:
         - dcterms_isPartOf # Box and folder
   provenance:
     Collections:
-      Aerial:
-        - fedora_created
-        - fedora_lastModified
-      Alice in Wonderland:
-        - fedora_created
-        - fedora_lastModified
-      Apfelbaum:
-        - fedora_created
-        - fedora_lastModified
-      Basbanes Texts:
-        - fedora_created
-        - fedora_lastModified
       Berger-Cloonan:
         - dcterms_provenance
-        - fedora_created
-        - fedora_lastModified
-      Brazos Maps:
-        - fedora_created
-        - fedora_lastModified
-      Bryan 150th:
-        - fedora_created
-        - fedora_lastModified
-      Building History:
-        - fedora_created
-        - fedora_lastModified
-      Charting Texas:
-        - fedora_created
-        - fedora_lastModified
-      Cherokee Freedmen:
-        - fedora_created
-        - fedora_lastModified
-      Cole Papers:
-        - fedora_created
-        - fedora_lastModified
-      College of Medicine:
-        - fedora_created
-        - fedora_lastModified
       College of Veterinary Medicine:
-        - dcterms_provenance # physical item provenance
-        - fedora_created
-        - fedora_lastModified
-      Gray Diary:
-        - fedora_created
-        - fedora_lastModified
-      Houston Oil Minutes:
-        - fedora_created
-        - fedora_lastModified
-      La Linda Poblana:
-        - fedora_created
-        - fedora_lastModified
-      London Maps:
-        - fedora_created
-        - fedora_lastModified
-      Lumpkin Papers:
-        - fedora_created
-        - fedora_lastModified
-      McInnis:
-        - fedora_created
-        - fedora_lastModified
-      NASA:
-        - fedora_created
-        - fedora_lastModified
-      SciFi Exhibit 2021:
-        - fedora_created
-        - fedora_lastModified
-      SciFi Radio Show:
-        - fedora_created
-        - fedora_lastModified
-      Time of Resolve:
-        - fedora_created
-        - fedora_lastModified
-      Woellhof:
-        - fedora_created
-        - fedora_lastModified
-      WW2 Maps:
-        - fedora_created
-        - fedora_lastModified
+        - dcterms_provenance
   related_item:
     Collections:
       Alice in Wonderland: 
         - dcterms_URL # broken link to catalog record
-  related_url:
-    Collections:
-      # none on Fedora, exists for Avalon only    
-  related_url_historic:
-    Collections:
-      # none on Fedora, exists for archived websites/exhibits only
   rights_holder:
     Collections:
       Alice in Wonderland:
