@@ -1,0 +1,1328 @@
+---
+#------------------------------
+# Fedora to Archipelago Mapping
+#------------------------------
+
+profile:
+  date_modified: '2026-03-10'
+  version: 0.1
+
+fields:
+  - abstract:
+    Collections:
+      - Alice in Wonderland:
+        - dc_abstract
+        - dcterms_abstract # inconsistent within collection, digital objects have either one or the other
+      - Apfelbaum:
+        - dcterms_abstract
+      - Basbanes Texts:
+        - dcterms_abstract
+      - Bryan 150th:
+        - dc_abstract
+      - Building History:
+        - dcterms_abstract # individual photograph description
+      - Cherokee Freedmen:
+        - dcterms_abstract
+      - College of Veterinary Medicine:
+        - dcterms_abstract
+      - La Linda Poblana:
+        - dc_abstract
+      - SciFi Exhibit 2021:
+        - dc_summary # summary of the book, not a description of the physical item
+      - Time of Resolve:
+        - dcterms_abstract
+      - Woellhof:
+        - dcterms_abstract
+    definition: "A summary of the resource."
+    mapping:
+      OAI:
+        - dc: dc:description
+        - qdc: dcterms:abstract
+        - mods: <abstract>
+    min: 0
+    max: 1
+    type: str
+    user info: "Summary or abstract of the resource."
+    example: "Photo postcard of the interior of Notre-Dame de Reims."
+  - accessRights:
+    Collections:
+      - Berger-Cloonan:
+        - dcterms_accessRights
+    definition: "Information about who access the resource or an indication of its security status."
+    mapping:
+      OAI:
+        - dc: dc:rights
+        - qdc: dcterms:accessRights
+        - mods: <accessCondition type="restriction on access">
+    min: 0
+    max: unlimited
+    type: str
+    user info: "Information about who access the resource or an indication of its security status."
+    example: "Openly accessible"
+  - classification:
+    Collections:
+      - Berger-Cloonan:
+        - dc_relation # looks like lcc call number
+      - Charting Texas:
+        - dcterms_lcc
+      - London Maps:
+        - dcterms_lcc
+    definition: "A designation applied to a resource that indicates the subject by applying a formal system of coding and organizing resources according to subject areas.."
+    mapping:
+        OAI:
+          dc: dc:subject
+          qdc: dcterms:subject
+          mods: <classification authority="">
+    min: 0
+    max: 1
+    type: str
+    user info: "Classification information, such as LCC call number"
+    example: "G4031 .E424 1763 .P5"
+  - collecting_area: # if ADO does not have this field already, it needs to be created
+    Collections:
+      - Alice in Wonderland:
+        - dcterms_isPartOf
+      - SciFi Exhibit 2021:
+        - dcterms_isPartOf
+    definition: "The collecting area to which the ADO and corresponding physical item belong."
+    mapping:
+        OAI:
+          dc: dc:relation
+          qdc: dcterms:isPartOf
+          mods: <relatedItem type="host">
+    min: 1
+    max: 1
+    type: str # will become a clickable link using the ispartof and ismemberof Archipelago fields
+    user info: "The collecting area to which the ADO and corresponding physical item belong."
+    example: "Cushing Library. Children's Collection"
+  - coordinates:
+    Collections:
+      - Brazos Maps:
+        - tamudigital_local/coordinates
+      - Charting Texas:
+        - dc_coverage
+      - London Maps:
+        - dcterms_spatial
+      - Woellhof:
+        - dc_coverage
+    description: "Spatial characteristics of the resource as represented by coordinates"
+    mapping:
+      OAI:
+        - dc: dc:coverage
+        - qdc: dcterms:spatial
+        - mods: <originInfo><place><cartographics><cartographicExtension>
+    min: 0
+    max: unlimited
+    type: coordinates
+    user info: "Spatial characteristics of the resource as represented by coordinates"
+    example: "Scale not given (E 63¬∞55 π00 ∫--E 97¬∞34 π00 ∫/N 36¬∞46 π00 ∫--N 7¬∞40 π00 ∫)."
+  - contributor:
+    Collections:
+      - Basbanes Texts:
+        - dc_contributor
+      - Berger-Cloonan:
+        - dc_contributor
+      - Brazos Maps:
+        - dc_contributor
+      - Charting Texas:
+        - dc_contributor
+      - Cherokee Freedmen:
+        - dc_contributor
+      - College of Medicine:
+        - dc_contributor
+      - College of Veterinary Medicine:
+        - dc_contributor
+      - Houston Oil Minutes:
+        - dc_contributor
+      - London Maps:
+        - dc_contributor
+      - SciFi Exhibit 2021:
+        - dc_contributor
+      - Time of Resolve:
+        - dc_contributor
+    description: "An entity responsible for making contributions to the resource."
+    mapping:
+      OAI:
+        - dc: dc:contributor
+        - qdc: dcterms:contributor
+        - mods: <name type="personal/corporate" valueURI=""><namePart>, <role><roleTerm type="text" authority=marcrelator><roleTerm type="code" authority=marcrelator><roleTerm valueURI="http://id.loc.gov/vocabulary/relators/ctb">
+    min: 0
+    max: unlimited
+    type: str
+    user info: "An entity responsible for making contributions to the resource."
+    example: "Albert, Martha|Von Weise, Chas.|Knalls, Lula|Breckinridge, Clifton Rodes, 1846-1932|Hastings, William Wirt, 1866-1938"
+  - creator:
+    Collections:
+      - Alice in Wonderland:
+        - dc_creator
+      - Apfelbaum:
+        - dc_creator
+      - Basbanes Texts:
+        - dc_creator
+      - Berger-Cloonan:
+        - dc_creator
+      - Brazos Maps:
+        - dc_creator
+      - Bryan 150th:
+        - dc_creator
+      - Charting Texas:
+        - dc_creator
+      - Cherokee Freedmen:
+        - dc_creator
+      - College of Veterinary Medicine:
+        - dc_creator
+      - Gray Diary:
+        - dc_creator
+      - La Linda Poblana:
+        - dc_creator
+      - London Maps:
+        - dc_creator
+      - SciFi Exhibit 2021:
+        - dc_creator
+      - Time of Resolve:
+        - dc_creator
+      - Woellhof:
+        - dc_creator
+    definition: "An entity primarily responsible for making the resource."
+    mapping:
+      OAI:
+        - dc: dc:creator
+        - qdc: dcterms:creator
+        - mods: <name type="personal/corporate" valueURI=""><namePart>, <role><roleTerm type="text" authority=marcrelator><roleTerm type="code" authority=marcrelator><roleTerm valueURI="http://id.loc.gov/vocabulary/relators/cre">
+    min: 0
+    max: unlimited
+    type: str
+    user info: "An entity primarily responsible for making the resource."
+    example: "United States. Commission to the Five Civilized Tribes"
+  - date_created:
+    Collections:
+      - Alice in Wonderland:
+        - dcterms_created
+      - Apfelbaum:
+        - dcterms_created
+      - Basbanes Texts:
+        - dcterms_created
+      - Berger-Cloonan:
+        - dcterms_created
+      - Bryan 150th:
+        - dcterms_created
+      - Building History:
+        - dc_date
+      - Cole Papers:
+        - dc_rights # date is mapped to this field for some reason
+        - dc_date
+      - Cherokee Freedmen:
+        - dcterms_created
+      - College of Medicine:
+        - dcterms_created
+      - College of Veterinary Medicine:
+        - dcterms_created
+      - Gray Diary:
+        - dcterms_created
+      - La Linda Poblana:
+        - dc_date
+      - London Maps:
+        - dcterms_created
+        - dc_date
+      - Lumpkin Papers:
+        - dc_date
+      - McInnis:
+        - dc_date
+      - Time of Resolve:
+        - dcterms_created
+    definition: "Date of creation of the resource."
+    mapping:
+      OAI:
+        dc: dc:date
+        qdc: dcterms:created
+        mods: <originInfo><dateCreated>
+    min: 0
+    max: 1
+    type: date
+    user info: "Date of creation of the resource."
+    example: "1889-11-30"
+  - date_issued:
+    Collections:
+      - Brazos Maps:
+        - dcterms_issued
+      - Charting Texas:
+        - dcterms_issused
+      - London Maps:
+        - dcterms_issued
+      - SciFi Exhibit 2021:
+        - dcterms_issued
+      - Woellhof:
+        - dcterms_issued
+    definition: "Date of formal issuance of the resource."
+    mapping:
+      OAI:
+        - dc: dc:date
+        - qdc: dcterms:issued
+        - mods: <originInfo><dateIssued>
+    min: 0
+    max: 1
+    type: date
+    user info: "Date of formal issuance of the resource."
+    example: "1983"
+  - description:
+    Collections:
+      - Apfelbaum:
+        - dc_description # "Held in the Archive of World War I German and Austrian Documents at Cushing Memorial Library on the campus of Texas A&M University, College Station, Texas." [Could also be mapped under physical_collection field.]
+      - Basbanes Texts:
+        - dc_description # "From the professional archives of Nicholas A. Basbanes, now held by Cushing Memorial Library & Archives, Texas A&M University." [Could also be mapped under physical_collection field.]
+      - Berger-Cloonan:
+        - tamudigital_local/details # "Surface application; Printed; P4.D6.F2; Overall pattern of floral design with orange and green diamond paste background; backed; Contained in BASSENGE folder;  Was book cover; book plate on verso; No Haemmerle; Sidney E. Berger and Michele V. Cloonan purchased the sheet from Bassenge Kunst und Buchauktion (Auction 97, Lot #5406) in 08/2011.; Section(s) from the Decorated and Decorative Paper Terms Thesaurus: VIII.H.1.d.1; Not signed. Not stamped.; Creased at center fold line; worn at crease; edge tear"
+      - Bryan 150th:
+        - tamudigital_local/details # "Picture Files Bryan Early-1986 #49"
+        - dc_description # "Held in the Bryan Scenes picture file at Cushing Memorial Library on the campus of Texas A&M University, College Station, Texas." [Could also be mapped under physical_collection field.]
+      - Building History:
+        - dc_description # building history information
+      - Charting Texas:
+        - dc_description # Date of object estimated by library to be 1845.|Held in the Floyd and Louise Chapman Texas and Borderlands Collection at Cushing Memorial Library and Archives on the campus of Texas A and M University, College Station, Texas.
+      - Cherokee Freedmen:
+        - dc_description # The letter is addressed from "Muskogee, Indian Territory."|"COPY" is stamped at the top of the page.|"Incl. B-27."|Cherokee Freedman, R-421."
+      - College of Veterinary Medicine:
+        - tamudigital_local/details # Written on photograph: "Aerial photograph of Vet. School area before 1979."
+        - dc_description # Printed at bottom of photograph: "Theobald Smith in 1889." [combine with local/details]
+      - Gray Diary:
+        - dc_description # The Cushing Library/Chapman Texas Collection copy is part of the Floyd & Louise Chapman Texas & Borderlands Collection. "Five hundred copies of this book have been printed in Fairfield types on Glatfelter paper. Designed by W. Thomas Taylor."--Colophon.
+      - Houston Oil Minutes:
+        - dc_description # Cover title.|Minute book, 1901-1908|Gift of Amanda and Ken Kellar '65|The Cushing Library/Chapman Texas Collection copy is part of the Floyd & Louise Chapman Texas & Borderlands Collection.|Minutes are handwritten; index is typed.|First entry, July 9 1901 - last entry May 25, 1908.
+      - La Linda Poblana:
+        - dc_description # Held in the Colonial Mexican Imprint Collection at Cushing Memorial Library on the campus of Texas A&M University, College Station, Texas.|PQ7296.G3 L5 1802
+      - London Maps:
+        - dc_description # Prepared from air photographs taken by R.A.F; Original item had scale: circa 1:1,250. 50 inches = 1 mile;  Incomplete series of photomaps. No more published; Maps compiled from 1945-1951 aerial photographs
+      - SciFi Exhibit 2021:
+        - dc_description # Book jacket image of the copy held in the Science Fiction & Fantasy Research Collection at Cushing Memorial Library on the campus of Texas A&M University, College Station, Texas and included in an exhibition, "Live To Build A Better World: Despair, Survival, and Hope in Science Fiction‚Äôs Response to Environmental Change,"  at Cushing from January 19, 2021-June 30, 2021. [Could also be mapped under physical_collection field.]
+      - Time of Resolve:
+        - dc_description # Inscription on item: Architectural Detail Photo #; This item was part of an exhibit,  "Texas A&M during the Great Depression," shown in Cushing Memorial Library from August 31, 2018 through February 22, 2019.; Cushing Memorial Library and Archives; Remstar #3
+      - Woellhof:
+        - dc_description # In lower right corner (in plate): 6.|With numbered distances along road.|Each segment has compass rose|Title in decorative cartouche, with fruits.|Vertical fold line at center.|Relief shown pictorially.|Shows the road, cities, towns, forested areas, rivers, hills, and buildings.|Appears in: Britannia, or, the kingdom of England and dominion of Wales, actually survey'd.|The Cushing Library copy is part of the Ronald L. and V. Jane Woellhof Rare Map Collection.
+    definition: "An account of the resource."
+    mapping:
+        OAI:
+          dc: dc:description
+          qdc: dcterms:description
+          mods: <note>
+    min: 0
+    max: unlimited
+    type: str
+    user info: "An account of the resource, not including abstract/summary or table of contents."
+    example: "Inscription on item: Architectural Detail Photo #; This item was part of an exhibit,  'Texas A&M during the Great Depression,' shown in Cushing Memorial Library from August 31, 2018 through February 22, 2019.; Cushing Memorial Library and Archives; Remstar #3"
+  - digital_collection: # if ADO does not have this field already, it needs to be created
+    Collections:
+      - Alice in Wonderland:
+        - dcterms_isPartOfSeries # Exhibit name
+    definition: "The parent digital collection or exhibit."
+    mapping:
+        OAI:
+          dc: dc:relation
+          qdc: dcterms:isPartOf
+          mods: <relatedItem type="host">, <relatedItem type="series">
+    min: 1
+    max: 1
+    type: str # will become a clickable link using the ispartof Archipelago field
+    user info: "The parent digital collection or exhibit."
+    example: "'Who in the world am I? Ah, that's the great puzzle!': The Faces of Alice in Wonderland"
+  - digital_publisher:
+    Collections:
+      - Berger-Cloonan:
+        - dc_publisher # digital publisher
+      - College of Medicine:
+        - dc_publisher # digital publisher
+      - London Maps:
+        - dc_publisher # digital and physical publishers
+      - Time of Resolve:
+        - dc_publisher # digital publisher
+    definition: "An entity responsible for making the digital resource available."
+    mapping:
+      OAI:
+        - dc: dc:publisher
+        - qdc: dcterms:publisher
+        - mods: <note>
+    min: 1
+    max: unlimited
+    user info: "An entity responsible for making the digital resource available."
+    example: "Texas A & M University. Libraries"
+  - extent:
+    Collections:
+      - Apfelbaum:
+        - dcterms_extent
+      - Berger-Cloonan:
+        - dcterms_extent
+      - Bryan 150th:
+        - dcterms_extent
+      - Cherokee Freedmen:
+        - dcterms_extent
+      - College of Veterinary Medicine:
+        - dcterms_extent
+      - Gray Diary:
+        - dcterms_extent
+      - Houston Oil Minutes:
+        - dcterms_extent
+      - La Linda Poblana:
+        - dc_extent
+      - London Maps:
+        - dcterms_extent
+      - SciFi Exhibit 2021:
+        - dcterms_extent
+      - Woellhof:
+        - dcterms_extent
+    definition: "The size or duration of the resource."
+    mapping:
+        OAI:
+          dc: dc:format
+          qdc: dcterms:extent
+          mods: <physicalDescription><extent>
+    min: 0
+    max: unlimited
+    type: str
+    user info: "The size or duration of the resource."
+    example: "17 leaves (36 cm.)|299 pages|41 cm."
+  - format:
+    Collections:
+      - Apfelbaum:
+        - dc_format
+      - Basbanes Texts:
+        - dc_format
+      - Berger-Cloonan:
+        - dc_format
+      - Brazos Maps:
+        - dc_format
+      - Bryan 150th:
+        - dc_format
+      - Charting Texas:
+        - dc_format
+      - Cherokee Freedmen:
+        - dc_format
+      - College of Medicine:
+        - dc_format
+      - College of Veterinary Medicine:
+        - dc_format
+      - Gray Diary:
+        - dc_format
+      - La Linda Poblana:
+        - dc_format
+      - London Maps:
+        - dc_format
+      - SciFi Exhibit 2021:
+        - dc_format
+      - Time of Resolve:
+        - dc_format
+      - WW2 Maps:
+        - dc_format
+    definition: "The file format, physical medium, or dimensions of the resource."
+    mapping:
+        OAI:
+          dc: dc:format
+          qdc: dcterms:format
+          mods: <physicalDescription><digitalOrigin>
+    min: 1
+    max: 1
+    type: str
+    user info: "The file format, physical medium, or dimensions of the resource."
+    example: "reformatted digital"
+  - genre_form:
+    Collections:
+      - Apfelbaum:
+        - dc_type
+      - Basbanes Texts:
+        - dc_type
+      - Berger-Cloonan:
+        - dc_type
+      - Bryan 150th:
+        - dc_type
+      - Cherokee Freedmen:
+        - dc_type
+      - College of Medicine:
+        - dcterms_type # includes DCMI and genre/form terms
+      - College of Veterinary Medicine:
+        - dc_type
+      - La Linda Poblana:
+        - dc_genre
+      - London Maps:
+        - dc_type
+        - dcterms_type # includes DCMI and genre/form terms
+      - SciFi Exhibit 2021:
+        - dc_type
+      - Time of Resolve:
+        - dcterms_type # includes DCMI and genre/form terms
+      - Woellhof:
+        - dc_type
+        - dcterms_type
+      - WW2 Maps:
+        - dc_type
+    definition: "The nature or genre of the resource."
+    mapping:
+        OAI:
+          dc: dc:type
+          qdc: dcterms:type
+          mods: <physicalDescription><form>, <genre>
+    min: 0
+    max: unlimited
+    type: str
+    user info: "Form and/or genre of the resource."
+    example: "Correspondence"
+  - identifier:
+    Collections:
+      - Woellhof:
+        - dc_identifier # ARK - maybe make this also take a value for the identifier type
+    definition: "An unambiguous reference to the resource within a given context. Use this field for non-local identifiers only."
+    mapping:
+        OAI:
+          dc: dc:identifier
+          qdc: dcterms:identifier
+          mods: <identifier type="">
+    min: 0
+    max: unlimited
+    type: str
+    user info: "An unambiguous reference to the resource within a given context. Use this field for non-local identifiers only."
+    example: "5406|12306"
+  - language:
+    Collections:
+      - Basbanes Texts:
+        - dc_language
+      - Brazos Maps:
+        - dc_language
+      - Charting Texas:
+        - dc_language
+      - Cherokee Freedmen:
+        - dc_language
+      - College of Veterinary Medicine:
+        - dc_language
+      - Gray Diary:
+        - dc_language
+      - La Linda Poblana:
+        - dc_language
+      - London Maps:
+        - dc_language
+      - SciFi Exhibit 2021:
+        - dc_language
+      - Time of Resolve:
+        - dc_language
+      - Woellhof:
+        - dc_language
+    definition: "A language of the resource."
+    mapping:
+        OAI:
+          dc: dc:language
+          qdc: dcterms:language
+          mods: <language>
+    min: 0
+    max: unlimited
+    type: str
+    user info: "A language of the resource."
+    example: "eng"
+  - localIdentifier:
+    Collections:
+      - Alice in Wonderland:
+        - dcterms_otherIdentifier
+      - Berger-Cloonan:
+        - dc_identifier
+      - Brazos Maps:
+        - dc_identifier
+      - Charting Texas:
+        - dc_identifier
+      - College of Veterinary Medicine:
+        - dc_identifier
+      - Houston Oil Minutes:
+        - dc_identifier
+      - London Maps:
+        - dc_identifier
+      - NASA:
+        - dc_identifier
+      - SciFi Exhibit 2021:
+        - dc_identifer
+      - Time of Resolve:
+        - dc_identifier
+    definition: "An unambiguous reference to the resource within a local context."
+    mapping:
+        OAI:
+          dc: dc:identifier
+          qdc: dcterms:identifier
+          mods: <identifier>
+    min: 0
+    max: unlimited
+    type: str
+    user info: "An unambiguous reference to the resource within a local context."
+    example: "5406|12306"
+  - medium:
+    Collections:
+      - Berger-Cloonan:
+        - dcterms_medium
+      - London Maps:
+        - dcterms_medium
+    definition: "The material or physical carrier of the resource."
+    mapping:
+      - dc: dc:format
+      - qdc: dcterms:medium
+      - mods: <physicalDescription><form>
+    min: 0
+    max: unlimited
+    type: str
+    user info: "The material or physical carrier of the resource."
+    example: "Paper|Leather"
+  - note:
+    Collections:
+      - SciFi Radio Show:
+        - dc_description # physical item description/source
+    definition: "Any details captured about the resource that do not fit elsewhere in the schema."
+    mapping:
+      - dc: dc:description
+      - qdc: dcterms:description
+      - mods: <note>
+    min: 0
+    max: unlimited
+    type: str
+    user info: "An account of the resource."
+    example: "The source is a reel tape. The playback device was a TEAC A-3340S reel-to-reel tape deck playing at a speed of 7.5 ips. The audio was captured with Hammerfall DSP Multiface II A/D Converter hardware and Adobe Audition software. Editing and processing was also performed with Adobe Audition. For the access files, Normalize process was used to modify volume levels."
+  - original_publication: # if object was originally published as part of a work
+    Collections:
+      - Alice in Wonderland:
+        - dc_citation # book citation
+    definition: "If the physical object was originally published as part of another work, map that work here."
+    mapping:
+        OAI:
+          dc: dc:relation
+          qdc: dcterms:isPartOf
+          mods: <relatedItem type="otherFormat">
+    min: 0
+    max: unlimited
+    type: str
+    user info: "If the physical object was originally published as part of another work, map that work here."
+    example: "Lewis Carroll. Alice in Wonderland. Borders Press, 2002"
+  - original_publisher: # Use original publisher instead of physical publisher because some items are born digital.
+    Collections:
+      - Apfelbaum:
+        - dc_publisher # physical publisher
+      - Bryan 150th:
+        - dc_publisher # physical publisher
+      - London Maps:
+        - dc_publisher # digital and physical publishers
+      - SciFi Exhibit 2021:
+        - dc_publisher # physical publisher
+    definition: "An entity responsible for making the original resource available."
+    mapping:
+      OAI:
+        - dc: dc:publisher
+        - qdc: dcterms:publisher
+        - mods: <originInfo><publisher>
+    min: 0
+    max: 1
+    user info: "An entity responsible for making the original resource available."
+    example: "E.C. Kropp Co."
+  - physical_collection:
+    Collections:
+      - Apfelbaum:
+        - dcterms_isPartOf
+      - Bryan 150th:
+        - dcterms_isPartOf
+      - College of Veterinary Medicine:
+        - dcterms_isPartOf
+      - La Linda Poblana:
+        - dcterms_isPartOf
+      - London Maps:
+        - dcterms_isPartOf # also includes original work
+      - Woellhof:
+        - dcterms_isPartOf
+    definition: "The physical collection from which the item was digitized."
+    mapping:
+        OAI:
+          dc: dc:relation
+          qdc: dcterms:isPartOf
+          mods: <relatedItem type="otherFormat">
+    min: 0
+    max: 1
+    type: str
+    user info: "The physical collection from which the item was digitized."
+    example: "College of Veterinary Medicine Image Collection"
+  - physical_location: # box/folder of the physical object
+    Collections:
+      - Cole Papers:
+        - dcterms_isPartOf # Box and folder
+      - Cherokee Freedmen:
+        - dcterms_isPartOf # folder
+      - Lumpkin Papers:
+        - dcterms_isPartOf # Box and folder
+      - McInnis:
+        - dcterms_isPartOf # Box and folder
+    definition: "Information about the physical location, such as the box and folder, from which the item was digitized."
+    mapping:
+        OAI:
+          dc: dc:relation
+          qdc: dcterms:isPartOf
+          mods: <relatedItem type="otherFormat">
+    min: 0
+    max: 1
+    type: str
+    user info: "Information about the physical location, such as the box and folder, from which the item was digitized."
+    example: "1/20: Rowe Family. Joseph (R-360, D-1016), Parmelia (R-361, D-681). 1901, 1903-1904"
+  - provenance:
+    Collections:
+      - Aerial:
+        - fedora_created
+        - fedora_lastModified
+      - Alice in Wonderland:
+        - fedora_created
+        - fedora_lastModified
+      - Apfelbaum:
+        - fedora_created
+        - fedora_lastModified
+      - Basbanes Texts:
+        - fedora_created
+        - fedora_lastModified
+      - Berger-Cloonan:
+        - dcterms_provenance
+        - fedora_created
+        - fedora_lastModified
+      - Brazos Maps:
+        - fedora_created
+        - fedora_lastModified
+      - Bryan 150th:
+        - fedora_created
+        - fedora_lastModified
+      - Building History:
+        - fedora_created
+        - fedora_lastModified
+      - Charting Texas:
+        - fedora_created
+        - fedora_lastModified
+      - Cherokee Freedmen:
+        - fedora_created
+        - fedora_lastModified
+      - Cole Papers:
+        - fedora_created
+        - fedora_lastModified
+      - College of Medicine:
+        - fedora_created
+        - fedora_lastModified
+      - College of Veterinary Medicine:
+        - dcterms_provenance # physical item provenance
+        - fedora_created
+        - fedora_lastModified
+      - Gray Diary:
+        - fedora_created
+        - fedora_lastModified
+      - Houston Oil Minutes:
+        - fedora_created
+        - fedora_lastModified
+      - La Linda Poblana:
+        - fedora_created
+        - fedora_lastModified
+      - London Maps:
+        - fedora_created
+        - fedora_lastModified
+      - Lumpkin Papers:
+        - fedora_created
+        - fedora_lastModified
+      - McInnis:
+        - fedora_created
+        - fedora_lastModified
+      - NASA:
+        - fedora_created
+        - fedora_lastModified
+      - SciFi Exhibit 2021:
+        - fedora_created
+        - fedora_lastModified
+      - SciFi Radio Show:
+        - fedora_created
+        - fedora_lastModified
+      - Time of Resolve:
+        - fedora_created
+        - fedora_lastModified
+      - Woellhof:
+        - fedora_created
+        - fedora_lastModified
+      - WW2 Maps:
+        - fedora_created
+        - fedora_lastModified
+    definition: "A statement of any changes in ownership and custody of the resource since its creation that are significant for its authenticity, integrity, and interpretation."
+    mapping:
+      OAI:
+        - qdc: dcterms:provenance
+        - mods: <originInfo><dateCaptured>
+    min: 0
+    max: unlimited
+    type: str
+    user info: "A statement of any changes in ownership and custody of the resource since its creation that are significant for its authenticity, integrity, and interpretation."
+    example:
+      - "2019-05-13T20:23:22.608000+00:00"
+      - "This nineteenth century photograph is an 'Ebay' purchase made by librarian Trenton Boyd and donated to the Medical Sciences Library.
+  - related_item:
+    Collections:
+      - Alice in Wonderland: 
+        - dcterms_URL # broken link to catalog record
+    definition: "A related resource."
+    mapping:
+      OAI:
+        - dc: dc:relation
+        - qdc: dcterms:relation
+        - mods: <relatedItem type="otherFormat">
+    min: 0
+    max: unlimited
+    type: str
+    user info: "A related resource. Do not map parent/child ADOs to this field."
+    example: "https://libcat.tamu.edu/vwebv/holdingsInfo?bibId=4702618"
+  - related_url:
+    Collections:
+      # none on Fedora, exists for Avalon only
+    definition: "A url to a relevant item, such as the same digital object hosted on another platform."
+    mapping:
+      OAI:
+        - dc: dc:relation
+        - qdc: dcterms:relation
+        - mods: <relatedItem type="references">
+    min: 0
+    max: 1
+    type: url
+    user info: "A url to a relevant item, such as the same digital object hosted on another platform."
+    example: "https://avalon.library.tamu.edu/media_objects/00000005c"
+  - related_url_historic:
+    Collections:
+      # none on Fedora, exists for archived websites/exhibits only
+    definition: "A historic url to a related item."
+    mapping:
+      OAI:
+        - dc: dc:relation
+        - qdc: dcterms:relation
+        - mods: <relatedItem type="references">
+    min: 0
+    max: 1
+    type: str
+    user info: "A historic url to a related item. Map urls to archived website and exhibits here."
+    example: "https://aavptbiennial-ojs-tamu.tdl.org/aavptbiennial"
+  - rights_holder:
+    Collections:
+      - Alice in Wonderland:
+        - rightsHolder # role of person with rights to the image
+    definition: "A person or organization owning or managing rights over the resource."
+    mapping:
+      OAI:
+        - qdc: dcterms:rightsHolder
+  - rights:
+    Collections:
+      - Alice in Wonderland:
+        - dcterms_rightsURI # uri
+      - Apfelbaum:
+        - dc_rights # needs separation, CC license and uri
+      - Basbanes Texts:
+        - dc_rights # needs separation, CC license and uri
+      - Berger-Cloonan:
+        - dc_rights # needs separation, CC license and uri
+      - Brazos Maps:
+        - dc_rights # needs separation, copyright review and uri
+      - Bryan 150th:
+        - dc_rights # needs separation, CC license and uri
+      - Charting Texas:
+        - dc_rights # needs separation, copyright review and uri
+      - Cherokee Freedmen:
+        - dc_rights # needs separation, CC license and uri
+      - College of Medicine:
+        - dc_rights # needs separation, CC license and uri
+      - College of Veterinary Medicine:
+        - dc_rights # needs separation, CC license and uri
+      - Gray Diary:
+        - dc_rights # needs separation, CC license and uri
+      - Houston Oil Minutes:
+        - dc_rights # needs separation, CC license and uri
+      - La Linda Poblana:
+        - dc_rights # uri
+      - London Maps:
+        - dc_rights # uri
+      - Lumpkin Papers:
+        - dc_rights # uri
+      - McInnis:
+        - dc_rights # uri
+      - SciFi Exhibit 2021:
+        - dc_rights # needs separation, CC license and uri
+      - Time of Resolve:
+        - dc_rights # needs separation, CC license and uri
+      - Woellhof:
+        - dc_rights # uri
+      - WW2 Maps:
+        - dc_rights # uri
+    definition: "Information about rights held in and over the resource."
+    mapping:
+      OAI:
+        - dc: dc:rights
+        - qdc: dcterms:rights
+        - mods: <accessCondition type="use and reproduction">
+    min: 1
+    max: 1
+    type: uri
+    user info: "URI with information about rights held in and over the resource."
+    example: "http://rightsstatements.org/vocab/NoC-US/1.0/"
+  - rights_statement:
+    Collections:
+      - Alice in Wonderland:
+        - dc_rights # copyright review information
+      - Apfelbaum:
+        - dc_rights # needs separation, CC license and uri
+      - Basbanes Texts:
+        - dc_rights # needs separation, CC license and uri
+      - Berger-Cloonan:
+        - dc_rights # needs separation, CC license and uri
+      - Brazos Maps:
+        - dc_rights # needs separation, copyright review and uri
+      - Bryan 150th:
+        - dc_rights # needs separation, CC license and uri
+      - Charting Texas:
+        - dc_rights # needs separation, copyright review and uri
+      - Cherokee Freedmen:
+        - dc_rights # needs separation, CC license and uri
+      - College of Medicine:
+        - dc_rights # needs separation, CC license and uri
+      - College of Veterinary Medicine:
+        - dc_rights # needs separation, CC license and uri
+      - Gray Diary:
+        - dc_rights # needs separation, CC license and uri
+      - Houston Oil Minutes:
+        - dc_rights # needs separation, CC license and uri
+      - SciFi Exhibit 2021:
+        - dc_rights # needs separation, CC license and uri
+      - Time of Resolve:
+        - dc_rights # needs separation, CC license and uri
+    definition: "Information about rights held in and over the resource."
+    mapping:
+      OAI:
+        - dc: dc:rights
+        - qdc: dcterms:rights
+        - mods: <accessCondition type="use and reproduction">
+    min: 0
+    max: 1
+    type: str
+    user info: "Free text with information about rights held in and over the resource."
+    example: "A copyright review process in August 2018 has determined that this particular item is in copyright, but the rights holder is unclear or unresponsive.  The Libraries provide access to the materials here as a digital aggregate under an assertion of fair use for non-commercial educational use (17 U.S. Code ¬ß 107) as well as of fair dealing for the illustrations published in the UK (Copyright, Designs and Patent Act 1988 [UK]). The written permission of any copyright and other rights holders is required for distribution, reproduction, or other use that extends beyond what is authorized by fair use and other statutory exemptions. Responsibility for making an independent legal assessment of an item and securing any necessary permissions ultimately rests with persons desiring to use the item. TAMU Libraries would be interested in updating the copyright holder information on items displayed in these collections.  Please use the contact method provided below to help update these records for future researchers."
+  - spatial:
+    Collections:
+      - Alice in Wonderland:
+        - tamudigital_localcountry
+      - Apfelbaum:
+        - dcterms_spatial
+      - Basbanes Texts:
+        - dcterms_coverage
+      - Berger-Cloonan:
+        - dcterms_spatial
+      - Brazos Maps:
+        - dcterms_spatial
+      - Bryan 150th:
+        - dcterms_spatial
+      - Building History:
+        - dcterms_spatial
+      - Charting Texas:
+        - dcterms_spatial
+      - Cherokee Freedmen:
+        - dcterms_spatial
+      - College of Medicine:
+        - dcterms_spatial
+      - College of Veterinary Medicine:
+        - dcterms_spatial
+      - London Maps:
+        - dc_coverage
+      - Time of Resolve:
+        - dcterms_spatial
+      - Woellhof:
+        - dcterms_spatial
+    definition: "Spatial characteristics of the resource."
+    mapping:
+      OAI:
+        dc: dc:coverage
+        qdc: dcterms:spatial
+        mods: <subject><geographic>
+    min: 0
+    max: unlimited
+    type: str
+    user info: "Geographic subjects of the resource."
+    example: "College Station (Tex.)"
+  - subject:
+    Collections:
+      - Alice in Wonderland:
+        - dc_subject
+      - Apfelbaum:
+        - dc_subject
+      - Basbanes Texts:
+        - dc_subject
+      - Berger-Cloonan:
+        - dc_subject
+      - Brazos Maps:
+        - dc_subject
+      - Bryan 150th:
+        - dc_subject
+      - Charting Texas:
+        - dc_subject
+      - Cherokee Freedmen:
+        - dc_subject
+      - College of Medicine:
+        - dc_subject
+      - College of Veterinary Medicine:
+        - dc_subject
+      - Gray Diary:
+        - dc_subject
+      - Houston Oil Minutes:
+        - dc_subject
+      - La Linda Poblana:
+        - dc_subject
+      - London Maps:
+        - dc_subject # also includes LOC location
+      - SciFi Exhibit 2021:
+        - dc_subject
+      - Time of Resolve:
+        - dc_subject
+      - Woellhof:
+        - dc_subject
+      - WW2 Maps:
+        - dc_subject
+    definition: "A topic of the resource."
+    mapping:
+      OAI:
+        dc: dc:subject
+        qdc: dcterms:subject
+        mods: <subject><topic>
+    min: 0
+    max: unlimited
+    type: str
+    user info: "A topic of the resource."
+    example: "Airports Texas--Maps|Aeronautical charts--Texas|Runways (Aeronautics)--Texas"
+  - tableOfContents:
+    Collections:
+      - College of Veterinary Medicine:
+        - dcterms_tableOfContents
+    definition: "A list of subunits of the resource."
+    mapping:
+      OAI:
+        dc: dc:description
+        qdc: dcterms:tableOfContents
+        mods: <tableOfContents>
+    min: 0
+    max: 1
+    type: str
+    user info: "A list of subunits of the resource."
+    example: "A. VETERINARY SCIENCE BLDG (1. Public Health, 2. Microbiology, 3. Physiology, 4. Anatomy) -- B. ADMINISTRATION BLDG. (1. College Admin. Offices and Library. 2. Pathology 3. Parasitology) --C. HOSPITAL, MEDICINE & SURGERY (1. Small Animal Clinic, 2. Large Animal Clinic, 3. Stables, 4. Feed Storage) -- D. SITE OF STATE DIAGNOSTIC LAB. (Future site of TVMDL, Texas Veterinary Medical Diagnostic Lab) -- E. LABORATORY ANIMAL BLDG. (Vivarium III) -- F. VETERINARY RESEARCH FARM -- G. toxicology laboratory ( U.S.D.A.) -- H. INSTITUTE OF TROPICAL VETERINARY MEDICINE AND ANIMAL ARIAL DRUG TOXICITY TESTING LABORATORY -- I. TEXAS FEVER BARN ( SITE OF DR. MARK FRANCIS' RESEARCH WITH PIROPLASMOSIS) -- J. VIRUS RESEARCH LABORATORY -- K. WILDLIFE DISEASE RESEARCH CENTER"
+  - temporal:
+    Collections:
+      - Apfelbaum:
+        - dcterms_temporal
+      - Berger-Cloonan:
+        - dcterms_temporal
+      - College of Veterinary Medicine:
+        - dcterms_temporal
+      - Time of Resolve:
+        - dcterms_temporal
+    definition: "Temporal characteristics of the resource."
+    mapping:
+      OAI:
+        - dc: dc:coverage
+        - qdc: dcterms:temporal
+        - mods: <subject><temporal>
+    min: 0
+    max: unlimited
+    type: str
+    user info: "Temporal characteristics of the resource."
+    example: "1970s"
+  - title:
+    Collections:
+      - Aerial:
+        - dc_title
+      - Alice in Wonderland:
+        - dc_title
+      - Apfelbaum:
+        - dc_title
+      - Basbanes Texts:
+        - dc_title
+      - Berger-Cloonan:
+        - dc_title
+      - Brazos Maps:
+        - dc_title
+      - Bryan 150th:
+        - dc_title
+      - Building History:
+        - dc_title
+      - Charting Texas:
+        - dc_title
+      - Cole Papers:
+        - dc_title
+      - Cherokee Freedmen:
+        - dc_title
+      - College of Medicine:
+        - dc_title
+      - College of Veterinary Medicine:
+        - dc_title
+      - Gray Diary:
+        - dc_title
+      - Houston Oil Minutes:
+        - dc_title
+      - La Linda Poblana:
+        - dc_title
+      - London Maps:
+        - dc_title
+      - Lumpkin Papers:
+        - dc_title
+      - McInnis:
+        - dc_title
+      - NASA:
+        - dc_title
+      - SciFi Exhibit 2021:
+        - dc_title
+      - SciFi Radio Show:
+        - dc_title
+      - Time of Resolve:
+        - dc_title
+      - Woellhof:
+        - dc_title
+      - WW2 Maps:
+        - dc_title
+    definition: "A name given to the resource."
+    mapping:
+      OAI:
+        - dc: dc:title
+        - qdc: dcterms:title
+        - mods: <titleInfo><title>
+    min: 1
+    max: 1
+    type: str
+    user info: "A name given to the resource."
+    example: "Cat Placed in Special Containment Area, number 05"
+  - title_alternative:
+    Collections:
+      - Apfelbaum:
+        - dcterms_alternative
+      - La Linda Poblana:
+        - dc_title:alternative
+      - London Maps:
+        - dcterms_alternative
+    definition: "An alternative name for the resource."
+    mapping:
+      OAI:
+        - dc: dc:title
+        - qdc: dcterms:alternative
+        - mods: <titleInfo type="alternative"><title>
+    min: 0
+    max: unlimited
+    type: str
+    user info: "An alternative name for the resource."
+    example: "Laon. Cave dwellers - the Creuttes"
+  - type:
+    Collections:
+      - Apfelbaum:
+        - dcterms_type
+      - Basbanes Texts:
+        - dcterms_type
+      - Berger-Cloonan:
+        - dcterms_type
+      - Brazos Maps:
+        - dcterms_type
+      - Bryan 150th:
+        - dcterms_type
+      - Charting Texas:
+        - dcterms_type
+      - Cherokee Freedmen:
+        - dcterms_type
+      - College of Veterinary Medicine:
+        - dcterms_type
+      - Gray Diary:
+        - dcterms_type
+      - Houston Oil Minutes:
+        - dc_type
+      - La Linda Poblana:
+        - dcterms_type
+      - SciFi Exhibit 2021:
+        - dcterms_type
+    definition:
+    mapping:
+      OAI:
+        - dc: dc:type
+        - qdc: dcterms:type
+        - mods: <typeOfResource>
+    min: 1
+    max: unlimited
+    type: str
+    user info: "The nature or genre of the resource."
+    example: "StillImage"
+  - Image:
+    Collections:
+      - Aerial:
+        - files
+      - Alice in Wonderland:
+        - files
+      - Apfelbaum:
+        - files
+      - Basbanes Texts:
+        - files
+      - Berger-Cloonan:
+        - files
+      - Brazos Maps:
+        - files
+      - Bryan 150th:
+        - files
+      - Building History:
+        - files
+      - Cole Papers:
+        - files
+      - Charting Texas:
+        - files
+      - Cherokee Freedmen:
+        - files
+      - College of Medicine:
+        - files
+      - College of Veterinary Medicine:
+        - files
+      - Gray Diary:
+        - files
+      - Houston Oil Minutes:
+        - files
+      - La Linda Poblana:
+        - files
+      - London Maps:
+        - files
+      - Lumpkin Papers:
+        - files
+      - McInnis:
+        - files
+      - Time of Resolve:
+        - files
+      - Woellhof:
+        - files
+      - WW2 Maps:
+        - files
+    definition: "Filename(s) of media"
+    min: 0
+    max: 1
+    type: url
+    user info: "Filename(s) of media"
+  - Audio:
+    Collections:
+      - NASA:
+        - files
+      - SciFi Radio Show:
+        - files
+    definition: "Filename(s) of media"
+    min: 0
+    max: 1
+    type: url
+    user info: "Filename(s) of media"
+  - Video:
+    Collections:
+      - NASA:
+        - files
+    definition: "Filename(s) of media"
+    min: 0
+    max: 1
+    type: url
+    user info: "Filename(s) of media"
+  - date_accessioned: # maybe map these under provenance?
+    Collections:
+      # none on Fedora, OAKTrust only
+    definition: "Date the resource was originally accessioned into OAKTrust."
+    mapping:
+      OAI:
+          dc: dc:date
+          qdc: dcterms:date
+          mods: <dateOther>
+    min: 0
+    max: 1
+    type: date
+    user info: "Date the resource was originally accessioned into OAKTrust."
+  - date_available: # maybe map these under provenance?
+    Collections:
+      # none on Fedora, OAKTrust only
+    definition: "Date the resource was originally made available in OAKTrust."
+    mapping:
+      OAI:
+        dc: dc:date
+        qdc: dcterms:date
+        mods: <dateOther>
+    min: 0
+    max: 1
+    type: date
+    user info: "Date the resource was originally made available in OAKTrust."
+  - local_department:
+    Collections:
+      # none on Fedora, OAKTrust only
+    definition: "A&M department the item pertains to."
+    mapping:
+      OAI:
+        dc: dc:contributor, dc:description
+        qdc: dcterms:contributor, dcterms:description
+        mods: <originInfo><publisher>
+    min: 0
+    max: unlimited
+    type: str
+    user info: "A&M department the item pertains to."
+  - mimetype:
+    Collections:
+      # none on Fedora, OAKTrust only
+    definition: "The electronic format type, or the data representation, of the resource."
+    mapping:
+      OAI:
+        - dc: dc:format
+        - qdc: dcterms:format
+        - mods: <physicalDescription><internetMediaType>
+    min: 0
+    max: unlimited
+    type: str
+    user info: "The electronic format type, or the data representation, of the resource."
+  - sponsorship:
+    Collections:
+      # none on Fedora, OAKTrust only
+    definition: "An agent that sponsored creation of the resource."
+    mapping:
+      OAI:
+        - dc: dc:description
+        - qdc: dcterms:description
+        - mods: <originInfo><agent>
+    min: 0
+    max: unlimited
+    type: str
+    user info: "An agent that sponsored creation of the resource."
+   - projection:
+    Collections:
+      # none from Fedora, will be a field for future map collections
+    definition: "The projection of the map"
+    mapping:
+      OAI:
+        dc: dc:description
+        qdc: dcterms:description
+        mods: <note>
+    min: 0
+    max: unlimited
+    type: str
+    user info: "The projection of the map. Only use for Map worktype."
+  - state_edition:
+    Collections:
+    # none from Fedora, use for future map collections
+    definition: "The specific version of a map."
+    mapping:
+      OAI:
+        - dc: dc:description
+        - qdc: dcterms:description
+        - mods: <note>
+    min: 0
+    max: unlimited
+    type: str
+    user info: "Specific version of a map. Use only for Map worktype."
+  - date_built:
+    Collections:
+      # none from Fedora, will be used in Building History Collection
+    definition: "The date the building in the photograph was constructed."
+    mapping:
+      OAI:
+        dc: dc:description
+        qdc: dcterms:description
+        mods: <note>
+    min: 0
+    max: 1
+    type: date
+    user info: "The date the building in the photograph was constructed."
+  - date_razed:
+    Collections:
+      # none from Fedora, will be used in Building History Collection
+    definition: "The date the building in the photograph was destroyed."
+    mapping:
+      OAI:
+        dc: dc:description
+        qdc: dcterms:description
+        mods: <note>
+    min: 0
+    max: 1
+    type: date
+    user info: "The date the building in the photograph was destroyed."
