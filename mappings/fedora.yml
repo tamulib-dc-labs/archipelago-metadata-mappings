@@ -5,10 +5,10 @@
 
 profile:
   date_modified: '2026-03-10'
-  version: 0.1
+  version: 0.2
 
 fields:
-  - abstract:
+  abstract:
     Collections:
       - Alice in Wonderland:
         - dc_abstract
@@ -44,7 +44,7 @@ fields:
     type: str
     user info: "Summary or abstract of the resource."
     example: "Photo postcard of the interior of Notre-Dame de Reims."
-  - accessRights:
+  accessRights:
     Collections:
       - Berger-Cloonan:
         - dcterms_accessRights
@@ -59,7 +59,7 @@ fields:
     type: str
     user info: "Information about who access the resource or an indication of its security status."
     example: "Openly accessible"
-  - classification:
+  classification:
     Collections:
       - Berger-Cloonan:
         - dc_relation # looks like lcc call number
@@ -78,7 +78,7 @@ fields:
     type: str
     user info: "Classification information, such as LCC call number"
     example: "G4031 .E424 1763 .P5"
-  - collecting_area: # if ADO does not have this field already, it needs to be created
+  collecting_area: # if ADO does not have this field already, it needs to be created
     Collections:
       - Alice in Wonderland:
         - dcterms_isPartOf
@@ -95,7 +95,7 @@ fields:
     type: str # will become a clickable link using the ispartof and ismemberof Archipelago fields
     user info: "The collecting area to which the ADO and corresponding physical item belong."
     example: "Cushing Library. Children's Collection"
-  - coordinates:
+  coordinates:
     Collections:
       - Brazos Maps:
         - tamudigital_local/coordinates
@@ -116,7 +116,7 @@ fields:
     type: coordinates
     user info: "Spatial characteristics of the resource as represented by coordinates"
     example: "Scale not given (E 63¬∞55 π00 ∫--E 97¬∞34 π00 ∫/N 36¬∞46 π00 ∫--N 7¬∞40 π00 ∫)."
-  - contributor:
+  contributor:
     Collections:
       - Basbanes Texts:
         - dc_contributor
@@ -151,7 +151,7 @@ fields:
     type: str
     user info: "An entity responsible for making contributions to the resource."
     example: "Albert, Martha|Von Weise, Chas.|Knalls, Lula|Breckinridge, Clifton Rodes, 1846-1932|Hastings, William Wirt, 1866-1938"
-  - creator:
+  creator:
     Collections:
       - Alice in Wonderland:
         - dc_creator
@@ -194,7 +194,7 @@ fields:
     type: str
     user info: "An entity primarily responsible for making the resource."
     example: "United States. Commission to the Five Civilized Tribes"
-  - date_created:
+  date_created:
     Collections:
       - Alice in Wonderland:
         - dcterms_created
@@ -241,7 +241,7 @@ fields:
     type: date
     user info: "Date of creation of the resource."
     example: "1889-11-30"
-  - date_issued:
+  date_issued:
     Collections:
       - Brazos Maps:
         - dcterms_issued
@@ -264,7 +264,7 @@ fields:
     type: date
     user info: "Date of formal issuance of the resource."
     example: "1983"
-  - description:
+  description:
     Collections:
       - Apfelbaum:
         - dc_description # "Held in the Archive of World War I German and Austrian Documents at Cushing Memorial Library on the campus of Texas A&M University, College Station, Texas." [Could also be mapped under physical_collection field.]
@@ -309,7 +309,7 @@ fields:
     type: str
     user info: "An account of the resource, not including abstract/summary or table of contents."
     example: "Inscription on item: Architectural Detail Photo #; This item was part of an exhibit,  'Texas A&M during the Great Depression,' shown in Cushing Memorial Library from August 31, 2018 through February 22, 2019.; Cushing Memorial Library and Archives; Remstar #3"
-  - digital_collection: # if ADO does not have this field already, it needs to be created
+  digital_collection: # if ADO does not have this field already, it needs to be created
     Collections:
       - Alice in Wonderland:
         - dcterms_isPartOfSeries # Exhibit name
@@ -324,7 +324,7 @@ fields:
     type: str # will become a clickable link using the ispartof Archipelago field
     user info: "The parent digital collection or exhibit."
     example: "'Who in the world am I? Ah, that's the great puzzle!': The Faces of Alice in Wonderland"
-  - digital_publisher:
+  digital_publisher:
     Collections:
       - Berger-Cloonan:
         - dc_publisher # digital publisher
@@ -344,7 +344,7 @@ fields:
     max: unlimited
     user info: "An entity responsible for making the digital resource available."
     example: "Texas A & M University. Libraries"
-  - extent:
+  extent:
     Collections:
       - Apfelbaum:
         - dcterms_extent
@@ -379,7 +379,7 @@ fields:
     type: str
     user info: "The size or duration of the resource."
     example: "17 leaves (36 cm.)|299 pages|41 cm."
-  - format:
+  format:
     Collections:
       - Apfelbaum:
         - dc_format
@@ -422,7 +422,7 @@ fields:
     type: str
     user info: "The file format, physical medium, or dimensions of the resource."
     example: "reformatted digital"
-  - genre_form:
+  genre_form:
     Collections:
       - Apfelbaum:
         - dc_type
@@ -463,7 +463,7 @@ fields:
     type: str
     user info: "Form and/or genre of the resource."
     example: "Correspondence"
-  - identifier:
+  identifier:
     Collections:
       - Woellhof:
         - dc_identifier # ARK - maybe make this also take a value for the identifier type
@@ -478,7 +478,7 @@ fields:
     type: str
     user info: "An unambiguous reference to the resource within a given context. Use this field for non-local identifiers only."
     example: "5406|12306"
-  - language:
+  language:
     Collections:
       - Basbanes Texts:
         - dc_language
@@ -513,7 +513,7 @@ fields:
     type: str
     user info: "A language of the resource."
     example: "eng"
-  - localIdentifier:
+  localIdentifier:
     Collections:
       - Alice in Wonderland:
         - dcterms_otherIdentifier
@@ -546,7 +546,7 @@ fields:
     type: str
     user info: "An unambiguous reference to the resource within a local context."
     example: "5406|12306"
-  - medium:
+  medium:
     Collections:
       - Berger-Cloonan:
         - dcterms_medium
@@ -562,7 +562,7 @@ fields:
     type: str
     user info: "The material or physical carrier of the resource."
     example: "Paper|Leather"
-  - note:
+  note:
     Collections:
       - SciFi Radio Show:
         - dc_description # physical item description/source
@@ -576,7 +576,7 @@ fields:
     type: str
     user info: "An account of the resource."
     example: "The source is a reel tape. The playback device was a TEAC A-3340S reel-to-reel tape deck playing at a speed of 7.5 ips. The audio was captured with Hammerfall DSP Multiface II A/D Converter hardware and Adobe Audition software. Editing and processing was also performed with Adobe Audition. For the access files, Normalize process was used to modify volume levels."
-  - original_publication: # if object was originally published as part of a work
+  original_publication: # if object was originally published as part of a work
     Collections:
       - Alice in Wonderland:
         - dc_citation # book citation
@@ -591,7 +591,7 @@ fields:
     type: str
     user info: "If the physical object was originally published as part of another work, map that work here."
     example: "Lewis Carroll. Alice in Wonderland. Borders Press, 2002"
-  - original_publisher: # Use original publisher instead of physical publisher because some items are born digital.
+  original_publisher: # Use original publisher instead of physical publisher because some items are born digital.
     Collections:
       - Apfelbaum:
         - dc_publisher # physical publisher
@@ -611,7 +611,7 @@ fields:
     max: 1
     user info: "An entity responsible for making the original resource available."
     example: "E.C. Kropp Co."
-  - physical_collection:
+  physical_collection:
     Collections:
       - Apfelbaum:
         - dcterms_isPartOf
@@ -636,7 +636,7 @@ fields:
     type: str
     user info: "The physical collection from which the item was digitized."
     example: "College of Veterinary Medicine Image Collection"
-  - physical_location: # box/folder of the physical object
+  physical_location: # box/folder of the physical object
     Collections:
       - Cole Papers:
         - dcterms_isPartOf # Box and folder
@@ -657,7 +657,7 @@ fields:
     type: str
     user info: "Information about the physical location, such as the box and folder, from which the item was digitized."
     example: "1/20: Rowe Family. Joseph (R-360, D-1016), Parmelia (R-361, D-681). 1901, 1903-1904"
-  - provenance:
+  provenance:
     Collections:
       - Aerial:
         - fedora_created
@@ -747,8 +747,8 @@ fields:
     user info: "A statement of any changes in ownership and custody of the resource since its creation that are significant for its authenticity, integrity, and interpretation."
     example:
       - "2019-05-13T20:23:22.608000+00:00"
-      - "This nineteenth century photograph is an 'Ebay' purchase made by librarian Trenton Boyd and donated to the Medical Sciences Library.
-  - related_item:
+      - This nineteenth century photograph is an 'Ebay' purchase made by librarian Trenton Boyd and donated to the Medical Sciences Library.
+  related_item:
     Collections:
       - Alice in Wonderland: 
         - dcterms_URL # broken link to catalog record
@@ -763,7 +763,7 @@ fields:
     type: str
     user info: "A related resource. Do not map parent/child ADOs to this field."
     example: "https://libcat.tamu.edu/vwebv/holdingsInfo?bibId=4702618"
-  - related_url:
+  related_url:
     Collections:
       # none on Fedora, exists for Avalon only
     definition: "A url to a relevant item, such as the same digital object hosted on another platform."
@@ -777,7 +777,7 @@ fields:
     type: url
     user info: "A url to a relevant item, such as the same digital object hosted on another platform."
     example: "https://avalon.library.tamu.edu/media_objects/00000005c"
-  - related_url_historic:
+  related_url_historic:
     Collections:
       # none on Fedora, exists for archived websites/exhibits only
     definition: "A historic url to a related item."
@@ -791,7 +791,7 @@ fields:
     type: str
     user info: "A historic url to a related item. Map urls to archived website and exhibits here."
     example: "https://aavptbiennial-ojs-tamu.tdl.org/aavptbiennial"
-  - rights_holder:
+  rights_holder:
     Collections:
       - Alice in Wonderland:
         - rightsHolder # role of person with rights to the image
@@ -799,7 +799,7 @@ fields:
     mapping:
       OAI:
         - qdc: dcterms:rightsHolder
-  - rights:
+  rights:
     Collections:
       - Alice in Wonderland:
         - dcterms_rightsURI # uri
@@ -852,7 +852,7 @@ fields:
     type: uri
     user info: "URI with information about rights held in and over the resource."
     example: "http://rightsstatements.org/vocab/NoC-US/1.0/"
-  - rights_statement:
+  rights_statement:
     Collections:
       - Alice in Wonderland:
         - dc_rights # copyright review information
@@ -893,7 +893,7 @@ fields:
     type: str
     user info: "Free text with information about rights held in and over the resource."
     example: "A copyright review process in August 2018 has determined that this particular item is in copyright, but the rights holder is unclear or unresponsive.  The Libraries provide access to the materials here as a digital aggregate under an assertion of fair use for non-commercial educational use (17 U.S. Code ¬ß 107) as well as of fair dealing for the illustrations published in the UK (Copyright, Designs and Patent Act 1988 [UK]). The written permission of any copyright and other rights holders is required for distribution, reproduction, or other use that extends beyond what is authorized by fair use and other statutory exemptions. Responsibility for making an independent legal assessment of an item and securing any necessary permissions ultimately rests with persons desiring to use the item. TAMU Libraries would be interested in updating the copyright holder information on items displayed in these collections.  Please use the contact method provided below to help update these records for future researchers."
-  - spatial:
+  spatial:
     Collections:
       - Alice in Wonderland:
         - tamudigital_localcountry
@@ -934,7 +934,7 @@ fields:
     type: str
     user info: "Geographic subjects of the resource."
     example: "College Station (Tex.)"
-  - subject:
+  subject:
     Collections:
       - Alice in Wonderland:
         - dc_subject
@@ -983,7 +983,7 @@ fields:
     type: str
     user info: "A topic of the resource."
     example: "Airports Texas--Maps|Aeronautical charts--Texas|Runways (Aeronautics)--Texas"
-  - tableOfContents:
+  tableOfContents:
     Collections:
       - College of Veterinary Medicine:
         - dcterms_tableOfContents
@@ -998,7 +998,7 @@ fields:
     type: str
     user info: "A list of subunits of the resource."
     example: "A. VETERINARY SCIENCE BLDG (1. Public Health, 2. Microbiology, 3. Physiology, 4. Anatomy) -- B. ADMINISTRATION BLDG. (1. College Admin. Offices and Library. 2. Pathology 3. Parasitology) --C. HOSPITAL, MEDICINE & SURGERY (1. Small Animal Clinic, 2. Large Animal Clinic, 3. Stables, 4. Feed Storage) -- D. SITE OF STATE DIAGNOSTIC LAB. (Future site of TVMDL, Texas Veterinary Medical Diagnostic Lab) -- E. LABORATORY ANIMAL BLDG. (Vivarium III) -- F. VETERINARY RESEARCH FARM -- G. toxicology laboratory ( U.S.D.A.) -- H. INSTITUTE OF TROPICAL VETERINARY MEDICINE AND ANIMAL ARIAL DRUG TOXICITY TESTING LABORATORY -- I. TEXAS FEVER BARN ( SITE OF DR. MARK FRANCIS' RESEARCH WITH PIROPLASMOSIS) -- J. VIRUS RESEARCH LABORATORY -- K. WILDLIFE DISEASE RESEARCH CENTER"
-  - temporal:
+  temporal:
     Collections:
       - Apfelbaum:
         - dcterms_temporal
@@ -1019,7 +1019,7 @@ fields:
     type: str
     user info: "Temporal characteristics of the resource."
     example: "1970s"
-  - title:
+  title:
     Collections:
       - Aerial:
         - dc_title
@@ -1082,7 +1082,7 @@ fields:
     type: str
     user info: "A name given to the resource."
     example: "Cat Placed in Special Containment Area, number 05"
-  - title_alternative:
+  title_alternative:
     Collections:
       - Apfelbaum:
         - dcterms_alternative
@@ -1101,7 +1101,7 @@ fields:
     type: str
     user info: "An alternative name for the resource."
     example: "Laon. Cave dwellers - the Creuttes"
-  - type:
+  type:
     Collections:
       - Apfelbaum:
         - dcterms_type
@@ -1138,7 +1138,7 @@ fields:
     type: str
     user info: "The nature or genre of the resource."
     example: "StillImage"
-  - Image:
+  Image:
     Collections:
       - Aerial:
         - files
@@ -1189,7 +1189,7 @@ fields:
     max: 1
     type: url
     user info: "Filename(s) of media"
-  - Audio:
+  Audio:
     Collections:
       - NASA:
         - files
@@ -1200,7 +1200,7 @@ fields:
     max: 1
     type: url
     user info: "Filename(s) of media"
-  - Video:
+  Video:
     Collections:
       - NASA:
         - files
@@ -1209,7 +1209,7 @@ fields:
     max: 1
     type: url
     user info: "Filename(s) of media"
-  - date_accessioned: # maybe map these under provenance?
+  date_accessioned: # maybe map these under provenance?
     Collections:
       # none on Fedora, OAKTrust only
     definition: "Date the resource was originally accessioned into OAKTrust."
@@ -1222,7 +1222,7 @@ fields:
     max: 1
     type: date
     user info: "Date the resource was originally accessioned into OAKTrust."
-  - date_available: # maybe map these under provenance?
+  date_available: # maybe map these under provenance?
     Collections:
       # none on Fedora, OAKTrust only
     definition: "Date the resource was originally made available in OAKTrust."
@@ -1235,7 +1235,7 @@ fields:
     max: 1
     type: date
     user info: "Date the resource was originally made available in OAKTrust."
-  - local_department:
+  local_department:
     Collections:
       # none on Fedora, OAKTrust only
     definition: "A&M department the item pertains to."
@@ -1248,7 +1248,7 @@ fields:
     max: unlimited
     type: str
     user info: "A&M department the item pertains to."
-  - mimetype:
+  mimetype:
     Collections:
       # none on Fedora, OAKTrust only
     definition: "The electronic format type, or the data representation, of the resource."
@@ -1261,7 +1261,7 @@ fields:
     max: unlimited
     type: str
     user info: "The electronic format type, or the data representation, of the resource."
-  - sponsorship:
+  sponsorship:
     Collections:
       # none on Fedora, OAKTrust only
     definition: "An agent that sponsored creation of the resource."
@@ -1274,7 +1274,7 @@ fields:
     max: unlimited
     type: str
     user info: "An agent that sponsored creation of the resource."
-   - projection:
+  projection:
     Collections:
       # none from Fedora, will be a field for future map collections
     definition: "The projection of the map"
@@ -1287,7 +1287,7 @@ fields:
     max: unlimited
     type: str
     user info: "The projection of the map. Only use for Map worktype."
-  - state_edition:
+  state_edition:
     Collections:
     # none from Fedora, use for future map collections
     definition: "The specific version of a map."
@@ -1300,7 +1300,7 @@ fields:
     max: unlimited
     type: str
     user info: "Specific version of a map. Use only for Map worktype."
-  - date_built:
+  date_built:
     Collections:
       # none from Fedora, will be used in Building History Collection
     definition: "The date the building in the photograph was constructed."
@@ -1313,7 +1313,7 @@ fields:
     max: 1
     type: date
     user info: "The date the building in the photograph was constructed."
-  - date_razed:
+  date_razed:
     Collections:
       # none from Fedora, will be used in Building History Collection
     definition: "The date the building in the photograph was destroyed."
