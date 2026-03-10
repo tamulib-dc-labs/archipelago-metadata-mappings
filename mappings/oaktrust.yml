@@ -1,0 +1,640 @@
+---
+#------------------------------
+# OAKTrust to Archipelago Mapping
+#------------------------------
+
+profile:
+  date_modified: '2026-03-10'
+  version: 0.1
+
+fields:
+  abstract:
+    Collections:
+      Committee on South Asian Women:
+        - dc.description
+      Cushing Historical: 
+        - dc.description
+      Frederick Cuny:
+        - dc.description.abstract[en]
+        - dc.description.abstract[es]
+      Historic Maps of Cuba:
+        - dc.description.abstract[en]
+      World War I Postcards:
+        - dc.description.abstract[en]
+  access_rights:
+    Collections:
+      Historic Maps of Cuba:
+        - dc.rights.requestable[en]
+  audience:
+    Collections:
+      Catalogs:
+        - dc.audience
+        - dc.audience[]
+  classification:
+    Collections:
+      Historic Maps of Cuba:
+        - dc.subject.lcc[en]
+  collecting_area: # if ADO does not have this field already, it needs to be created
+    Collections:
+        World War I Postcards:
+        - dc.relation.ispartof[en] # physical collection, Ragan Military Collection
+  coordinates:
+    Collections:
+      Geologic Atlas:
+        - dc.coverage.box[en]
+        - dc.coverage.point[en]
+      Historic Maps of Cuba:
+        - dc.coverage.box[en]
+        - dc.coverage.point[en]
+  content_type:
+    Collections:
+      Catalogs:
+        - dc.type[en]
+      Committee on South Asian Women:
+        - dcterms.type # includes DCMI and OAKTrust type (ie volume, issue)
+      Cushing Historical: 
+        - dc.type[en]
+      Frederick Cuny:
+        - dc.type.material[en]
+      Raiford Stripling:
+        - dc.type[en]
+      Toward Better Living:
+        - dc.type[en]
+      World War I Postcards:
+        - dc.type.material[en]
+        - dc.type[en] # one genre/form might have been placed here accidentally
+      Wheelan:
+        - dc.type[en]
+  contributor:
+    Collections:
+      Catalogs:
+        - dc.contributor
+      Committee on South Asian Women:
+        - dc.contributor
+      Frederick Cuny:
+        - dc.contributor
+      Primeros Libros: 
+        - dc.contributor
+      World War I Postcards:
+        - dc.contributor
+  creator:
+    Collections:
+      Austin 1830 Map: 
+        - dc.creator
+      Catalogs:
+        - dc.creator
+        - dc.creator[]
+      Cushing Historical: 
+        - dc.creator
+      Frederick Cuny:
+        - dc.creator
+      Geologic Atlas:
+        - dc.creator
+      Historic Maps of Cuba:
+        - dc.creator
+      Primeros Libros: 
+        - dc.creator
+      Raiford Stripling:
+        - dc.creator
+      Toward Better Living:
+        - dc.creator
+      World War I Postcards:
+        - dc.creator
+      Wheelan:
+        - dc.creator
+  date_available:
+    Collections:
+      Austin 1830 Map: 
+        - dc.date.available
+      Catalogs:
+        - dc.date.available
+        - dc.date.available[]
+      Cushing Historical: 
+        - dc.date.available
+      Frederick Cuny:
+        - dc.date.available
+      Geologic Atlas:
+        - dc.date.available
+      Historic Maps of Cuba:
+        - dc.date.available
+      Primeros Libros: 
+        - dc.date.available
+      Raiford Stripling:
+        - dc.date.available
+      Toward Better Living:
+        - dc.date.available
+      World War I Postcards:
+        - dc.date.available
+      Wheelan:
+        - dc.date.available
+  date_created:
+    Collections:
+      Commitee on South Asian Women:
+        - dc.date
+      Cushing Historical: 
+        - dc.date.created
+      Frederick Cuny:
+        - dc.date.created
+      Primeros Libros: 
+        - dc.date.created
+      Raiford Stripling:
+        - dc.date.created
+      Toward Better Living:
+        - dc.date.created
+      World War I Postcards:
+        - dc.date.created
+      Wheelan:
+        - dc.date.created
+  date_digital_creation:
+    Collections:
+      Austin 1830 Map: 
+        - dc.date.accessioned
+      Catalogs:
+        - dc.date.accessioned
+        - dc.date.accessioned[]
+      Committee on South Asian Women:
+        - dc.date.accessioned
+      Cushing Historical: 
+        - dc.date.accessioned
+      Frederick Cuny: 
+        - dc.date.accessioned
+      Geologic Atlas:
+        - dc.date.accessioned
+      Historic Maps of Cuba:
+        - dc.date.accessioned
+      Primeros Libros: 
+        - dc.date.accessioned
+      Raiford Stripling:
+        - dc.date.accessioned
+      Toward Better Living:
+        - dc.date.accessioned
+      World War I Postcards:
+        - dc.date.accessioned
+      Wheelan:
+        - dc.date.accessioned
+  date_issued:
+    Collections:
+      Catalogs:
+        - dc.date.issued
+        - dc.date.issued[]
+      Cushing Historical: 
+        - dc.date.issued
+      Frederick Cuny:
+        - dc.date.issued
+      Geologic Atlas:
+        - dc.date.issued
+      Historic Maps of Cuba:
+        - dc.date.issued
+      Primeros Libros: 
+        - dc.date.issued
+      Raiford Stripling:
+        - dc.date.issued
+      Toward Better Living:
+        - dc.date.issued
+      World War I Postcards:
+        - dc.date.issued
+      Wheelan:
+        - dc.date.issued
+  description:
+    Collections:
+      Austin 1830 Map: 
+        - dc.description[en] # Scale approximately 1:1,530,000 (W 103¬∞--W 93¬∞/N 35¬∞--N 25¬∞). 1 map : hand colored ; 72 x 58 cm, folded into leather cover 15 x 9 cm||Date for map is estimated
+      Catalogs:
+        - dc.description[en] # First term - June 8--July 17||Second term -  July 19--August 28||Open to men and women
+      Cushing Historical: 
+        - dc.description[en] # Acedemic building||photograph date: Unknown
+      Frederick Cuny:
+        - dc.description[en] # Management Training/Course Outlines/Curricula.  (198.1)  Disaster Studies (General Aspects)/Political Aspects of Refugee Situations.  (80.2)||The digital Cuny Archive was made available in part through funding assistance from USAID.
+      Geologic Atlas:
+        - dc.description[en] # Columbia folio, Tennessee
+      Historic Maps of Cuba:
+        - dc.description[en] # Includes comparative area map and insets of "Central Havana" and "U.S. Naval Base Guantanamo Bay."||1 map (2 views showing front and back)
+      Raiford Stripling:
+        - dc.description # Drawing from a set of 6 sheets of architectural drawings of the Singson residence project, showing front elevation and floor plan.||Pencil on vellum
+      Toward Better Living:
+        - dc.description[en] # Three African American men and a horse gathering hay in a field.||One of the men is ident is identified as Abe Young Teppedgar.||Although some of the descriptions of photographs in this collection have been altered for clarity, a majority of the descriptions are transcribed verbatim from the back of the photographs and reflect the language of those times.
+      World War I Postcards:
+        - dc.description[en] # TRANSCRIPTION; MESSAGE: Tuesday; Dear Pal,; Shall expect you soon after dinner tomorrow what do you say to an early tea and then to the show and Art and Lou join us. How did you like the storm old sports. Love from the Dumplings May; SENT TO: Miss Wortham [address illegible]
+      Wheelan:
+        - dc.description[en] # Railroad crossing a trestle bridge in the New Mexico countryside.||Caption:  Highest bridge on Road to Cloudcroft.  C22-.  Alexander Foto.||Photograph taken probably 1910-1920
+  digital_exhibit:
+    Collections:
+      # Although not indicated in OAKTrust, COSAW has a corresponding Spotlight exhibit that should be recorded.
+  digital_publisher:
+    Collections:
+      Catalogs:
+        - dc.publisher # physical publisher
+      Cushing Historical: 
+        - dc.publisher # digital and physical publishers
+      Frederick Cuny:
+        - dc.publisher # physical publisher
+      Geologic Atlas:
+        - dc.publisher # physical publisher
+      Historic Maps of Cuba:
+        - dc.publisher # physical publisher
+      Primeros Libros: 
+        - dc.publisher # physical publisher
+      Raiford Stripling:
+        - dc.publisher # physical and digital publishers
+      Toward Better Living:
+        - dc.publisher # physical and digital publishers
+      World War I Postcards:
+        - dc.publisher # physical publisher
+      Wheelan:
+        - dc.publisher # physical and digital publishers
+  extent:
+    Collections:
+      Committee on South Asian Women:
+        - dcterms.extent
+      Cushing Historical: 
+        - dc.format.extent[en]
+        - dc.format.medium[en]
+      Geologic Atlas:
+        - dc.format.extent[en]
+      Raiford Stripling:
+        - dc.format.extent[en]
+      Toward Better Living:
+        - dc.format.extent[en]
+      World War I Postcards:
+        - dc.format.extent[en]
+        - dc.format[en]
+      Wheelan:
+        - dc.format[en]
+  format:
+    Collections:
+      Catalogs:
+        - dc.format.digitalOrigin[en]
+      Committee on South Asian Women:
+        - dc.format
+      Frederick Cuny:
+        - dc.format.digitalOrigin[en]
+      Toward Better Living:
+        - dc.format.medium[en]
+  genre_form_local:
+    Collections:
+      Austin 1830 Map: 
+        - dc.type[en]
+      Committee on South Asian Women:
+        - dcterms.type # includes DCMI and OAKTrust type (ie volume, issue)
+        - dspace.entity.type # ie Publication, JournalVolume
+      Cushing Historical: 
+        - dc.type
+      Frederick Cuny:
+        - dc.type.genre[en]
+        - dc.type[en] # either this or the other is included per item, not both
+      Geologic Atlas:
+        - dc.type[en]
+      Historic Maps of Cuba:
+        - dc.type[en]
+      Primeros Libros: 
+        - dc.type 
+      Raiford Stripling:
+        - dc.type.genre[en]
+      World War I Postcards:
+        - dc.type.genre[en]
+      Wheelan:
+        - dc.format.medium[en]
+  geographic_subject_local:
+    Collections:
+      Catalogs:
+        - dc.coverage.spatial[en]
+      Committee on South Asian Women:
+        - dcterms.spatial
+      Geologic Atlas:
+        - dc.coverage.spatial[en]
+      Historic Maps of Cuba:
+        - dc.coverage.spatial[en]
+      Raiford Stripling:
+        - dc.coverage.spatial[en]
+      Toward Better Living:
+        - dc.coverage.spatial[en]
+      World War I Postcards:
+        - dc.coverage.spatial[en]
+      Wheelan:
+        - dc.coverage.spatial[en]
+  identifier:
+    Collections:
+      Austin 1830 Map: 
+        - id # local to OAKTrust
+        - dc.identifier.uri # OAKTrust handle
+      Catalogs:
+        - id # local to OAKTrust
+        - dc.identifier.uri # OAKtrust handle
+        - dc.identifier.uri[] # oaktrust handle
+      Committee on South Asian Women:
+        - id # local to OAKTrust
+        - dc.identifier.uri # OAKTrust handle
+      Cushing Historical:
+        - id # local to OAKTrust
+        - dc.identifier # 4 digit number
+        - dc.identifier.other # Image file name, Flickr link, PhotosetID, Physical Photograph Location
+        - dc.identifier.uri # OAKTrust handle
+      Frederick Cuny:
+        - id # local to OAKTrust
+        - dc.identifier.uri # OAKTrust handle
+      Geologic Atlas:
+        - id # local to OAKTrust
+        - dc.identifier.govdoc
+        - dc.identifier.uri # OAKTrust handle
+      Historic Maps of Cuba:
+        - id # local to OAKTrust
+        - dc.identifier.govdoc
+        - dc.identifier.other # 6 or 7 digit number
+        - dc.identifier.uri # OAKTrust handle
+      Primeros Libros:
+        - id # local to OAKTrust
+        - dc.identifier.uri # OAKTrust handle
+        - dc.identifier.urn
+      Raiford Stripling:
+        - id # local to OAKTrust
+        - dc.identifier.other # physical location and filename
+        - dc.identifier.uri # oaktrust handle
+      Toward Better Living:
+        - id # local to OAKTrust
+        - dc.identifier.other # physical location and filename
+        - dc.identifier.uri # oaktrust handle
+      World War I Postcards:
+        - id # local to OAKTrust
+        - dc.identifier.uri # OAKTrust handle
+      Wheelan:
+        - id # local to OAKTrust
+        - dc.identifier.uri # OAKTrust handle
+  language:
+    Collections:
+      Austin 1830 Map: 
+        - dc.language.iso
+      Catalogs:
+        - dc.language.iso
+        - dc.language.iso[]
+      Committee on South Asian Women:
+        - dc.language
+      Frederick Cuny:
+        - dc.language.iso
+      Geologic Atlas:
+        - dc.language.iso
+      Historic Maps of Cuba:
+        - dc.language.iso
+      Primeros Libros: 
+        - dc.language
+      World War I Postcards:
+        - dc.language.iso
+      Wheelan:
+        - dc.language.iso
+  local_department:
+    Collections:
+      Austin 1830 Map: 
+        - local.department[en]
+  medium:
+    Collections:
+      Catalogs:
+        - dc.format.medium[en]
+      Frederick Cuny:
+        - dc.format.medium[en]
+      London Maps:
+        - dcterms_medium
+  mimetype:
+    Collections:
+      Catalogs:
+        - dc.format.mimetype
+        - dc.format.mimetype[]
+      Geologic Atlas:
+        - dc.format.mimetype
+      Wheelan:
+        - dc.format.mimetype
+  note:
+    Collections:
+      World War I Postcards:
+        - local.details # donor information
+  original_publication: # if object was originally published as part of a work
+    Collections:
+      Catalogs:
+        - dc.relation.ispartofseries
+      Committee on South Asian Women:
+        - dc.source
+      Geologic Atlas:
+        - dc.relation.ispartofseries # series in was published in
+      Historic Maps of Cuba:
+        - dc.relation.ispartof[en] # work it was excerpted from
+        - dc.relation.ispartofseries[en] # series it was published in
+      World War I Postcards:
+        - dc.relation.ispartofseries # publication series
+  original_publisher:
+    Collections:
+      Catalogs:
+        - dc.publisher
+      Cushing Historical: 
+        - dc.publisher # digital and physical publishers
+      Frederick Cuny:
+        - dc.publisher
+      Geologic Atlas:
+        - dc.publisher
+      Historic Maps of Cuba:
+        - dc.publisher
+      Primeros Libros: 
+        - dc.publisher
+      Raiford Stripling:
+        - dc.publisher # physical and digital publishers
+      Toward Better Living:
+        - dc.publisher # physical and digital publishers
+      World War I Postcards:
+        - dc.publisher
+      Wheelan:
+        - dc.publisher # physical and digital publishers
+  physical_collection:
+    Collections:
+      Cushing Historical: 
+        - dc.relation.ispartof[en]
+      Toward Better Living:
+        - dc.relation.ispartof[en]
+      World War I Postcards:
+        - dc.relation.ispartof[en] # physical collection, Ragan Military Collection
+      Wheelan:
+        - dc.relation.ispartof[en]
+  physical_location:
+    Collections:
+      Raiford Stripling:
+        - dc.identifier.other # physical location and filename
+      Toward Better Living:
+        - dc.identifier.other # physical location and filename
+      World War I Postcards:
+        - dc.identifier.other
+      Wheelan:
+        - dc.identifier.other 
+  provenance:
+    Collections:
+      Austin 1830 Map: 
+        - dc.description.provenance[en]
+      Catalogs:
+        - dc.description.provenance[en]
+      Committee on South Asian Women:
+        - dc.description.provenance[en]
+      Cushing Historical: 
+        - dc.description.provenance[en]
+      Frederick Cuny:
+        - dc.description.provenance[en]
+      Geologic Atlas:
+        - dc.description.provenance[en]
+      Historic Maps of Cuba:
+        - dc.description.provenance[en]
+      Primeros Libros: 
+        - dc.description.provenance[en]
+        - dc.description.provenance[es]
+        - dc.date.updated
+      Raiford Stripling:
+        - dc.description.provenance[en]
+      Toward Better Living:
+        - dc.description.provenance[en]
+      World War I Postcards:
+        - dc.description.provenance[en]
+      Wheelan:
+        - dc.description.provenance[en]
+  related_url:
+    Collections:
+      Austin 1830 Map: 
+        - collection # handle of parent collection
+      Catalogs:
+        - collection # handle of parent collection
+      Committee on South Asian Women:
+        - collection # handle of parent collection
+      Cushing Historical: 
+        - collection # handle of parent collection
+      Frederick Cuny: 
+        - collection # handle of parent collection
+      Geologic Atlas:
+        - collection # handle of parent collection
+      Historic Maps of Cuba:
+        - collection # handle of parent collection
+      Primeros Libros: 
+        - collection # handle of parent collection
+      Raiford Stripling:
+        - collection # handle of parent collection
+      Toward Better Living:
+        - collection # handle of parent collection
+      World War I Postcards:
+        - collection # handle of parent collection
+      Wheelan:
+        - collection # handle of parent collection
+  related_url_historic:
+    Collections:
+      Primeros Libros: 
+        - dc.identifier.url # broken link to - Primeros Libros website
+  rights:
+    Collections:
+      Austin 1830 Map:
+        - dc.rights.uri
+      Catalogs:
+        - dc.rights.uri
+        - dc.rights.uri[]
+      Committee on South Asian Women:
+        - dc.rights
+      Cushing Historical: 
+        - dc.rights # rights
+      Geologic Atlas:
+        - dc.rights.uri
+      Historic Maps of Cuba:
+        - dc.rights.uri
+      World War I Postcards:
+        - dc.rights[en] # needs separation
+  rights_statement:
+    Collections:
+      Austin 1830 Map:
+        - dc.rights[en]
+      Catalogs:
+        - dc.rights[en] 
+      Cushing Historical: 
+        - dc.rights[en] 
+      Geologic Atlas:
+        - dc.rights[en]
+      Historic Maps of Cuba:
+        - dc.rights[en]
+      Primeros Libros:
+        - dc.rights[en]
+        - dc.rights[es] 
+      Raiford Stripling:
+        - dc.rights[en] # copyright review
+      Toward Better Living:
+        - dc.rights[en] # copyright review
+      World War I Postcards:
+        - dc.rights[en] # needs separation
+      Wheelan:
+        - dc.rights[en] # copyright review
+  sponsorship:
+    Collections:
+      Frederick Cuny:
+        - dc.description.sponsorship[en]
+  subject_local:
+    Collections:
+      Austin 1830 Map: 
+        - dc.subject[en]
+      Catalogs:
+        - dc.subject.lcsh[en]
+        - dc.subject[en]
+      Committee on South Asian Women:
+        - dc.subject
+      Cushing Historical: 
+        - dc.subject[en]
+      Geologic Atlas:
+        - dc.subject.lcsh[en]
+        - dc.subject[en]
+      Historic Maps of Cuba:
+        - dc.subject.lcsh[en]
+        - dc.subject[en]
+      Primeros Libros: 
+        - dc.subject.other[en]
+        - dc.subject.other[es]
+        - dc.subject[en]
+      Raiford Stripling:
+        - dc.subject[en]
+      Toward Better Living:
+        - dc.subject.tgn[en]
+      World War I Postcards:
+        - dc.subject[en]
+      Wheelan:
+        - dc.subject.tgm[en]
+  table_of_contents:
+    Collections:
+      World War I Postcards:
+        - dc.description.tableOfContents[en]
+  temporal_subject_local:
+    Collections:
+      Catalogs:
+        - dc.coverage.temporal[en]
+      World War I Postcards:
+        - dc.coverage.temporal[en]
+  title:
+    Collections:
+      Austin 1830 Map: 
+        - dc.title[en]
+      Catalogs:
+        - dc.title[en]
+      Committee on South Asian Women:
+        - dc.title
+      Cushing Historical: 
+        - dc.title
+      Frederick Cuny:
+        - dc.title[en]
+      Geologic Atlas:
+        - dc.title[en]
+      Historic Maps of Cuba:
+        - dc.title[en]
+      Primeros Libros: 
+        - dc.title
+        - dc.title[en]
+      Raiford Stripling:
+        - dc.title[en]
+      Toward Better Living:
+        - dc.title[en]
+      World War I Postcards:
+        - dc.title[en]
+      Wheelan: 
+        - dc.title[en]
+  title_alternative:
+    Collections:
+      Catalogs:
+        - dc.title.alternative[en]
+      Cushing Historical: 
+        - dcterms.alternative
+      Primeros Libros: 
+        - dc.title.alternative[en]
+      World War I Postcards:
+        - dc.title.alternative[en]

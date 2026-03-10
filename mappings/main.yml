@@ -42,6 +42,16 @@ fields:
     type: object
     user info: "An entity responsible for making the resource. Map all creator/contributors that have a role other than creator or contributor here."
     example: {"value": "Lastname, Firstname", "role": "interviewee"}
+  audience:
+    definition: "A class of agents for whom the resource is intended or useful."
+    mapping:
+      OAI:
+        - qdc: dcterms:audience
+        - mods: <targetAudience>
+    min: 0
+    type: str
+    user info: "A class of agents for whom the resource is intended or useful."
+    example: "Graduate||Undergraduate"
   classification:
     definition: "A designation applied to a resource that indicates the subject by applying a formal system of coding and organizing resources according to subject areas.."
     mapping:
@@ -77,6 +87,17 @@ fields:
     type: str
     user info: "Human readable spatial characteristics of the resource as represented by coordinates. Not machine actionable."
     example: "Scale not given (E 63¬∞55 π00 ∫--E 97¬∞34 π00 ∫/N 36¬∞46 π00 ∫--N 7¬∞40 π00 ∫)."
+  content_type:
+    definition: "The nature or genre of the resource."
+    mapping:
+      OAI:
+        - dc: dc:type
+        - qdc: dcterms:type
+        - mods: <typeOfResource>
+    min: 1
+    type: str
+    user info: "The nature or genre of the resource."
+    example: "StillImage"
   contributor:
     description: "An entity responsible for making contributions to the resource."
     mapping:
@@ -280,6 +301,28 @@ fields:
     type: object
     user info: "An unambiguous reference to the resource within a given context."
     example: {"value": "5406|12306", "authority": "local"} 
+  ismemberof:
+    definition: "The Archipelago node_uuid of the CreativeWorkSeries the item is a part of."
+    mapping:
+      OAI:
+        dc: dc:related
+        qdc: dcterms:isPartOf
+        mods: <related item type="host">
+    min: 0
+    max: 1
+    type: str (node_uuid)
+    user info: "The Archipelago node_uuid of the CreativeWorkSeries the item is a part of."
+  ispartof:
+    definition: "The Archipelago node_uuid of the Collection the item is a part of."
+    mapping:
+      OAI:
+        dc: dc:related
+        qdc: dcterms:isPartOf
+        mods: <related item type="host">
+    min: 0
+    max: 1
+    type: str (node_uuid)
+    user info: "The Archipelago node_uuid of the Collection the item is a part of."
   language:
     definition: "A language of the resource."
     mapping:
@@ -464,6 +507,13 @@ fields:
     type: str
     user info: "Free text with information about rights held in and over the resource."
     example: "A copyright review process in August 2018 has determined that this particular item is in copyright, but the rights holder is unclear or unresponsive.  The Libraries provide access to the materials here as a digital aggregate under an assertion of fair use for non-commercial educational use (17 U.S. Code ¬ß 107) as well as of fair dealing for the illustrations published in the UK (Copyright, Designs and Patent Act 1988 [UK]). The written permission of any copyright and other rights holders is required for distribution, reproduction, or other use that extends beyond what is authorized by fair use and other statutory exemptions. Responsibility for making an independent legal assessment of an item and securing any necessary permissions ultimately rests with persons desiring to use the item. TAMU Libraries would be interested in updating the copyright holder information on items displayed in these collections.  Please use the contact method provided below to help update these records for future researchers."
+  sequence_id:
+    definition: "The order an ADO appears in within a CreativeWorkSeries."
+    min: 0
+    max: 1
+    type: int
+    user info: "The order an ADO appears in within a CreativeWorkSeries."
+    example: "4"
   sponsorship:
     definition: "An agent that sponsored creation of the resource."
     mapping:
@@ -564,16 +614,12 @@ fields:
     user info: "An alternative name for the resource."
     example: "Laon. Cave dwellers - the Creuttes"
   type:
-    definition: "The nature or genre of the resource."
-    mapping:
-      OAI:
-        - dc: dc:type
-        - qdc: dcterms:type
-        - mods: <typeOfResource>
+    definition: "The worktype Archipelago needs to use to display the ADO."
     min: 1
+    max: 1
     type: str
-    user info: "The nature or genre of the resource."
-    example: "StillImage"
+    user info: "The worktype Archipelago needs to use to display the ADO."
+    example: "Image"
   Image:
     definition: "Filename(s) of media"
     min: 0

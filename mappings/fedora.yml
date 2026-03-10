@@ -277,10 +277,11 @@ fields:
         - dc_description # Inscription on item: Architectural Detail Photo #; This item was part of an exhibit,  "Texas A&M during the Great Depression," shown in Cushing Memorial Library from August 31, 2018 through February 22, 2019.; Cushing Memorial Library and Archives; Remstar #3
       Woellhof:
         - dc_description # In lower right corner (in plate): 6.|With numbered distances along road.|Each segment has compass rose|Title in decorative cartouche, with fruits.|Vertical fold line at center.|Relief shown pictorially.|Shows the road, cities, towns, forested areas, rivers, hills, and buildings.|Appears in: Britannia, or, the kingdom of England and dominion of Wales, actually survey'd.|The Cushing Library copy is part of the Ronald L. and V. Jane Woellhof Rare Map Collection.
-  digital_exhibit: # if ADO does not have this field already, it needs to be created
+  digital_exhibit:
     Collections:
       Alice in Wonderland:
         - dcterms_isPartOfSeries # Exhibit name
+      # Although not indicated in Fedora, Alice in Wonderland, Bryan 150th, Charting Texas, Cherokee Freedmen, Gray Diary, La Linda Poblana, London Maps, SciFi Exhibit 2021, and Woellhof Maps all have corresponding Spotlight exhibits that should be recorded.
   digital_publisher:
     Collections:
       Berger-Cloonan:
@@ -347,7 +348,7 @@ fields:
         - dc_format
       WW2 Maps:
         - dc_format
-  genre_form:
+  genre_form_local:
     Collections:
       Apfelbaum:
         - dc_type
@@ -377,6 +378,36 @@ fields:
         - dcterms_type
       WW2 Maps:
         - dc_type
+  geographic_subject_local:
+    Collections:
+      Alice in Wonderland:
+        - tamudigital_localcountry
+      Apfelbaum:
+        - dcterms_spatial
+      Basbanes Texts:
+        - dcterms_coverage
+      Berger-Cloonan:
+        - dcterms_spatial
+      Brazos Maps:
+        - dcterms_spatial
+      Bryan 150th:
+        - dcterms_spatial
+      Building History:
+        - dcterms_spatial
+      Charting Texas:
+        - dcterms_spatial
+      Cherokee Freedmen:
+        - dcterms_spatial
+      College of Medicine:
+        - dcterms_spatial
+      College of Veterinary Medicine:
+        - dcterms_spatial
+      London Maps:
+        - dc_coverage
+      Time of Resolve:
+        - dcterms_spatial
+      Woellhof:
+        - dcterms_spatial
   identifier:
     Collections:
       Alice in Wonderland:
@@ -439,6 +470,8 @@ fields:
     Collections:
       Alice in Wonderland:
         - dc_citation # book citation
+      London Maps:
+        - dcterms_ispartof # Collection name and name of journal
   original_publisher: # Use original publisher instead of physical publisher because some items are born digital.
     Collections:
       Apfelbaum:
@@ -486,7 +519,7 @@ fields:
   rights_holder:
     Collections:
       Alice in Wonderland:
-        - rightsHolder # role of person with rights to the image
+        - dcterms_rightsHolder # role of person with rights to the image
   rights:
     Collections:
       Alice in Wonderland:
@@ -559,37 +592,7 @@ fields:
         - dc_rights # needs separation, CC license and uri
       Time of Resolve:
         - dc_rights # needs separation, CC license and uri
-  spatial:
-    Collections:
-      Alice in Wonderland:
-        - tamudigital_localcountry
-      Apfelbaum:
-        - dcterms_spatial
-      Basbanes Texts:
-        - dcterms_coverage
-      Berger-Cloonan:
-        - dcterms_spatial
-      Brazos Maps:
-        - dcterms_spatial
-      Bryan 150th:
-        - dcterms_spatial
-      Building History:
-        - dcterms_spatial
-      Charting Texas:
-        - dcterms_spatial
-      Cherokee Freedmen:
-        - dcterms_spatial
-      College of Medicine:
-        - dcterms_spatial
-      College of Veterinary Medicine:
-        - dcterms_spatial
-      London Maps:
-        - dc_coverage
-      Time of Resolve:
-        - dcterms_spatial
-      Woellhof:
-        - dcterms_spatial
-  subject:
+  subject_local:
     Collections:
       Alice in Wonderland:
         - dc_subject
