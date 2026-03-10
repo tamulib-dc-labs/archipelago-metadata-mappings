@@ -10,28 +10,28 @@ profile:
 fields:
   abstract:
     Collections:
-      - Alice in Wonderland:
+      Alice in Wonderland:
         - dc_abstract
         - dcterms_abstract # inconsistent within collection, digital objects have either one or the other
-      - Apfelbaum:
+      Apfelbaum:
         - dcterms_abstract
-      - Basbanes Texts:
+      Basbanes Texts:
         - dcterms_abstract
-      - Bryan 150th:
+      Bryan 150th:
         - dc_abstract
-      - Building History:
+      Building History:
         - dcterms_abstract # individual photograph description
-      - Cherokee Freedmen:
+      Cherokee Freedmen:
         - dcterms_abstract
-      - College of Veterinary Medicine:
+      College of Veterinary Medicine:
         - dcterms_abstract
-      - La Linda Poblana:
+      La Linda Poblana:
         - dc_abstract
-      - SciFi Exhibit 2021:
+      SciFi Exhibit 2021:
         - dc_summary # summary of the book, not a description of the physical item
-      - Time of Resolve:
+      Time of Resolve:
         - dcterms_abstract
-      - Woellhof:
+      Woellhof:
         - dcterms_abstract
     definition: "A summary of the resource."
     mapping:
@@ -44,7 +44,7 @@ fields:
     type: str
     user info: "Summary or abstract of the resource."
     example: "Photo postcard of the interior of Notre-Dame de Reims."
-  accessRights:
+  access_rights:
     Collections:
       - Berger-Cloonan:
         - dcterms_accessRights
@@ -75,9 +75,9 @@ fields:
           mods: <classification authority="">
     min: 0
     max: 1
-    type: str
+    type: object
     user info: "Classification information, such as LCC call number"
-    example: "G4031 .E424 1763 .P5"
+    example: {"value": "G4031 .E424 1763 .P5", "authority": "lcc"}
   collecting_area: # if ADO does not have this field already, it needs to be created
     Collections:
       - Alice in Wonderland:
@@ -90,7 +90,7 @@ fields:
           dc: dc:relation
           qdc: dcterms:isPartOf
           mods: <relatedItem type="host">
-    min: 1
+    min: 0
     max: 1
     type: str # will become a clickable link using the ispartof and ismemberof Archipelago fields
     user info: "The collecting area to which the ADO and corresponding physical item belong."
@@ -105,16 +105,15 @@ fields:
         - dcterms_spatial
       - Woellhof:
         - dc_coverage
-    description: "Spatial characteristics of the resource as represented by coordinates"
+    description: "Human readable spatial characteristics of the resource as represented by coordinates. Not machine actionable."
     mapping:
       OAI:
         - dc: dc:coverage
         - qdc: dcterms:spatial
         - mods: <originInfo><place><cartographics><cartographicExtension>
     min: 0
-    max: unlimited
-    type: coordinates
-    user info: "Spatial characteristics of the resource as represented by coordinates"
+    type: str
+    user info: "Human readable spatial characteristics of the resource as represented by coordinates. Not machine actionable."
     example: "Scale not given (E 63¬∞55 π00 ∫--E 97¬∞34 π00 ∫/N 36¬∞46 π00 ∫--N 7¬∞40 π00 ∫)."
   contributor:
     Collections:
@@ -147,7 +146,6 @@ fields:
         - qdc: dcterms:contributor
         - mods: <name type="personal/corporate" valueURI=""><namePart>, <role><roleTerm type="text" authority=marcrelator><roleTerm type="code" authority=marcrelator><roleTerm valueURI="http://id.loc.gov/vocabulary/relators/ctb">
     min: 0
-    max: unlimited
     type: str
     user info: "An entity responsible for making contributions to the resource."
     example: "Albert, Martha|Von Weise, Chas.|Knalls, Lula|Breckinridge, Clifton Rodes, 1846-1932|Hastings, William Wirt, 1866-1938"
@@ -309,11 +307,12 @@ fields:
     type: str
     user info: "An account of the resource, not including abstract/summary or table of contents."
     example: "Inscription on item: Architectural Detail Photo #; This item was part of an exhibit,  'Texas A&M during the Great Depression,' shown in Cushing Memorial Library from August 31, 2018 through February 22, 2019.; Cushing Memorial Library and Archives; Remstar #3"
-  digital_collection: # if ADO does not have this field already, it needs to be created
+  digital_exhibit: # if ADO does not have this field already, it needs to be created
     Collections:
       - Alice in Wonderland:
         - dcterms_isPartOfSeries # Exhibit name
     definition: "The parent digital collection or exhibit."
+    note: "We're currently thinking this will be a json object with value / url in main.yml."
     mapping:
         OAI:
           dc: dc:relation
