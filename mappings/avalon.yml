@@ -1,0 +1,418 @@
+---
+#------------------------------
+# Avalon to Archipelago Mapping
+#------------------------------
+
+profile:
+  date_modified: '2026-03-11'
+  version: 0.1
+
+fields:
+  abstract:
+    Collections: 
+      Basbanes:
+        - Abstract
+      Dallas Women's Gallery:
+        - Abstract
+      Los Palabristas:
+        - Abstract
+      NASA:
+        - Abstract
+      Science Fiction Radio Show:
+        - Abstract
+      Forest Service:
+        - Abstract
+      Veterans of the Valley:
+        - Abstract
+  access_rights:
+    Collections: 
+      Basbanes:
+        - Access Restrictions
+      Dallas Women's Gallery:
+        - Access Restrictions
+      Los Palabristas:
+        - Access Restrictions
+      NASA:
+        - Access Restrictions
+      Owens:
+        - Access Restrictions
+      Science Fiction Radio Show:
+        - Access Restrictions
+      Forest Service:
+        - Access Restrictions
+      Veterans of the Valley:
+        - Access Restrictions
+  agent:
+    Collections:
+      Owens:
+        - Note/performers
+      Forest Service:
+        - Note/performers
+  content_type:
+    Collections: 
+      Basbanes:
+        - Genre # includes content_type and genre_form_local
+      Dallas Women's Gallery:
+        - Genre # includes content_type and genre_form_local
+      Los Palabristas:
+        - Genre # includes content_type and genre_form_local
+      NASA:
+        - Genre # includes content_type and genre_form_local
+      Owens: 
+        - Genre # includes content_type and genre_form_local
+      Science Fiction Radio Show:
+        - Genre # includes content_type and genre_form_local
+      Forest Service:
+        - Genre # includes content_type and genre_form_local
+      Veterans of the Valley:
+        - Genre # includes content_type and genre_form_local
+  contributor:
+    Collections: 
+      Basbanes:
+        - Contributor
+      Dallas Women's Gallery:
+        - Contributor
+      Los Palabristas:
+        - Contributor
+      NASA:
+        - Contributor
+      Science Fiction Radio Show:
+        - Contributor
+      Forest Service:
+        - Contributor
+      Veterans of the Valley:
+        - Contributor
+  creator:
+    Collections: 
+      Basbanes:
+        - Creator
+      Dallas Women's Gallery:
+        - Creator
+      Los Palabristas:
+        - Creator
+      NASA:
+        - Creator
+      Owens:
+        - Creator
+      Science Fiction Radio Show:
+        - Creator
+      Forest Service:
+        - Creator
+      Veterans of the Valley:
+        - Creator
+  date_digital_creation:
+    Collections: 
+      Basbanes:
+        - Note # starts with "Date of digitization"
+      Dallas Women's Gallery:
+        - date_digitized # on json
+      Los Palabristas:
+        - date_digitized # on json
+      NASA:
+        - Note # Date digitized...
+      Owens:
+        - date_digitized
+      Science Fiction Radio Show:
+        - date_digitized
+      Forest Service:
+        - date_digitized
+      Veterans of the Valley:
+        - date_digitized
+  date_issued:
+    Collections: 
+      Basbanes:
+        - Date Issued
+      Dallas Women's Gallery:
+        - Date Issued
+      Los Palabristas:
+        - Date Issued
+      NASA:
+        - Date Issued
+      Owens:
+        - Date Issued
+      Science Fiction Radio Show:
+        - Date Issued
+      Forest Service:
+        - Date Issued
+      Veterans of the Valley:
+        - Date Issued
+  digital_publisher:
+    Collections:
+      Basbanes:
+        - Publisher
+      Owens:
+        - Publisher
+  extent:
+    Collections: 
+      Basbanes:
+        - Physical Description
+      Dallas Women's Gallery:
+        - Physical Description
+      Los Palabristas:
+        - Physical Description
+      NASA:
+        - Physical Description
+      Owens:
+        - Physical Description
+      Science Fiction Radio Show:
+        - Physical Description
+      Forest Service:
+        - Physical Description
+  format:
+    Collections: 
+      Basbanes:
+        - Note # reads "reformatted digital"
+      Dallas Women's Gallery:
+        - Note # reads "born digital"
+      Los Palabristas:
+        - Note # reads "reformatted digital"
+      NASA:
+        - Note # reads "reformatted digital"
+      Owens:
+        - Note # reads "reformatted digital"
+      Forest Service:
+        - Note # reads "reformatted digital"
+      Veterans of the Valley:
+        - Note # reads "reformatted digital"
+  genre_form_local:
+    Collections: 
+      Basbanes:
+        - Genre # includes content_type and genre_form_local
+      Dallas Women's Gallery:
+        - Genre # includes content_type and genre_form_local
+      Los Palabristas:
+        - Genre # includes content_type and genre_form_local
+      NASA:
+        - Genre # includes content_type and genre_form_local
+      Owens:
+        - Genre # includes content_type and genre_form_local
+      Science Fiction Radio Show:
+        - Genre # includes content_type and genre_form_local
+      Forest Service:
+        - Genre # includes content_type and genre_form_local
+      Veterans of the Valley:
+        - Genre # includes content_type and genre_form_local
+  georgraphic_subject_local:
+    Collections:
+      Basbanes:
+        - Geographic subject
+      Dallas Women's Gallery:
+        - Geographic subject
+      Los Palabristas:
+        - Geographic subject
+      NASA:
+        - Geographic subject
+      Science Fiction Radio Show:
+        - Geographic subject
+      Forest Service:
+        - Geographic subject
+  identifier:
+    Collections:  
+      Basbanes:
+        - Other identifier
+      Los Palabristas:
+        - Other identifier
+      NASA:
+        - Other identifier
+      Science Fiction Radio Show:
+        - Other identifier
+      Forest Service:
+        - Other identifier
+      Veterans of the Valley:
+        - Other identifier
+  language:
+    Collections: 
+      Basbanes:
+        - Language
+      Dallas Women's Gallery:
+        - Language
+      Los Palabristas:
+        - Language
+      NASA:
+        - Language
+      Owens:
+        - Language
+      Science Fiction Radio Show:
+        - Language
+      Forest Service:
+        - Language
+      Veterans of the Valley:
+        - Language
+  medium:
+    Collections: 
+      Basbanes:
+        - Note # Source is a Sony MC-60 microcassette audio tape...
+  mimetype:
+    Collections: 
+      Basbanes:
+        - Note # starts with "File formats"
+  note:
+    Collections:
+      Basbanes:
+        - Note # starts with "Durations"
+      Dallas Women's Gallery:
+        - Note/creation/production credits
+      Los Palabristas:
+        - Note/statement of Responsibility
+        - Note/creation/production credits
+      NASA:
+        - Note # The source is...
+        - Note # "No top label present..."
+      Science Fiction Radio Show:
+        - Note # interviewer and interviewee
+        - Note # produced by permian science fiction association    
+      Forest Service:
+        - Note # radio program produced for the Cooperative Forest Fire Prevention Campaign...
+      Veterans of the Valley:
+        - Note # From Veterans of the Valley, a television series...
+  original_publisher:
+    Collections: 
+      Basbanes:
+        - Note # reads "London Library"
+      NASA:
+        - Publisher
+      Science Fiction Radio Show:
+        - Publisher
+      Forest Service:
+        - Publisher
+  physical_collection:
+    Collections:
+      NASA:
+        - Note # "Items were digitized from the Gerald Griffin Collection..."
+      Forest Service:
+        - Note # From the Texas A&M Forest Service...
+  physical_location:
+    Collections:
+      Owens:
+        - Note # Box number
+  provenance:
+    Collections:
+      Veterans of the Valley:
+        - Note # items in this collection were donated...
+  related_item:
+    Collections:
+      Basbanes:
+        - collection id # https://avalon.library.tamu.edu/collections/xs55mc14f
+      Dallas Women's Gallery:
+        - collection id
+      Los Palabristas:
+        - collection id
+      NASA:
+        - collection id
+      Owens:
+        - collection id
+      Science Fiction Radio Show:
+        - collection id
+        - related_item_label
+        - related_item_url # finding aid for physical SFRS Collection
+      Forest Service:
+        - collection id
+      Veterans of the Valley:
+        - collection id
+  related_url:
+    Collections:
+      Basbanes:
+        - Work id # "https://avalon.library.tamu.edu/media_objects/00000005c"
+      Dallas Women's Gallery:
+        - Work id
+      Los Palabristas:
+        - Work id
+      NASA:
+        - Work id
+      Owens:
+        - Work id
+      Science Fiction Radio Show:
+        - Work id
+      Forest Service:
+        - Work id
+      Veterans of the Valley:
+        - Work id
+  rights:
+    Collections: 
+      Basbanes:
+        - Terms of Use # needs separation
+      Dallas Women's Gallery:
+        - Terms of Use # needs separation
+      Los Palabristas:
+        - Terms of Use # needs separation
+      NASA:
+        - Terms of Use # needs separation
+      Owens:
+        - Terms of Use # needs separation
+      Science Fiction Radio Show:
+        - Terms of Use # needs separation
+      Forest Service:
+        - Terms of Use # needs separation
+      Veterans of the Valley:
+        - Terms of Use # needs separation
+  rights_statement:
+    Collections: 
+      Basbanes:
+        - Terms of Use # needs separation
+      Dallas Women's Gallery: 
+        - Terms of Use # needs separation
+      Los Palabristas:
+        - Terms of Use # needs separation
+      NASA:
+        - Terms of Use # needs separation
+      Owens:
+        - Terms of Use # needs separation
+      Science Fiction Radio Show:
+        - Terms of Use # needs separation
+      Forest Service:
+        - Terms of Use # needs separation
+      Veterans of the Valley:
+        - Terms of Use # needs separation
+  subject_local:
+    Collections: 
+      Basbanes:
+        - Subject
+      Dallas Women's Gallery:
+        - Subject
+      Los Palabristas:
+        - Subject
+      NASA:
+        - Subject
+      Science Fiction Radio Show:
+        - Subject
+      Forest Service:
+        - Subject
+      Veterans of the Valley:
+        - Subject
+  table_of_contents:
+      Dallas Women's Gallery:
+        # find some way to extract the structure xml
+      Owens:
+        - Table of Contents
+  temporal_subject_local:
+    Collections: 
+      Basbanes:
+        - Temporal Subject
+      Dallas Women's Gallery:
+        - Temporal Subject
+      Los Palabristas:
+        - Temporal Subject
+      NASA:
+        - Temporal Subject
+      Science Fiction Radio Show:
+        - Temporal Subject
+      Forest Service:
+        - Temporal Subject
+  title:
+    Collections: 
+      Basbanes:
+        - Title
+      Dallas Women's Gallery:
+        - Title
+      Los Palabristas:
+        - Title
+      NASA:
+        - Title
+      Owens:
+        - Title
+      Science Fiction Radio Show:
+        - Title
+      Forest Service:
+        - Title
+      Veterans of the Valley:
+        - Title
