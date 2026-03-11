@@ -4,759 +4,1103 @@
 #------------------------------
 
 profile:
-  date_modified: '2026-03-10'
-  version: 0.2
+  date_modified: '2026-03-11'
+  version: 0.3
 
 fields:
   abstract:
     Collections:
-      Alice in Wonderland:
+      alice_in_wonderland:
         - dc_abstract
         - dcterms_abstract # inconsistent within collection, digital objects have either one or the other
-      Apfelbaum:
+      apfelbaum-ww1:
         - dcterms_abstract
-      Basbanes Texts:
+      basbanes-texts:
         - dcterms_abstract
-      Bryan 150th:
+      BasbanesEternalPassion:
+        - dcterms_abstract
+      bryan-150:
         - dc_abstract
-      Building History:
+      audrey-import:
         - dcterms_abstract # individual photograph description
-      Cherokee Freedmen:
+      cherokee-freedmen-corrected:
         - dcterms_abstract
-      College of Veterinary Medicine:
+      cherokee-freedmen:
         - dcterms_abstract
-      La Linda Poblana:
+      cvm-batch-1:
+        - dcterms_abstract
+      cvm-batch-2:
+        - dcterms_abstract
+      la_linda_poblana:
         - dc_abstract
-      SciFi Exhibit 2021:
+      scifi-exhibit-2021:
         - dc_summary
-      Time of Resolve:
+      time_of_resolve:
         - dcterms_abstract
-      Woellhof:
+      woellhof:
+        - dcterms_abstract
+      woellhof-2:
         - dcterms_abstract
   access_rights:
     Collections:
-      Berger-Cloonan:
+      berger_cloonan:
+        - dcterms_accessRights
+      berger_cloonan_batch_3:
+        - dcterms_accessRights
+      berger_cloonan_batch_4:
+        - dcterms_accessRights
+      berger_cloonan_batch_a:
         - dcterms_accessRights
   classification:
     Collections:
-      Berger-Cloonan:
+      berger_cloonan:
         - dc_relation # looks like lcc call number
-      Charting Texas:
+      berger_cloonan_batch_3:
+        - dc_relation
+      berger_cloonan_batch_a:
+        - dc_relation
+      charting_texas:
         - dcterms_lcc
-      London Maps:
+      london-maps-batch-2:
         - dcterms_lcc
-  collecting_area: # if ADO does not have this field already, it needs to be created
+  collecting_area:
     Collections:
-      Alice in Wonderland:
+      alice_in_wonderland:
         - dcterms_isPartOf
-      SciFi Exhibit 2021:
+      scifi-exhibit-2021:
         - dcterms_isPartOf
   coordinates:
     Collections:
-      Brazos Maps:
+      brazos_maps:
         - tamudigital_local/coordinates
-      Charting Texas:
+      charting_texas:
         - dc_coverage
-      London Maps:
+      london-maps-batch-2:
         - dcterms_spatial
-      Woellhof:
+      woellhof:
+        - dc_coverage
+      woellhof-2:
+        - dc_coverage
+      woellhof-3:
         - dc_coverage
   content_type:
     Collections:
-      Apfelbaum:
+      apfelbaum-ww1:
         - dcterms_type
-      Basbanes Texts:
+      basbanes-texts:
         - dcterms_type
-      Berger-Cloonan:
+      BasbanesEternalPassion:
         - dcterms_type
-      Brazos Maps:
+      berger_cloonan:
         - dcterms_type
-      Bryan 150th:
+      berger_cloonan_batch_3:
         - dcterms_type
-      Charting Texas:
+      berger_cloonan_batch_4:
         - dcterms_type
-      Cherokee Freedmen:
+      berger_cloonan_batch_a:
         - dcterms_type
-      College of Veterinary Medicine:
+      brazos_maps:
         - dcterms_type
-      Gray Diary:
+      bryan-150:
         - dcterms_type
-      Houston Oil Minutes:
+      charting_texas:
+        - dcterms_type
+      cherokee-freedmen-corrected:
+        - dcterms_type
+      cherokee-freedmen:
+        - dcterms_type
+      cvm-batch-1:
+        - dcterms_type
+      cvm-batch-2:
+        - dcterms_type
+      graydiary-saf:
+        - dcterms_type
+      houston_oil_company_minutes:
         - dc_type
-      La Linda Poblana:
+      la_linda_poblana:
         - dcterms_type
-      SciFi Exhibit 2021:
+      london-maps-batch-2:
+        - dcterms_type
+      scifi-exhibit-2021:
         - dcterms_type
   contributor:
     Collections:
-      Basbanes Texts:
+      basbanes-texts:
         - dc_contributor
-      Berger-Cloonan:
+      BasbanesEternalPassion:
         - dc_contributor
-      Brazos Maps:
+      berger_cloonan:
         - dc_contributor
-      Charting Texas:
+      berger_cloonan_batch_4:
         - dc_contributor
-      Cherokee Freedmen:
+      brazos_maps:
         - dc_contributor
-      College of Medicine:
+      charting_texas:
         - dc_contributor
-      College of Veterinary Medicine:
+      cherokee-freedmen:
         - dc_contributor
-      Houston Oil Minutes:
+      cherokee-freedmen-corrected:
         - dc_contributor
-      London Maps:
+      com_class_rosters:
         - dc_contributor
-      SciFi Exhibit 2021:
+      cvm-batch-1:
         - dc_contributor
-      Time of Resolve:
+      cvm-batch-2:
+        - dc_contributor
+      houston_oil_company_minutes:
+        - dc_contributor
+      london-collection:
+        - dc_contributor
+      london-maps-batch-2:
+        - dc_contributor
+      Stephen_Powys_Marks_London_Collection:
+        - dc_contributor
+      scifi-exhibit-2021:
+        - dc_contributor
+      time_of_resolve:
         - dc_contributor
   creator:
     Collections:
-      Alice in Wonderland:
+      alice_in_wonderland:
         - dc_creator
-      Apfelbaum:
+      apfelbaum-ww1:
         - dc_creator
-      Basbanes Texts:
+      basbanes-texts:
         - dc_creator
-      Berger-Cloonan:
+      BasbanesEternalPassion:
         - dc_creator
-      Brazos Maps:
+      berger_cloonan:
         - dc_creator
-      Bryan 150th:
+      berger_cloonan_batch_4:
         - dc_creator
-      Charting Texas:
+      brazos_maps:
         - dc_creator
-      Cherokee Freedmen:
+      bryan-150:
         - dc_creator
-      College of Veterinary Medicine:
+      charting_texas:
         - dc_creator
-      Gray Diary:
+      cherokee-freedmen-corrected:
         - dc_creator
-      La Linda Poblana:
+      cherokee-freedmen:
         - dc_creator
-      London Maps:
+      cvm-batch-1:
         - dc_creator
-      SciFi Exhibit 2021:
+      cvm-batch-2:
         - dc_creator
-      Time of Resolve:
+      graydiary-saf:
         - dc_creator
-      Woellhof:
+      la_linda_poblana:
+        - dc_creator
+      london-collection:
+        - dc_creator
+      london-maps-batch-2:
+        - dc_creator
+      Stephen_Powys_Marks_London_Collection:
+        - dc_creator
+      scifi-exhibit-2021:
+        - dc_creator
+      time_of_resolve:
+        - dc_creator
+      woellhof:
+        - dc_creator
+      woellhof-2:
+        - dc_creator
+      woellhof-3:
         - dc_creator
   date_created:
     Collections:
-      Alice in Wonderland:
+      alice_in_wonderland:
         - dcterms_created
-      Apfelbaum:
+      apfelbaum-ww1:
         - dcterms_created
-      Basbanes Texts:
+      basbanes-texts:
         - dcterms_created
-      Berger-Cloonan:
+      BasbanesEternalPassion:
         - dcterms_created
-      Bryan 150th:
+      berger_cloonan:
         - dcterms_created
-      Building History:
+      berger_cloonan_batch_3:
+        - dcterms_created
+      berger_cloonan_batch_4:
+        - dcterms_created
+      berger_cloonan_batch_a:
+        - dcterms_created
+      bryan-150:
+        - dcterms_created
+      audrey-import:
         - dc_date
-      Cole Papers:
+      cole-papers:
         - dc_rights # date is mapped to this field for some reason
         - dc_date
-      Cherokee Freedmen:
+      cherokee-freedmen-corrected:
         - dcterms_created
-      College of Medicine:
+      cherokee-freedmen:
         - dcterms_created
-      College of Veterinary Medicine:
+      com_class_rosters:
         - dcterms_created
-      Gray Diary:
+      cvm-batch-1:
         - dcterms_created
-      La Linda Poblana:
+      cvm-batch-2:
+        - dcterms_created
+      graydiary-saf:
+        - dcterms_created
+      la_linda_poblana:
         - dc_date
-      London Maps:
+      london-collection:
         - dcterms_created
+      london-maps-batch-2:
         - dc_date
-      Lumpkin Papers:
+      Stephen_Powys_Marks_London_Collection:
+        - dcterms_created
+      lumpkin-papers:
         - dc_date
-      McInnis:
+      mcinnis:
         - dc_date
-      Time of Resolve:
+      time_of_resolve:
         - dcterms_created
   date_digital_creation:
     Collections:
       Aerial:
         - fedora_created
-      Alice in Wonderland:
+      alice_in_wonderland:
         - fedora_created
-      Apfelbaum:
+      apfelbaum-ww1:
         - fedora_created
-      Basbanes Texts:
+      basbanes-texts:
         - fedora_created
-      Berger-Cloonan:
+      BasbanesEternalPassion:
         - fedora_created
-      Brazos Maps:
+      berger_cloonan:
         - fedora_created
-      Bryan 150th:
+      berger_cloonan_batch_3:
         - fedora_created
-      Building History:
+      berger_cloonan_batch_4:
         - fedora_created
-      Charting Texas:
+      berger_cloonan_batch_a:
         - fedora_created
-      Cherokee Freedmen:
+      brazos_maps:
         - fedora_created
-      Cole Papers:
+      bryan-150:
         - fedora_created
-      College of Medicine:
+      audrey-import:
         - fedora_created
-      College of Veterinary Medicine:
+      charting_texas:
         - fedora_created
-      Gray Diary:
+      cherokee-freedmen-corrected:
         - fedora_created
-      Houston Oil Minutes:
+      chreokee-freedmen:
         - fedora_created
-      La Linda Poblana:
+      cole-papers:
         - fedora_created
-      London Maps:
+      com_class_rosters:
         - fedora_created
-      Lumpkin Papers:
+      cvm-batch-1:
         - fedora_created
-      McInnis:
+      cvm-batch-2:
         - fedora_created
-      NASA:
+      graydiary-saf:
         - fedora_created
-      SciFi Exhibit 2021:
+      houston_oil_company_minutes:
         - fedora_created
-      SciFi Radio Show:
+      la_linda_poblana:
         - fedora_created
-      Time of Resolve:
+      london-collection:
         - fedora_created
-      Woellhof:
+      london-maps-batch-2:
         - fedora_created
-      WW2 Maps:
+      Stephen_Powys_Marks_London_Collection:
+        - fedora_created
+      lumpkin-papers:
+        - fedora_created
+      mcinnis:
+        - fedora_created
+      saf-output:
+        - fedora_created
+      scifi-exhibit-2021:
+        - fedora_created
+      sci_fi_initial:
+        - fedora_created
+      sci_fi_temp_batch_2:
+        - fedora_created
+      time_of_resolve:
+        - fedora_created
+      woellhof:
+        - fedora_created
+      batch-service-maps-tests:
         - fedora_created
   date_issued:
     Collections:
-      Brazos Maps:
+      brazos_maps:
         - dcterms_issued
-      Charting Texas:
+      charting_texas:
         - dcterms_issused
-      London Maps:
+      london-collection:
         - dcterms_issued
-      SciFi Exhibit 2021:
+      scifi-exhibit-2021:
         - dcterms_issued
-      Woellhof:
+      Stephen_Powys_Marks_London_Collection:
+        - dcterms_issued
+      woellhof:
+        - dcterms_issued
+      woellhof-2:
+        - dcterms_issued
+      woellhof-3:
         - dcterms_issued
   description:
     Collections:
-      Apfelbaum:
+      apfelbaum-ww1:
         - dc_description # "Held in the Archive of World War I German and Austrian Documents at Cushing Memorial Library on the campus of Texas A&M University, College Station, Texas." [Could also be mapped under physical_collection field.]
-      Basbanes Texts:
+      basbanes-texts:
         - dc_description # "From the professional archives of Nicholas A. Basbanes, now held by Cushing Memorial Library & Archives, Texas A&M University." [Could also be mapped under physical_collection field.]
-      Berger-Cloonan:
+      BasbanesEternalPassion:
+        - dc_description # "From the professional archives of Nicholas A. Basbanes, now held by Cushing Memorial Library & Archives, Texas A&M University." [Could also be mapped under physical_collection field.]
+      berger_cloonan:
         - tamudigital_local/details # "Surface application; Printed; P4.D6.F2; Overall pattern of floral design with orange and green diamond paste background; backed; Contained in BASSENGE folder;  Was book cover; book plate on verso; No Haemmerle; Sidney E. Berger and Michele V. Cloonan purchased the sheet from Bassenge Kunst und Buchauktion (Auction 97, Lot #5406) in 08/2011.; Section(s) from the Decorated and Decorative Paper Terms Thesaurus: VIII.H.1.d.1; Not signed. Not stamped.; Creased at center fold line; worn at crease; edge tear"
-      Bryan 150th:
+      berger_cloonan_batch_3:
+        - tamudigital_local/details
+      berger_cloonan_batch_4:
+        - tamudigital_local/details
+      berger_cloonan_batch_a:
+        - tamudigital_local/details
+      bryan-150:
         - tamudigital_local/details # "Picture Files Bryan Early-1986 #49"
         - dc_description # "Held in the Bryan Scenes picture file at Cushing Memorial Library on the campus of Texas A&M University, College Station, Texas." [Could also be mapped under physical_collection field.]
-      Building History:
-        - dc_description # building history information
-      Charting Texas:
+      audrey-import:
+        - dc_description # audrey-import information
+      charting_texas:
         - dc_description # Date of object estimated by library to be 1845.|Held in the Floyd and Louise Chapman Texas and Borderlands Collection at Cushing Memorial Library and Archives on the campus of Texas A and M University, College Station, Texas.
-      Cherokee Freedmen:
+      cherokee-freedmen-corrected:
         - dc_description # The letter is addressed from "Muskogee, Indian Territory."|"COPY" is stamped at the top of the page.|"Incl. B-27."|Cherokee Freedman, R-421."
-      College of Veterinary Medicine:
+      cherokee-freedmen:
+        - dc_description # The letter is addressed from "Muskogee, Indian Territory."|"COPY" is stamped at the top of the page.|"Incl. B-27."|Cherokee Freedman, R-421."
+      cvm-batch-1:
         - tamudigital_local/details # Written on photograph: "Aerial photograph of Vet. School area before 1979."
         - dc_description # Printed at bottom of photograph: "Theobald Smith in 1889." [combine with local/details]
-      Gray Diary:
+      cvm-batch-2:
+        - tamudigital_local/details # Written on photograph: "Aerial photograph of Vet. School area before 1979."
+        - dc_description # Printed at bottom of photograph: "Theobald Smith in 1889." [combine with local/details]
+      graydiary-saf:
         - dc_description # The Cushing Library/Chapman Texas Collection copy is part of the Floyd & Louise Chapman Texas & Borderlands Collection. "Five hundred copies of this book have been printed in Fairfield types on Glatfelter paper. Designed by W. Thomas Taylor."--Colophon.
-      Houston Oil Minutes:
+      houston_oil_company_minutes:
         - dc_description # Cover title.|Minute book, 1901-1908|Gift of Amanda and Ken Kellar '65|The Cushing Library/Chapman Texas Collection copy is part of the Floyd & Louise Chapman Texas & Borderlands Collection.|Minutes are handwritten; index is typed.|First entry, July 9 1901 - last entry May 25, 1908.
-      La Linda Poblana:
+      la_linda_poblana:
         - dc_description # Held in the Colonial Mexican Imprint Collection at Cushing Memorial Library on the campus of Texas A&M University, College Station, Texas.|PQ7296.G3 L5 1802
-      London Maps:
+      london-collection:
         - dc_description # Prepared from air photographs taken by R.A.F; Original item had scale: circa 1:1,250. 50 inches = 1 mile;  Incomplete series of photomaps. No more published; Maps compiled from 1945-1951 aerial photographs
-      SciFi Exhibit 2021:
+      london-maps-batch-2:
+        - dc_description # Prepared from air photographs taken by R.A.F; Original item had scale: circa 1:1,250. 50 inches = 1 mile;  Incomplete series of photomaps. No more published; Maps compiled from 1945-1951 aerial photographs
+      Stephen_Powys_Marks_London_Collection:
+        - dc_description # Prepared from air photographs taken by R.A.F; Original item had scale: circa 1:1,250. 50 inches = 1 mile;  Incomplete series of photomaps. No more published; Maps compiled from 1945-1951 aerial photographs
+      scifi-exhibit-2021:
         - dc_description # Book jacket image of the copy held in the Science Fiction & Fantasy Research Collection at Cushing Memorial Library on the campus of Texas A&M University, College Station, Texas and included in an exhibition, "Live To Build A Better World: Despair, Survival, and Hope in Science Fiction‚Äôs Response to Environmental Change,"  at Cushing from January 19, 2021-June 30, 2021. [Could also be mapped under physical_collection field.]
-      Time of Resolve:
+      time_of_resolve:
         - dc_description # Inscription on item: Architectural Detail Photo #; This item was part of an exhibit,  "Texas A&M during the Great Depression," shown in Cushing Memorial Library from August 31, 2018 through February 22, 2019.; Cushing Memorial Library and Archives; Remstar #3
-      Woellhof:
-        - dc_description # In lower right corner (in plate): 6.|With numbered distances along road.|Each segment has compass rose|Title in decorative cartouche, with fruits.|Vertical fold line at center.|Relief shown pictorially.|Shows the road, cities, towns, forested areas, rivers, hills, and buildings.|Appears in: Britannia, or, the kingdom of England and dominion of Wales, actually survey'd.|The Cushing Library copy is part of the Ronald L. and V. Jane Woellhof Rare Map Collection.
+      woellhof:
+        - dc_description # In lower right corner (in plate): 6.|With numbered distances along road.|Each segment has compass rose|Title in decorative cartouche, with fruits.|Vertical fold line at center.|Relief shown pictorially.|Shows the road, cities, towns, forested areas, rivers, hills, and buildings.|Appears in: Britannia, or, the kingdom of England and dominion of Wales, actually survey'd.|The Cushing Library copy is part of the Ronald L. and V. Jane woellhof Rare Map Collection.
+      woellhof-2:
+        - dc_description
+      woellhof-3:
+        - dc_description
   digital_exhibit:
     Collections:
-      Alice in Wonderland:
+      alice_in_wonderland:
         - dcterms_isPartOfSeries # Exhibit name
-      # Although not indicated in Fedora, Alice in Wonderland, Bryan 150th, Charting Texas, Cherokee Freedmen, Gray Diary, La Linda Poblana, London Maps, SciFi Exhibit 2021, and Woellhof Maps all have corresponding Spotlight exhibits that should be recorded.
+      # Although not indicated in Fedora, alice_in_wonderland, bryan-150, charting_texas, cherokee-freedmen-corrected, graydiary-saf, la_linda_poblana, london-collection, scifi-exhibit-2021, and woellhof Maps all have corresponding Spotlight exhibits that should be recorded.
   digital_publisher:
     Collections:
-      Berger-Cloonan:
+      berger_cloonan:
         - dc_publisher # digital publisher
-      College of Medicine:
+      berger_cloonan_batch_3:
+        - dc_publisher
+      berger_cloonan_batch_4:
+        - dc_publisher
+      berger_cloonan_batch_a:
+        - dc_publisher
+      com_class_rosters:
         - dc_publisher # digital publisher
-      London Maps:
+      london-collection:
         - dc_publisher # digital and physical publishers
-      Time of Resolve:
+      london-maps-batch-2:
+        - dc_publisher
+      Stephen_Powys_Marks_London_Collection:
+        - dc_publisher
+      time_of_resolve:
         - dc_publisher # digital publisher
   extent:
     Collections:
-      Apfelbaum:
+      apfelbaum-ww1:
         - dcterms_extent
-      Berger-Cloonan:
+      berger_cloonan:
         - dcterms_extent
-      Bryan 150th:
+      berger_cloonan_batch_3:
         - dcterms_extent
-      Cherokee Freedmen:
+      berger_cloonan_batch_4:
         - dcterms_extent
-      College of Veterinary Medicine:
+      berger_cloonan_batch_a:
         - dcterms_extent
-      Gray Diary:
+      bryan-150:
         - dcterms_extent
-      Houston Oil Minutes:
+      cherokee-freedmen-corrected:
         - dcterms_extent
-      La Linda Poblana:
+      cherokee-freedmen:
+        - dcterms_extent
+      cvm-batch-1:
+        - dcterms_extent
+      graydiary-saf:
+        - dcterms_extent
+      houston_oil_company_minutes:
+        - dcterms_extent
+      la_linda_poblana:
         - dc_extent
-      London Maps:
+      london-collection:
         - dcterms_extent
-      SciFi Exhibit 2021:
+      london-maps-batch-2:
         - dcterms_extent
-      Woellhof:
+      scifi-exhibit-2021:
+        - dcterms_extent
+      woellhof:
+        - dcterms_extent
+      woellhof-2:
+        - dcterms_extent
+      woellhof-3:
         - dcterms_extent
   format:
     Collections:
-      Apfelbaum:
+      apfelbaum-ww1:
         - dc_format
-      Basbanes Texts:
+      basbanes-texts:
         - dc_format
-      Berger-Cloonan:
+      BasbanesEternalPassion:
         - dc_format
-      Brazos Maps:
+      berger_cloonan:
         - dc_format
-      Bryan 150th:
+      berger_cloonan_batch_3:
         - dc_format
-      Charting Texas:
+      berger_cloonan_batch_4:
         - dc_format
-      Cherokee Freedmen:
+      berger_cloonan_batch_a:
         - dc_format
-      College of Medicine:
+      brazos_maps:
         - dc_format
-      College of Veterinary Medicine:
+      bryan-150:
         - dc_format
-      Gray Diary:
+      charting_texas:
         - dc_format
-      La Linda Poblana:
+      cherokee-freedmen-corrected:
         - dc_format
-      London Maps:
+      cherokee-freedmen:
         - dc_format
-      SciFi Exhibit 2021:
+      com_class_rosters:
         - dc_format
-      Time of Resolve:
+      cvm-batch-1:
         - dc_format
-      WW2 Maps:
+      cvm-batch-2:
+        - dc_format
+      graydiary-saf:
+        - dc_format
+      la_linda_poblana:
+        - dc_format
+      london-collection:
+        - dc_format
+      london-maps-batch-2:
+        - dc_format
+      Stephen_Powys_Marks_London_Collection:
+        - dc_format
+      scifi-exhibit-2021:
+        - dc_format
+      time_of_resolve:
+        - dc_format
+      batch-service-maps-tests:
         - dc_format
   genre_form_local:
     Collections:
-      Apfelbaum:
+      apfelbaum-ww1:
         - dc_type
-      Basbanes Texts:
+      basbanes-texts:
         - dc_type
-      Berger-Cloonan:
+      BasbanesEternalPassion:
         - dc_type
-      Bryan 150th:
+      berger_cloonan:
         - dc_type
-      Cherokee Freedmen:
+      berger_cloonan_batch_3:
         - dc_type
-      College of Medicine:
+      berger_cloonan_batch_4:
+        - dc_type
+      berger_cloonan_batch_a:
+        - dc_type
+      bryan-150:
+        - dc_type
+      cherokee-freedmen-corrected:
+        - dc_type
+      cherokee-freedmen:
+        - dc_type
+      com_class_rosters:
         - dcterms_type # includes DCMI and genre/form terms
-      College of Veterinary Medicine:
+      cvm-batch-1:
         - dc_type
-      La Linda Poblana:
+      cvm-batch-2:
+        - dc_type
+      la_linda_poblana:
         - dc_genre
-      London Maps:
+      london-collection:
+        - dc_type 
+      london-maps-batch-2:
         - dc_type
         - dcterms_type # includes DCMI and genre/form terms
-      SciFi Exhibit 2021:
+      Stephen_Powys_Marks_London_Collection:
         - dc_type
-      Time of Resolve:
+      scifi-exhibit-2021:
+        - dc_type
+      time_of_resolve:
         - dcterms_type # includes DCMI and genre/form terms
-      Woellhof:
+      woellhof:
         - dc_type
         - dcterms_type
-      WW2 Maps:
+      woellhof-2:
+        - dcterms_type
+      woellhof-3:
+        - dcterms_type
+      batch-service-maps-tests:
         - dc_type
   geographic_subject_local:
     Collections:
-      Alice in Wonderland:
+      alice_in_wonderland:
         - tamudigital_localcountry
-      Apfelbaum:
+      apfelbaum-ww1:
         - dcterms_spatial
-      Basbanes Texts:
+      basbanes-texts:
         - dcterms_coverage
-      Berger-Cloonan:
+      BasbanesEternalPassion:
+        - dcterms_coverage
+      berger_cloonan:
         - dcterms_spatial
-      Brazos Maps:
+      berger_cloonan_batch_3:
         - dcterms_spatial
-      Bryan 150th:
+      berger_cloonan_batch_4:
         - dcterms_spatial
-      Building History:
+      berger_cloonan_batch_a:
         - dcterms_spatial
-      Charting Texas:
+      brazos_maps:
         - dcterms_spatial
-      Cherokee Freedmen:
+      bryan-150:
         - dcterms_spatial
-      College of Medicine:
+      audrey-import:
         - dcterms_spatial
-      College of Veterinary Medicine:
+      charting_texas:
         - dcterms_spatial
-      London Maps:
+      cherokee-freedmen-corrected:
+        - dcterms_spatial
+      cherokee-freedmen:
+        - dcterms_spatial
+      com_class_rosters:
+        - dcterms_spatial
+      cvm-batch-1:
+        - dcterms_spatial
+      cvm-batch-2:
+        - dcterms_spatial
+      london-maps-batch-2:
         - dc_coverage
-      Time of Resolve:
+      time_of_resolve:
         - dcterms_spatial
-      Woellhof:
+      woellhof:
+        - dcterms_spatial
+      woellhof-2:
+        - dcterms_spatial
+      woellhof-3:
         - dcterms_spatial
   identifier:
     Collections:
-      Alice in Wonderland:
+      alice_in_wonderland:
         - dcterms_otherIdentifier
-      Berger-Cloonan:
+      berger_cloonan:
         - dc_identifier
-      Brazos Maps:
+      berger_cloonan_batch_3:
         - dc_identifier
-      Charting Texas:
+      berger_cloonan_batch_4:
         - dc_identifier
-      College of Veterinary Medicine:
+      berger_cloonan_batch_a:
         - dc_identifier
-      Houston Oil Minutes:
+      brazos_maps:
         - dc_identifier
-      London Maps:
+      charting_texas:
         - dc_identifier
-      NASA:
+      cvm-batch-1:
         - dc_identifier
-      SciFi Exhibit 2021:
+      cvm-batch-2:
+        - dc_identifier
+      houston_oil_company_minutes:
+        - dc_identifier
+      london-maps-batch-2:
+        - dc_identifier
+      saf-output:
+        - dc_identifier
+      scifi-exhibit-2021:
         - dc_identifer
-      Time of Resolve:
+      time_of_resolve:
         - dc_identifier
-      Woellhof:
+      woellhof:
         - dc_identifier # ARK - maybe make this also take a value for the identifier type
+      woellhof-2:
+        - dc_identifier
+      woellhof-3:
+        - dc_identifier
   language:
     Collections:
-      Basbanes Texts:
+      basbanes-texts:
         - dc_language
-      Brazos Maps:
+      BasbanesEternalPassion:
         - dc_language
-      Charting Texas:
+      brazos_maps:
         - dc_language
-      Cherokee Freedmen:
+      charting_texas:
         - dc_language
-      College of Veterinary Medicine:
+      cherokee-freedmen-corrected:
         - dc_language
-      Gray Diary:
+      cherokee-freedmen:
         - dc_language
-      La Linda Poblana:
+      cvm-batch-1:
         - dc_language
-      London Maps:
+      graydiary-saf:
         - dc_language
-      SciFi Exhibit 2021:
+      la_linda_poblana:
         - dc_language
-      Time of Resolve:
+      london-collection:
         - dc_language
-      Woellhof:
+      london-maps-batch-2:
+        - dc_language
+      Stephen_Powys_Marks_London_Collection:
+        - dc_language
+      scifi-exhibit-2021:
+        - dc_language
+      time_of_resolve:
+        - dc_language
+      woellhof:
+        - dc_language
+      woellhof-2:
+        - dc_language
+      woellhof-3:
         - dc_language
   medium:
     Collections:
-      Berger-Cloonan:
+      berger_cloonan:
         - dcterms_medium
-      London Maps:
+      berger_cloonan_batch_3:
+        - dcterms_medium
+      berger_cloonan_batch_4:
+        - dcterms_medium
+      berger_cloonan_batch_a:
+        - dcterms_medium
+      london-collection:
+        - dcterms_medium
+      Stephen_Powys_Marks_London_Collection:
         - dcterms_medium
   note:
     Collections:
-      SciFi Radio Show:
+      sci_fi_initial:
+        - dc_description
+      sci_fi_temp_batch_2:
         - dc_description # physical item description/source
   original_publication: # if object was originally published as part of a work
     Collections:
-      Alice in Wonderland:
+      alice_in_wonderland:
         - dc_citation # book citation
-      London Maps:
-        - dcterms_ispartof # Collection name and name of journal
+      london-collection:
+        - dcterms_isPartOf # Collection name and name of journal
+      Stephen_Powys_Marks_London_Collection:
+        - dcterms_isPartOf # Collection name and name of journal
   original_publisher: # Use original publisher instead of physical publisher because some items are born digital.
     Collections:
-      Apfelbaum:
+      apfelbaum-ww1:
         - dc_publisher # physical publisher
-      Bryan 150th:
+      bryan-150:
         - dc_publisher # physical publisher
-      London Maps:
+      london-collection:
         - dc_publisher # digital and physical publishers
-      SciFi Exhibit 2021:
+      london-maps-batch-2:
+        - dc_publisher
+      Stephen_Powys_Marks_London_Collection:
+        - dc_publisher
+      scifi-exhibit-2021:
         - dc_publisher # physical publisher
   physical_collection:
     Collections:
-      Apfelbaum:
+      apfelbaum-ww1:
         - dcterms_isPartOf
-      Bryan 150th:
+      bryan-150:
         - dcterms_isPartOf
-      College of Veterinary Medicine:
+      cvm-batch-1:
         - dcterms_isPartOf
-      La Linda Poblana:
+      cvm-batch-2:
         - dcterms_isPartOf
-      London Maps:
+      la_linda_poblana:
+        - dcterms_IsPartOf
+      london-collection:
         - dcterms_isPartOf # also includes original work
-      Woellhof:
+      Stephen_Powys_Marks_London_Collection:
+        - dcterms_isPartOf # also includes original work
+      woellhof:
+        - dcterms_isPartOf
+      woellhof-2:
+        - dcterms_isPartOf
+      woellhof-3:
         - dcterms_isPartOf
   physical_location: # box/folder of the physical object
     Collections:
-      Cole Papers:
+      cole-papers:
         - dcterms_isPartOf # Box and folder
-      Cherokee Freedmen:
+      cherokee-freedmen-corrected:
         - dcterms_isPartOf # folder
-      Lumpkin Papers:
+      cherokee-freedmen:
+        - dcterms_isPartOf # folder
+      lumpkin-papers:
         - dcterms_isPartOf # Box and folder
-      McInnis:
+      mcinnis:
         - dcterms_isPartOf # Box and folder
   provenance:
     Collections:
-      Berger-Cloonan:
+      berger_cloonan_batch_a:
         - dcterms_provenance
-      College of Veterinary Medicine:
+      cvm-batch-1:
         - dcterms_provenance
   related_item:
     Collections:
-      Alice in Wonderland: 
+      alice_in_wonderland: 
         - dcterms_URL # broken link to catalog record
   rights_holder:
     Collections:
-      Alice in Wonderland:
+      alice_in_wonderland:
         - dcterms_rightsHolder # role of person with rights to the image
   rights:
     Collections:
-      Alice in Wonderland:
+      alice_in_wonderland:
         - dcterms_rightsURI # uri
-      Apfelbaum:
+      apfelbaum-ww1:
         - dc_rights # needs separation, CC license and uri
-      Basbanes Texts:
+      basbanes-texts:
         - dc_rights # needs separation, CC license and uri
-      Berger-Cloonan:
+      BasbanesEternalPassion:
+        - dc_rights
+      berger_cloonan:
         - dc_rights # needs separation, CC license and uri
-      Brazos Maps:
+      berger_cloonan_batch_3:
+        - dc_rights
+      berger_cloonan_batch_4:
+        - dc_rights
+      berger_cloonan_batch_a:
+        - dc_rights
+      brazos_maps:
         - dc_rights # needs separation, copyright review and uri
-      Bryan 150th:
+      bryan-150:
         - dc_rights # needs separation, CC license and uri
-      Charting Texas:
+      charting_texas:
         - dc_rights # needs separation, copyright review and uri
-      Cherokee Freedmen:
+      cherokee-freedmen-corrected:
         - dc_rights # needs separation, CC license and uri
-      College of Medicine:
+      cherokee-freedmen:
+        - dc_rights
+      com_class_rosters:
         - dc_rights # needs separation, CC license and uri
-      College of Veterinary Medicine:
+      cvm-batch-1:
         - dc_rights # needs separation, CC license and uri
-      Gray Diary:
+      cvm-batch-2:
+        - dc_rights
+      graydiary-saf:
         - dc_rights # needs separation, CC license and uri
-      Houston Oil Minutes:
+      houston_oil_company_minutes:
         - dc_rights # needs separation, CC license and uri
-      La Linda Poblana:
+      la_linda_poblana:
         - dc_rights # uri
-      London Maps:
+      london-collection:
         - dc_rights # uri
-      Lumpkin Papers:
+      london-maps-batch-2:
+        - dc_rights
+      Stephen_Powys_Marks_London_Collection:
+        - dc_rights
+      lumpkin-papers:
         - dc_rights # uri
-      McInnis:
+      mcinnis:
         - dc_rights # uri
-      SciFi Exhibit 2021:
+      scifi-exhibit-2021:
         - dc_rights # needs separation, CC license and uri
-      Time of Resolve:
+      time_of_resolve:
         - dc_rights # needs separation, CC license and uri
-      Woellhof:
+      woellhof:
         - dc_rights # uri
-      WW2 Maps:
+      woellhof-2:
+        - dc_rights
+      woellhof-3:
+        - dc_rights
+      batch-service-maps-tests:
         - dc_rights # uri
   rights_statement:
     Collections:
-      Alice in Wonderland:
+      alice_in_wonderland:
         - dc_rights # copyright review information
-      Apfelbaum:
+      apfelbaum-ww1:
         - dc_rights # needs separation, CC license and uri
-      Basbanes Texts:
+      basbanes-texts:
         - dc_rights # needs separation, CC license and uri
-      Berger-Cloonan:
+      BasbanesEternalPassion:
+        - dc_rights
+      berger_cloonan:
         - dc_rights # needs separation, CC license and uri
-      Brazos Maps:
+      berger_cloonan_batch_3:
+        - dc_rights
+      berger_cloonan_batch_4:
+        - dc_rights
+      berger_cloonan_batch_a:
+        - dc_rights
+      brazos_maps:
         - dc_rights # needs separation, copyright review and uri
-      Bryan 150th:
+      bryan-150:
         - dc_rights # needs separation, CC license and uri
-      Charting Texas:
+      charting_texas:
         - dc_rights # needs separation, copyright review and uri
-      Cherokee Freedmen:
+      cherokee-freedmen-corrected:
         - dc_rights # needs separation, CC license and uri
-      College of Medicine:
+      cherokee-freedmen:
+        - dc_rights
+      com_class_rosters:
         - dc_rights # needs separation, CC license and uri
-      College of Veterinary Medicine:
+      cvm-batch-1:
         - dc_rights # needs separation, CC license and uri
-      Gray Diary:
+      cvm-batch-2:
+        - dc_rights
+      graydiary-saf:
         - dc_rights # needs separation, CC license and uri
-      Houston Oil Minutes:
+      houston_oil_company_minutes:
         - dc_rights # needs separation, CC license and uri
-      SciFi Exhibit 2021:
+      scifi-exhibit-2021:
         - dc_rights # needs separation, CC license and uri
-      Time of Resolve:
+      time_of_resolve:
         - dc_rights # needs separation, CC license and uri
   subject_local:
     Collections:
-      Alice in Wonderland:
+      alice_in_wonderland:
         - dc_subject
-      Apfelbaum:
+      apfelbaum-ww1:
         - dc_subject
-      Basbanes Texts:
+      basbanes-texts:
         - dc_subject
-      Berger-Cloonan:
+      BasbanesEternalPassion:
         - dc_subject
-      Brazos Maps:
+      berger_cloonan:
         - dc_subject
-      Bryan 150th:
+      berger_cloonan_batch_3:
         - dc_subject
-      Charting Texas:
+      berger_cloonan_batch_4:
         - dc_subject
-      Cherokee Freedmen:
+      berger_cloonan_batch_a:
         - dc_subject
-      College of Medicine:
+      brazos_maps:
         - dc_subject
-      College of Veterinary Medicine:
+      bryan-150:
         - dc_subject
-      Gray Diary:
+      charting_texas:
         - dc_subject
-      Houston Oil Minutes:
+      cherokee-freedmen-corrected:
         - dc_subject
-      La Linda Poblana:
+      cherokee-freedmen:
         - dc_subject
-      London Maps:
+      com_class_rosters:
+        - dc_subject
+      cvm-batch-1:
+        - dc_subject
+      graydiary-saf:
+        - dc_subject
+      houston_oil_company_minutes:
+        - dc_subject
+      la_linda_poblana:
+        - dc_subject
+      london-collection:
         - dc_subject # also includes LOC location
-      SciFi Exhibit 2021:
+      Stephen_Powys_Marks_London_Collection:
         - dc_subject
-      Time of Resolve:
+      scifi-exhibit-2021:
         - dc_subject
-      Woellhof:
+      time_of_resolve:
         - dc_subject
-      WW2 Maps:
+      woellhof:
+        - dc_subject
+      woellhof-3:
+        - dc_subject
+      batch-service-maps-tests:
         - dc_subject
   table_of_contents:
     Collections:
-      College of Veterinary Medicine:
+      cvm-batch-1:
         - dcterms_tableOfContents
-  temporal:
+  temporal_subject_local:
     Collections:
-      Apfelbaum:
+      apfelbaum-ww1:
         - dcterms_temporal
-      Berger-Cloonan:
+      berger_cloonan_batch_a:
         - dcterms_temporal
-      College of Veterinary Medicine:
+      cvm-batch-1:
         - dcterms_temporal
-      Time of Resolve:
+      cvm-batch-2:
+        - dcterms_temporal
+      time_of_resolve:
         - dcterms_temporal
   title:
     Collections:
       Aerial:
         - dc_title
-      Alice in Wonderland:
+      alice_in_wonderland:
         - dc_title
-      Apfelbaum:
+      apfelbaum-ww1:
         - dc_title
-      Basbanes Texts:
+      basbanes-texts:
         - dc_title
-      Berger-Cloonan:
+      BasbanesEternalPassion:
         - dc_title
-      Brazos Maps:
+      berger_cloonan:
         - dc_title
-      Bryan 150th:
+      berger_cloonan_batch_3:
         - dc_title
-      Building History:
+      berger_cloonan_batch_4:
         - dc_title
-      Charting Texas:
+      berger_cloonan_batch_a:
         - dc_title
-      Cole Papers:
+      brazos_maps:
         - dc_title
-      Cherokee Freedmen:
+      bryan-150:
         - dc_title
-      College of Medicine:
+      audrey-import:
         - dc_title
-      College of Veterinary Medicine:
+      charting_texas:
         - dc_title
-      Gray Diary:
+      cole-papers:
         - dc_title
-      Houston Oil Minutes:
+      cherokee-freedmen-corrected:
         - dc_title
-      La Linda Poblana:
+      cherokee-freedmen:
         - dc_title
-      London Maps:
+      com_class_rosters:
         - dc_title
-      Lumpkin Papers:
+      cvm-batch-1:
         - dc_title
-      McInnis:
+      cvm-batch-2:
         - dc_title
-      NASA:
+      graydiary-saf:
         - dc_title
-      SciFi Exhibit 2021:
+      houston_oil_company_minutes:
         - dc_title
-      SciFi Radio Show:
+      la_linda_poblana:
         - dc_title
-      Time of Resolve:
+      london-collection:
         - dc_title
-      Woellhof:
+      london-maps-batch-2:
         - dc_title
-      WW2 Maps:
+      Stephen_Powys_Marks_London_Collection:
+        - dc_title
+      lumpkin-papers:
+        - dc_title
+      mcinnis:
+        - dc_title
+      saf-output:
+        - dc_title
+      scifi-exhibit-2021:
+        - dc_title
+      sci_fi_initial:
+        - dc_title
+      sci_fi_temp_batch_2:
+        - dc_title
+      time_of_resolve:
+        - dc_title
+      woellhof:
+        - dc_title
+      woellhof-2:
+        - dc_title
+      woellhof-3:
+        - dc_title
+      batch-service-maps-tests:
         - dc_title
   title_alternative:
     Collections:
-      Apfelbaum:
+      apfelbaum-ww1:
         - dcterms_alternative
-      La Linda Poblana:
+      la_linda_poblana:
         - dc_title:alternative
-      London Maps:
+      london-collection:
         - dcterms_alternative  
+      Stephen_Powys_Marks_London_Collection:
+        - dcterms_alternative
   Image:
     Collections:
       Aerial:
         - files
-      Alice in Wonderland:
+      alice_in_wonderland:
         - files
-      Apfelbaum:
+      apfelbaum-ww1:
         - files
-      Basbanes Texts:
+      basbanes-texts:
         - files
-      Berger-Cloonan:
+      BasbanesEternalPassion:
         - files
-      Brazos Maps:
+      berger_cloonan:
         - files
-      Bryan 150th:
+      berger_cloonan_batch_3:
         - files
-      Building History:
+      berger_cloonan_batch_4:
         - files
-      Cole Papers:
+      berger_cloonan_batch_a:
         - files
-      Charting Texas:
+      brazos_maps:
         - files
-      Cherokee Freedmen:
+      bryan-150:
         - files
-      College of Medicine:
+      audrey-import:
         - files
-      College of Veterinary Medicine:
+      cole-papers:
         - files
-      Gray Diary:
+      charting_texas:
         - files
-      Houston Oil Minutes:
+      cherokee-freedmen-corrected:
         - files
-      La Linda Poblana:
+      cherokee-freedmen:
         - files
-      London Maps:
+      com_class_rosters:
         - files
-      Lumpkin Papers:
+      cvm-batch-1:
         - files
-      McInnis:
+      cvm-batch-2:
         - files
-      Time of Resolve:
+      graydiary-saf:
         - files
-      Woellhof:
+      houston_oil_company_minutes:
         - files
-      WW2 Maps:
+      la_linda_poblana:
+        - files
+      london-collection:
+        - files
+      london-maps-batch-2:
+        - files
+      Stephen_Powys_Marks_London_Collection:
+        - files
+      lumpkin-papers:
+        - files
+      mcinnis:
+        - files
+      time_of_resolve:
+        - files
+      woellhof:
+        - files
+      woellhof-2:
+        - files
+      woellhof-3:
+        - files
+      batch-service-maps-tests:
         - files
   Audio:
     Collections:
-      NASA:
+      saf-output:
         - files
-      SciFi Radio Show:
+      sci_fi_initial:
+        - files
+      sci_fi_temp_batch_2:
         - files
   Video:
     Collections:
-      NASA:
+      saf-output:
         - files
