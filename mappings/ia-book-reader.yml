@@ -1,0 +1,46 @@
+---
+#--------------------------------
+# OAKTrust to Archipelago Mapping
+#--------------------------------
+
+profile:
+  date_modified: '2026-03-14'
+  version: 0.1
+
+fields:
+  identifier:
+    Collections:
+      yearbooks:
+        - "//identifier"
+      yellbooks:
+        - "//identifier"
+  title:
+    Collections:
+      yearbooks:
+        - "//title"
+      yellbooks:
+        - "{//title}, {//year}"
+  creator:
+    Collections:
+      yearbooks:
+        - "//creator"
+  abstract:
+    Collections:
+      yearbooks:
+        - "normalize-space(/metadata/description/br/following-sibling::text()[normalize-space()][1])"
+        - "/metadata/description/br/following-sibling::text()[1]"
+  subject:
+    Collections:
+      yearbooks:
+        - "/metadata/description/ul/li/text()"
+  related_item:
+    Collections:
+      yearbooks:
+        - "//bookrecord"
+  date_issued:
+    Collections:
+      yearbooks:
+        - "//year"
+      yellbooks:
+        - "//year"
+
