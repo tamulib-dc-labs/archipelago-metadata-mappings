@@ -31,6 +31,8 @@ fields:
         - dcterms_abstract
       cvm-batch-2:
         - dcterms_abstract
+      cvm-batch-3:
+        - dcterms_abstract
       la_linda_poblana:
         - dc_abstract
       scifi-exhibit-2021:
@@ -58,6 +60,14 @@ fields:
       berger_cloonan_batch_3:
         - dc_relation
       berger_cloonan_batch_a:
+        - dc_relation
+      berger_cloonan_batch_5:
+        - dc_relation
+      berger_cloonan_batch_6:
+        - dc_relation
+      berger_cloonan_batch_7:
+        - dc_relation
+      berger_cloonan_batch_8:
         - dc_relation
       charting_texas:
         - dcterms_lcc
@@ -99,6 +109,14 @@ fields:
         - dcterms_type
       berger_cloonan_batch_a:
         - dcterms_type
+      berger_cloonan_batch_5:
+        - dcterms_type
+      berger_cloonan_batch_6:
+        - dcterms_type
+      berger_cloonan_batch_7:
+        - dcterms_type
+      berger_cloonan_batch_8:
+        - dcterms_type
       brazos_maps:
         - dcterms_type
       bryan-150:
@@ -112,6 +130,8 @@ fields:
       cvm-batch-1:
         - dcterms_type
       cvm-batch-2:
+        - dcterms_type
+      cvm-batch-3:
         - dcterms_type
       graydiary-saf:
         - dcterms_type
@@ -133,6 +153,14 @@ fields:
         - dc_contributor
       berger_cloonan_batch_4:
         - dc_contributor
+      berger_cloonan_batch_5:
+        - dc_contributor
+      berger_cloonan_batch_6:
+        - dc_contributor
+      berger_cloonan_batch_7:
+        - dc_contributor
+      berger_cloonan_batch_8:
+        - dc_contributor
       brazos_maps:
         - dc_contributor
       charting_texas:
@@ -146,6 +174,8 @@ fields:
       cvm-batch-1:
         - dc_contributor
       cvm-batch-2:
+        - dc_contributor
+      cvm-batch-3:
         - dc_contributor
       houston_oil_company_minutes:
         - dc_contributor
@@ -173,6 +203,14 @@ fields:
         - dc_creator
       berger_cloonan_batch_4:
         - dc_creator
+      berger_cloonan_batch_5:
+        - dc_creator
+      berger_cloonan_batch_6:
+        - dc_creator
+      berger_cloonan_batch_7:
+        - dc_creator
+      berger_cloonan_batch_8:
+        - dc_creator
       brazos_maps:
         - dc_creator
       bryan-150:
@@ -186,6 +224,8 @@ fields:
       cvm-batch-1:
         - dc_creator
       cvm-batch-2:
+        - dc_creator
+      cvm-batch-3:
         - dc_creator
       graydiary-saf:
         - dc_creator
@@ -225,6 +265,12 @@ fields:
         - dcterms_created
       berger_cloonan_batch_a:
         - dcterms_created
+      berger_cloonan_batch_5:
+        - dcterms_created
+      berger_cloonan_batch_6:
+        - dcterms_created
+      berger_cloonan_batch_7:
+        - dcterms_created
       bryan-150:
         - dcterms_created
       audrey-import:
@@ -241,6 +287,8 @@ fields:
       cvm-batch-1:
         - dcterms_created
       cvm-batch-2:
+        - dcterms_created
+      cvm-batch-3:
         - dcterms_created
       graydiary-saf:
         - dcterms_created
@@ -278,6 +326,14 @@ fields:
         - fedora_created
       berger_cloonan_batch_a:
         - fedora_created
+      berger_cloonan_batch_5:
+        - fedora_created
+      berger_cloonan_batch_6:
+        - fedora_created
+      berger_cloonan_batch_7:
+        - fedora_created
+      berger_cloonan_batch_8:
+        - fedora_created
       brazos_maps:
         - fedora_created
       bryan-150:
@@ -297,6 +353,8 @@ fields:
       cvm-batch-1:
         - fedora_created
       cvm-batch-2:
+        - fedora_created
+      cvm-batch-3:
         - fedora_created
       graydiary-saf:
         - fedora_created
@@ -362,6 +420,14 @@ fields:
         - tamudigital_local/details
       berger_cloonan_batch_a:
         - tamudigital_local/details
+      berger_cloonan_batch_5:
+        - tamudigital_local/details
+      berger_cloonan_batch_6:
+        - tamudigital_local/details
+      berger_cloonan_batch_7:
+        - tamudigital_local/details
+      berger_cloonan_batch_8:
+        - tamudigital_local/details
       bryan-150:
         - tamudigital_local/details # "Picture Files Bryan Early-1986 #49"
         - dc_description # "Held in the Bryan Scenes picture file at Cushing Memorial Library on the campus of Texas A&M University, College Station, Texas." [Could also be mapped under physical_collection field.]
@@ -379,6 +445,9 @@ fields:
       cvm-batch-2:
         - tamudigital_local/details # Written on photograph: "Aerial photograph of Vet. School area before 1979."
         - dc_description # Printed at bottom of photograph: "Theobald Smith in 1889." [combine with local/details]
+      cvm-batch-3:
+        - tamudigital_local/details
+        - dc_description
       graydiary-saf:
         - dc_description # The Cushing Library/Chapman Texas Collection copy is part of the Floyd & Louise Chapman Texas & Borderlands Collection. "Five hundred copies of this book have been printed in Fairfield types on Glatfelter paper. Designed by W. Thomas Taylor."--Colophon.
       houston_oil_company_minutes:
@@ -438,6 +507,14 @@ fields:
         - dcterms_extent
       berger_cloonan_batch_a:
         - dcterms_extent
+      berger_cloonan_batch_5:
+        - dcterms_extent
+      berger_cloonan_batch_6:
+        - dcterms_extent
+      berger_cloonan_batch_7:
+        - dcterms_extent
+      berger_cloonan_batch_8:
+        - dcterms_extent
       bryan-150:
         - dcterms_extent
       cherokee-freedmen-corrected:
@@ -445,6 +522,10 @@ fields:
       cherokee-freedmen:
         - dcterms_extent
       cvm-batch-1:
+        - dcterms_extent
+      cvm-batch-2:
+        - dcterms_extent
+      cvm-batch-3:
         - dcterms_extent
       graydiary-saf:
         - dcterms_extent
@@ -479,6 +560,14 @@ fields:
       berger_cloonan_batch_4:
         - dc_format
       berger_cloonan_batch_a:
+        - dc_format
+      berger_cloonan_batch_5:
+        - dc_format
+      berger_cloonan_batch_6:
+        - dc_format
+      berger_cloonan_batch_7:
+        - dc_format
+      berger_cloonan_batch_8:
         - dc_format
       brazos_maps:
         - dc_format
@@ -528,6 +617,14 @@ fields:
         - dc_type
       berger_cloonan_batch_a:
         - dc_type
+      berger_cloonan_batch_5:
+        - dc_type
+      berger_cloonan_batch_6:
+        - dc_type
+      berger_cloonan_batch_7:
+        - dc_type
+      berger_cloonan_batch_8:
+        - dc_type
       bryan-150:
         - dc_type
       cherokee-freedmen-corrected:
@@ -539,6 +636,8 @@ fields:
       cvm-batch-1:
         - dc_type
       cvm-batch-2:
+        - dc_type
+      cvm-batch-3:
         - dc_type
       la_linda_poblana:
         - dc_genre
@@ -580,6 +679,14 @@ fields:
         - dcterms_spatial
       berger_cloonan_batch_a:
         - dcterms_spatial
+      berger_cloonan_batch_5:
+        - dcterms_spatial
+      berger_cloonan_batch_6:
+        - dcterms_spatial
+      berger_cloonan_batch_7:
+        - dcterms_spatial
+      berger_cloonan_batch_8:
+        - dcterms_spatial
       brazos_maps:
         - dcterms_spatial
       bryan-150:
@@ -597,6 +704,8 @@ fields:
       cvm-batch-1:
         - dcterms_spatial
       cvm-batch-2:
+        - dcterms_spatial
+      cvm-batch-3:
         - dcterms_spatial
       london-maps-batch-2:
         - dc_coverage
@@ -620,6 +729,14 @@ fields:
         - dc_identifier
       berger_cloonan_batch_a:
         - dc_identifier
+      berger_cloonan_batch_5:
+        - dc_identifier
+      berger_cloonan_batch_6:
+        - dc_identifier
+      berger_cloonan_batch_7:
+        - dc_identifier
+      berger_cloonan_batch_8:
+        - dc_identifier
       brazos_maps:
         - dc_identifier
       charting_texas:
@@ -627,6 +744,8 @@ fields:
       cvm-batch-1:
         - dc_identifier
       cvm-batch-2:
+        - dc_identifier
+      cvm-batch-3:
         - dc_identifier
       houston_oil_company_minutes:
         - dc_identifier
@@ -649,6 +768,8 @@ fields:
       basbanes-texts:
         - dc_language
       BasbanesEternalPassion:
+        - dc_language
+      berger_cloonan_batch_8:
         - dc_language
       brazos_maps:
         - dc_language
@@ -689,6 +810,14 @@ fields:
       berger_cloonan_batch_4:
         - dcterms_medium
       berger_cloonan_batch_a:
+        - dcterms_medium
+      berger_cloonan_batch_5:
+        - dcterms_medium
+      berger_cloonan_batch_6:
+        - dcterms_medium
+      berger_cloonan_batch_7:
+        - dcterms_medium
+      berger_cloonan_batch_8:
         - dcterms_medium
       london-collection:
         - dcterms_medium
@@ -732,6 +861,8 @@ fields:
         - dcterms_isPartOf
       cvm-batch-2:
         - dcterms_isPartOf
+      cvm-batch-3:
+        - dcterms_isPartOf
       la_linda_poblana:
         - dcterms_IsPartOf
       london-collection:
@@ -760,7 +891,11 @@ fields:
     Collections:
       berger_cloonan_batch_a:
         - dcterms_provenance
+      berger_cloonan_batch_8:
+        - dcterms_provenance
       cvm-batch-1:
+        - dcterms_provenance
+      cvm-batch-3:
         - dcterms_provenance
   related_item:
     Collections:
@@ -788,6 +923,14 @@ fields:
         - dc_rights
       berger_cloonan_batch_a:
         - dc_rights
+      berger_cloonan_batch_5:
+        - dc_rights # needs separation, CC license and uri
+      berger_cloonan_batch_6:
+        - dc_rights
+      berger_cloonan_batch_7:
+        - dc_rights
+      berger_cloonan_batch_8:
+        - dc_rights
       brazos_maps:
         - dc_rights # needs separation, copyright review and uri
       bryan-150:
@@ -803,7 +946,9 @@ fields:
       cvm-batch-1:
         - dc_rights # needs separation, CC license and uri
       cvm-batch-2:
-        - dc_rights
+        - dc_rights # needs separation, CC license and uri
+      cvm-batch-3:
+        - dc_rights # needs separation, CC License and uri
       graydiary-saf:
         - dc_rights # needs separation, CC license and uri
       houston_oil_company_minutes:
@@ -892,6 +1037,14 @@ fields:
         - dc_subject
       berger_cloonan_batch_a:
         - dc_subject
+      berger_cloonan_batch_5:
+        - dc_subject
+      berger_cloonan_batch_6:
+        - dc_subject
+      berger_cloonan_batch_7:
+        - dc_subject
+      berger_cloonan_batch_8:
+        - dc_subject
       brazos_maps:
         - dc_subject
       bryan-150:
@@ -905,6 +1058,10 @@ fields:
       com_class_rosters:
         - dc_subject
       cvm-batch-1:
+        - dc_subject
+      cvm-batch-2:
+        - dc_subject
+      cvm-batch-3:
         - dc_subject
       graydiary-saf:
         - dc_subject
@@ -936,9 +1093,15 @@ fields:
         - dcterms_temporal
       berger_cloonan_batch_a:
         - dcterms_temporal
+      berger_cloonan_batch_7:
+        - dcterms_temporal
+      berger_cloonan_batch_8:
+        - dcterms_temporal
       cvm-batch-1:
         - dcterms_temporal
       cvm-batch-2:
+        - dcterms_temporal
+      cvm-batch-3:
         - dcterms_temporal
       time_of_resolve:
         - dcterms_temporal
@@ -962,6 +1125,14 @@ fields:
         - dc_title
       berger_cloonan_batch_a:
         - dc_title
+      berger_cloonan_batch_5:
+        - dc_title
+      berger_cloonan_batch_6:
+        - dc_title
+      berger_cloonan_batch_7:
+        - dc_title
+      berger_cloonan_batch_8:
+        - dc_title
       brazos_maps:
         - dc_title
       bryan-150:
@@ -981,6 +1152,8 @@ fields:
       cvm-batch-1:
         - dc_title
       cvm-batch-2:
+        - dc_title
+      cvm-batch-3:
         - dc_title
       graydiary-saf:
         - dc_title
@@ -1020,6 +1193,10 @@ fields:
     Collections:
       apfelbaum-ww1:
         - dcterms_alternative
+      berger_cloonan_batch_5:
+        - dcterms_alternative
+      berger_cloonan_batch_8:
+        - dcterms_alternative
       la_linda_poblana:
         - dc_title:alternative
       london-collection:
@@ -1046,6 +1223,14 @@ fields:
         - files
       berger_cloonan_batch_a:
         - files
+      berger_cloonan_batch_5:
+        - files
+      berger_cloonan_batch_6:
+        - files
+      berger_cloonan_batch_7:
+        - files
+      berger_cloonan_batch_8:
+        - files
       brazos_maps:
         - files
       bryan-150:
@@ -1065,6 +1250,8 @@ fields:
       cvm-batch-1:
         - files
       cvm-batch-2:
+        - files
+      cvm-batch-3:
         - files
       graydiary-saf:
         - files
