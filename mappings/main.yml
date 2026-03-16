@@ -351,6 +351,19 @@ fields:
     type: str (node_uuid)
     user info: "The Archipelago node_uuid of the Collection the item is a part of."
     label: Is Part Of
+  label:
+    definition: "A name given to the resource."
+    mapping:
+      OAI:
+        - dc: dc:title
+        - qdc: dcterms:title
+        - mods: <titleInfo><title>
+    min: 1
+    max: 1
+    type: str
+    user info: "A name given to the resource."
+    example: "Cat Placed in Special Containment Area, number 05"
+    label: Title
   language:
     definition: "A language of the resource."
     mapping:
@@ -643,19 +656,6 @@ fields:
     user info: "Temporal characteristics of the resource."
     example: "1970s"
     label: Temporal Subject
-  title:
-    definition: "A name given to the resource."
-    mapping:
-      OAI:
-        - dc: dc:title
-        - qdc: dcterms:title
-        - mods: <titleInfo><title>
-    min: 1
-    max: 1
-    type: str
-    user info: "A name given to the resource."
-    example: "Cat Placed in Special Containment Area, number 05"
-    label: Title
   title_alternative:
     definition: "An alternative name for the resource."
     mapping:

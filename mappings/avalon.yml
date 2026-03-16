@@ -220,6 +220,24 @@ fields:
         - Other identifier
       Veterans of the Valley:
         - Other identifier
+  title:
+    Collections: 
+      Basbanes:
+        - Title
+      Dallas Women's Gallery:
+        - Title
+      Los Palabristas:
+        - Title
+      NASA:
+        - Title
+      Owens:
+        - Title
+      Science Fiction Radio Show:
+        - Title
+      Forest Service:
+        - Title
+      Veterans of the Valley:
+        - Title
   language:
     Collections: 
       Basbanes:
@@ -398,21 +416,3 @@ fields:
         - Temporal Subject
       Forest Service:
         - Temporal Subject
-  title:
-    Collections: 
-      Basbanes:
-        - Title
-      Dallas Women's Gallery:
-        - Title
-      Los Palabristas:
-        - Title
-      NASA:
-        - Title
-      Owens:
-        - Title
-      Science Fiction Radio Show:
-        - Title
-      Forest Service:
-        - Title
-      Veterans of the Valley:
-        - Title

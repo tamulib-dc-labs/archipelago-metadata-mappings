@@ -763,6 +763,90 @@ fields:
         - dc_identifier
       woellhof-3:
         - dc_identifier
+  label:
+    Collections:
+      Aerial:
+        - dc_title
+      alice_in_wonderland:
+        - dc_title
+      apfelbaum-ww1:
+        - dc_title
+      basbanes-texts:
+        - dc_title
+      BasbanesEternalPassion:
+        - dc_title
+      berger_cloonan:
+        - dc_title
+      berger_cloonan_batch_3:
+        - dc_title
+      berger_cloonan_batch_4:
+        - dc_title
+      berger_cloonan_batch_a:
+        - dc_title
+      berger_cloonan_batch_5:
+        - dc_title
+      berger_cloonan_batch_6:
+        - dc_title
+      berger_cloonan_batch_7:
+        - dc_title
+      berger_cloonan_batch_8:
+        - dc_title
+      brazos_maps:
+        - dc_title
+      bryan-150:
+        - dc_title
+      audrey-import:
+        - dc_title
+      charting_texas:
+        - dc_title
+      cole-papers:
+        - dc_title
+      cherokee-freedmen-corrected:
+        - dc_title
+      cherokee-freedmen:
+        - dc_title
+      com_class_rosters:
+        - dc_title
+      cvm-batch-1:
+        - dc_title
+      cvm-batch-2:
+        - dc_title
+      cvm-batch-3:
+        - dc_title
+      graydiary-saf:
+        - dc_title
+      houston_oil_company_minutes:
+        - dc_title
+      la_linda_poblana:
+        - dc_title
+      london-collection:
+        - dc_title
+      london-maps-batch-2:
+        - dc_title
+      Stephen_Powys_Marks_London_Collection:
+        - dc_title
+      lumpkin-papers:
+        - dc_title
+      mcinnis:
+        - dc_title
+      saf-output:
+        - dc_title
+      scifi-exhibit-2021:
+        - dc_title
+      sci_fi_initial:
+        - dc_title
+      sci_fi_temp_batch_2:
+        - dc_title
+      time_of_resolve:
+        - dc_title
+      woellhof:
+        - dc_title
+      woellhof-2:
+        - dc_title
+      woellhof-3:
+        - dc_title
+      batch-service-maps-tests:
+        - dc_title
   language:
     Collections:
       basbanes-texts:
@@ -1105,90 +1189,6 @@ fields:
         - dcterms_temporal
       time_of_resolve:
         - dcterms_temporal
-  title:
-    Collections:
-      Aerial:
-        - dc_title
-      alice_in_wonderland:
-        - dc_title
-      apfelbaum-ww1:
-        - dc_title
-      basbanes-texts:
-        - dc_title
-      BasbanesEternalPassion:
-        - dc_title
-      berger_cloonan:
-        - dc_title
-      berger_cloonan_batch_3:
-        - dc_title
-      berger_cloonan_batch_4:
-        - dc_title
-      berger_cloonan_batch_a:
-        - dc_title
-      berger_cloonan_batch_5:
-        - dc_title
-      berger_cloonan_batch_6:
-        - dc_title
-      berger_cloonan_batch_7:
-        - dc_title
-      berger_cloonan_batch_8:
-        - dc_title
-      brazos_maps:
-        - dc_title
-      bryan-150:
-        - dc_title
-      audrey-import:
-        - dc_title
-      charting_texas:
-        - dc_title
-      cole-papers:
-        - dc_title
-      cherokee-freedmen-corrected:
-        - dc_title
-      cherokee-freedmen:
-        - dc_title
-      com_class_rosters:
-        - dc_title
-      cvm-batch-1:
-        - dc_title
-      cvm-batch-2:
-        - dc_title
-      cvm-batch-3:
-        - dc_title
-      graydiary-saf:
-        - dc_title
-      houston_oil_company_minutes:
-        - dc_title
-      la_linda_poblana:
-        - dc_title
-      london-collection:
-        - dc_title
-      london-maps-batch-2:
-        - dc_title
-      Stephen_Powys_Marks_London_Collection:
-        - dc_title
-      lumpkin-papers:
-        - dc_title
-      mcinnis:
-        - dc_title
-      saf-output:
-        - dc_title
-      scifi-exhibit-2021:
-        - dc_title
-      sci_fi_initial:
-        - dc_title
-      sci_fi_temp_batch_2:
-        - dc_title
-      time_of_resolve:
-        - dc_title
-      woellhof:
-        - dc_title
-      woellhof-2:
-        - dc_title
-      woellhof-3:
-        - dc_title
-      batch-service-maps-tests:
-        - dc_title
   title_alternative:
     Collections:
       apfelbaum-ww1:

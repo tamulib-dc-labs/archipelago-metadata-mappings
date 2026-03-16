@@ -14,7 +14,7 @@ fields:
         - "//identifier"
       yellbooks:
         - "//identifier"
-  title:
+  label:
     Collections:
       yearbooks:
         - "//title"

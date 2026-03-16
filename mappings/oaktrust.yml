@@ -359,6 +359,33 @@ fields:
       Wheelan:
         - id # local to OAKTrust
         - dc.identifier.uri # OAKTrust handle
+  label:
+    Collections:
+      Austin 1830 Map: 
+        - dc.title[en]
+      Catalogs:
+        - dc.title[en]
+      Committee on South Asian Women:
+        - dc.title
+      Cushing Historical: 
+        - dc.title
+      Frederick Cuny:
+        - dc.title[en]
+      Geologic Atlas:
+        - dc.title[en]
+      Historic Maps of Cuba:
+        - dc.title[en]
+      Primeros Libros: 
+        - dc.title
+        - dc.title[en]
+      Raiford Stripling:
+        - dc.title[en]
+      Toward Better Living:
+        - dc.title[en]
+      World War I Postcards:
+        - dc.title[en]
+      Wheelan: 
+        - dc.title[en]
   language:
     Collections:
       Austin 1830 Map: 
@@ -601,33 +628,6 @@ fields:
         - dc.coverage.temporal[en]
       World War I Postcards:
         - dc.coverage.temporal[en]
-  title:
-    Collections:
-      Austin 1830 Map: 
-        - dc.title[en]
-      Catalogs:
-        - dc.title[en]
-      Committee on South Asian Women:
-        - dc.title
-      Cushing Historical: 
-        - dc.title
-      Frederick Cuny:
-        - dc.title[en]
-      Geologic Atlas:
-        - dc.title[en]
-      Historic Maps of Cuba:
-        - dc.title[en]
-      Primeros Libros: 
-        - dc.title
-        - dc.title[en]
-      Raiford Stripling:
-        - dc.title[en]
-      Toward Better Living:
-        - dc.title[en]
-      World War I Postcards:
-        - dc.title[en]
-      Wheelan: 
-        - dc.title[en]
   title_alternative:
     Collections:
       Catalogs:
