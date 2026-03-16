@@ -20,6 +20,7 @@ fields:
     type: str
     user info: "Summary or abstract of the resource."
     example: "Photo postcard of the interior of Notre-Dame de Reims."
+    label: Abstract
   access_rights:
     definition: "Information about who access the resource or an indication of its security status."
     mapping:
@@ -31,6 +32,7 @@ fields:
     type: str
     user info: "Information about who access the resource or an indication of its security status."
     example: "Openly accessible"
+    label: Access Rights
   agent:
     definition: "An entity responsible for making the resource."
     mapping:
@@ -42,6 +44,7 @@ fields:
     type: object
     user info: "An entity responsible for making the resource. Map all creator/contributors that have a role other than creator or contributor here."
     example: {"value": "Lastname, Firstname", "role": "interviewee"}
+    label: Agent # I don't love this label
   audience:
     definition: "A class of agents for whom the resource is intended or useful."
     mapping:
@@ -52,6 +55,7 @@ fields:
     type: str
     user info: "A class of agents for whom the resource is intended or useful."
     example: "Graduate||Undergraduate"
+    label: Audience
   classification:
     definition: "A designation applied to a resource that indicates the subject by applying a formal system of coding and organizing resources according to subject areas.."
     mapping:
@@ -64,6 +68,7 @@ fields:
     type: object
     user info: "Classification information, such as LCC call number"
     example: {"value": "G4031 .E424 1763 .P5", "authority": "lcc"}
+    label: Classification
   collecting_area: # if ADO does not have this field already, it needs to be created
     definition: "The collecting area to which the ADO and corresponding physical item belong."
     mapping:
@@ -76,6 +81,7 @@ fields:
     type: str # will become a clickable link using the ispartof and ismemberof Archipelago fields
     user info: "The collecting area to which the ADO and corresponding physical item belong."
     example: "Cushing Library. Children's Collection"
+    label: Collecting Area
   coordinates:
     description: "Human readable spatial characteristics of the resource as represented by coordinates. Not machine actionable."
     mapping:
@@ -87,6 +93,7 @@ fields:
     type: str
     user info: "Human readable spatial characteristics of the resource as represented by coordinates. Not machine actionable."
     example: "Scale not given (E 63¬∞55 π00 ∫--E 97¬∞34 π00 ∫/N 36¬∞46 π00 ∫--N 7¬∞40 π00 ∫)."
+    label: Coordinates
   content_type:
     definition: "The nature or genre of the resource."
     mapping:
@@ -98,6 +105,7 @@ fields:
     type: str
     user info: "The nature or genre of the resource."
     example: "StillImage"
+    label: Content Type
   contributor:
     description: "An entity responsible for making contributions to the resource."
     mapping:
@@ -109,6 +117,7 @@ fields:
     type: str
     user info: "An entity responsible for making contributions to the resource."
     example: "Albert, Martha|Von Weise, Chas.|Knalls, Lula|Breckinridge, Clifton Rodes, 1846-1932|Hastings, William Wirt, 1866-1938"
+    label: Contributor
   creator:
     definition: "An entity primarily responsible for making the resource."
     mapping:
@@ -120,6 +129,7 @@ fields:
     type: str
     user info: "An entity primarily responsible for making the resource."
     example: "United States. Commission to the Five Civilized Tribes."
+    label: Creator
   date_available:
     definition: "Date the resource was originally made available in OAKTrust."
     mapping:
@@ -131,6 +141,7 @@ fields:
     max: 1
     type: date
     user info: "Date the resource was originally made available in OAKTrust."
+    label: Date Available
   date_built:
     definition: "The date the building in the photograph was constructed."
     mapping:
@@ -142,6 +153,7 @@ fields:
     max: 1
     type: date
     user info: "The date the building in the photograph was constructed."
+    label: Date Built
   date_created:
     definition: "Date of creation of the resource."
     mapping:
@@ -154,6 +166,7 @@ fields:
     type: date
     user info: "Date of creation of the resource."
     example: "1889-11-30"
+    label: Date Created
   date_digital_creation:
     definition: "Date the digital version of the resource was created."
     mapping:
@@ -166,6 +179,7 @@ fields:
       type: date
       user info: "Date the digital version of the resource was first created (in Fedora, OAKTrust, Avalon, or Archipelago). This may be fedora:created or dc.date.accessioned. Do not put the date of Archipelago ingest for ADOs migrated from another repository."
       example: "2019-05-13T20:23:22.608000+00:00"
+      label: Date Available Online
   date_issued:
     definition: "Date of formal issuance of the resource."
     mapping:
@@ -178,6 +192,7 @@ fields:
     type: date
     user info: "Date of formal issuance of the resource."
     example: "1983"
+    label: Date Issued
   date_razed:
     definition: "The date the building in the photograph was destroyed."
     mapping:
@@ -189,6 +204,7 @@ fields:
     max: 1
     type: date
     user info: "The date the building in the photograph was destroyed."
+    label: Date Razed
   description:
     definition: "An account of the resource."
     mapping:
@@ -200,6 +216,7 @@ fields:
     type: str
     user info: "An account of the resource, not including abstract/summary or table of contents."
     example: "Inscription on item: Architectural Detail Photo #; This item was part of an exhibit,  'Texas A&M during the Great Depression,' shown in Cushing Memorial Library from August 31, 2018 through February 22, 2019.; Cushing Memorial Library and Archives; Remstar #3"
+    label: Description
   digital_exhibit: # if ADO does not have this field already, it needs to be created
     definition: "The parent digital collection or exhibit."
     note: "We're currently thinking this will be a json object with value / url in main.yml."
@@ -213,6 +230,7 @@ fields:
     type: str # will become a clickable link using the ispartof Archipelago field
     user info: "The parent digital collection or exhibit."
     example: "'Who in the world am I? Ah, that's the great puzzle!': The Faces of Alice in Wonderland"
+    label: Digital Exhibit
   digital_publisher:
     definition: "An entity responsible for making the digital resource available."
     mapping:
@@ -223,6 +241,7 @@ fields:
     min: 1
     user info: "An entity responsible for making the digital resource available."
     example: "Texas A & M University. Libraries"
+    label: Digital Publisher
   extent:
     definition: "The size or duration of the resource."
     mapping:
@@ -234,6 +253,7 @@ fields:
     type: str
     user info: "The size or duration of the resource."
     example: "17 leaves (36 cm.)|299 pages|41 cm."
+    label: Extent
   format:
     definition: "The file format, physical medium, or dimensions of the resource."
     mapping:
@@ -246,6 +266,7 @@ fields:
     type: str
     user info: "The file format, physical medium, or dimensions of the resource."
     example: "reformatted digital"
+    label: Format
   genre_form_lcgft:
     definition: "The nature or genre of the resource that follows LCGFT headings."
     mapping:
@@ -257,6 +278,7 @@ fields:
     type: object
     user info: "Form and/or genre of the resource that follows LCGFT headings."
     example: {"value": "", "uri": ""}
+    label: Genre
   genre_form_local:
     definition: "The nature or genre of the resource."
     mapping:
@@ -268,6 +290,7 @@ fields:
     type: str
     user info: "Form and/or genre of the resource."
     example: "Correspondence"
+    label: Correspondence
   geographic_subject_lcnaf:
     definition: "Spatial characteristics of the resource."
     mapping:
@@ -279,6 +302,7 @@ fields:
     type: object
     user info: "Geographic subjects of the resource."
     example: {"value": "", "uri": ""}
+    label: Geographic Subject
   georgraphic_subject_local:
     definition: "Spatial characteristics of the resource."
     mapping:
@@ -290,6 +314,7 @@ fields:
     type: str
     user info: "Geographic subjects of the resource."
     example: "College Station (Tex.)"
+    label: Local Geographic Subject
   identifier:
     definition: "An unambiguous reference to the resource within a given context."
     mapping:
@@ -300,7 +325,8 @@ fields:
     min: 0
     type: object
     user info: "An unambiguous reference to the resource within a given context."
-    example: {"value": "5406|12306", "authority": "local"} 
+    example: {"value": "5406|12306", "authority": "local"}
+    label: Identifier
   ismemberof:
     definition: "The Archipelago node_uuid of the CreativeWorkSeries the item is a part of."
     mapping:
@@ -312,6 +338,7 @@ fields:
     max: 1
     type: str (node_uuid)
     user info: "The Archipelago node_uuid of the CreativeWorkSeries the item is a part of."
+    label: Is Member Of
   ispartof:
     definition: "The Archipelago node_uuid of the Collection the item is a part of."
     mapping:
@@ -323,6 +350,7 @@ fields:
     max: 1
     type: str (node_uuid)
     user info: "The Archipelago node_uuid of the Collection the item is a part of."
+    label: Is Part Of
   language:
     definition: "A language of the resource."
     mapping:
@@ -334,6 +362,7 @@ fields:
     type: str
     user info: "A language of the resource."
     example: "eng"
+    label: Language
   local_department:
     definition: "A&M department the item pertains to."
     mapping:
@@ -344,6 +373,7 @@ fields:
     min: 0
     type: str
     user info: "A&M department the item pertains to."
+    label: Local Department
   medium:
     definition: "The material or physical carrier of the resource."
     mapping:
@@ -354,6 +384,7 @@ fields:
     type: str
     user info: "The material or physical carrier of the resource."
     example: "Paper|Leather"
+    label: Medium
   mimetype:
     definition: "The electronic format type, or the data representation, of the resource."
     mapping:
@@ -364,6 +395,7 @@ fields:
     min: 0
     type: str
     user info: "The electronic format type, or the data representation, of the resource."
+    label: Mime Type
   note:
     definition: "Any details captured about the resource that do not fit elsewhere in the schema."
     mapping:
@@ -374,6 +406,7 @@ fields:
     type: str
     user info: "An account of the resource."
     example: "The source is a reel tape. The playback device was a TEAC A-3340S reel-to-reel tape deck playing at a speed of 7.5 ips. The audio was captured with Hammerfall DSP Multiface II A/D Converter hardware and Adobe Audition software. Editing and processing was also performed with Adobe Audition. For the access files, Normalize process was used to modify volume levels."
+    label: Note
   original_publication:
     definition: "The work the object was originally published as a part of."
     mapping:
@@ -385,6 +418,7 @@ fields:
     type: str
     user info: "If the physical object was originally published as part of another work, map that work here."
     example: "Lewis Carroll. Alice in Wonderland. Borders Press, 2002"
+    label: Original Publication
   original_publisher:
     definition: "An entity responsible for making the original resource available."
     mapping:
@@ -396,6 +430,7 @@ fields:
     max: 1
     user info: "An entity responsible for making the original resource available."
     example: "E.C. Kropp Co."
+    label: Original Publisher
   physical_collection:
     definition: "The physical collection from which the item was digitized."
     mapping:
@@ -408,6 +443,7 @@ fields:
     type: str
     user info: "The physical collection from which the item was digitized."
     example: "College of Veterinary Medicine Image Collection"
+    label: Physical Collection
   physical_location:
     definition: "Information about the physical location, such as the box and folder, from which the item was digitized."
     mapping:
@@ -420,6 +456,7 @@ fields:
     type: str
     user info: "Information about the physical location, such as the box and folder, from which the item was digitized."
     example: "1/20: Rowe Family. Joseph (R-360, D-1016), Parmelia (R-361, D-681). 1901, 1903-1904"
+    label: Physical Location
   projection:
     definition: "The projection of the map"
     mapping:
@@ -430,6 +467,7 @@ fields:
     min: 0
     type: str
     user info: "The projection of the map. Only use for Map worktype."
+    label: Projection
   provenance:
     definition: "A statement of any changes in ownership and custody of the resource since its creation that are significant for its authenticity, integrity, and interpretation."
     mapping:
@@ -440,6 +478,7 @@ fields:
     type: str
     user info: "A statement of any changes in ownership and custody of the resource since its creation that are significant for its authenticity, integrity, and interpretation."
     example: "This nineteenth century photograph is an 'Ebay' purchase made by librarian Trenton Boyd and donated to the Medical Sciences Library."
+    label: Provenance
   related_item:
     definition: "A related resource."
     mapping:
@@ -451,6 +490,7 @@ fields:
     type: str
     user info: "A related resource, such as a catalog record. Do not map parent/child ADOs to this field."
     example: "https://libcat.tamu.edu/vwebv/holdingsInfo?bibId=4702618"
+    label: Related Item
   related_url:
     definition: "A url to a relevant item, such as the same digital object hosted on another platform."
     mapping:
@@ -463,6 +503,7 @@ fields:
     type: url
     user info: "A url to a relevant item, such as the same digital object hosted on another platform."
     example: "https://avalon.library.tamu.edu/media_objects/00000005c"
+    label: Related URL
   related_url_historic:
     definition: "A historic url to a related item."
     mapping:
@@ -475,6 +516,7 @@ fields:
     type: str
     user info: "A historic url to a related item. Map urls to archived website and exhibits here."
     example: "https://aavptbiennial-ojs-tamu.tdl.org/aavptbiennial"
+    label: Related URL
   rights_holder:
     definition: "A person or organization owning or managing rights over the resource."
     mapping:
@@ -482,7 +524,8 @@ fields:
         - qdc: dcterms:rightsHolder
     min: 0
     user info: "A person or organization owning or managing rights over the resource."
-    example: "Illustrator"
+    example: "Illustrator" # Is this a real example?  It just looks like a role.
+    label: Rights Holder
   rights:
     definition: "Information about rights held in and over the resource."
     mapping:
@@ -495,6 +538,7 @@ fields:
     type: uri
     user info: "URI with information about rights held in and over the resource."
     example: "http://rightsstatements.org/vocab/NoC-US/1.0/"
+    label: Rights Statement
   rights_statement:
     definition: "Information about rights held in and over the resource."
     mapping:
@@ -507,6 +551,7 @@ fields:
     type: str
     user info: "Free text with information about rights held in and over the resource."
     example: "A copyright review process in August 2018 has determined that this particular item is in copyright, but the rights holder is unclear or unresponsive.  The Libraries provide access to the materials here as a digital aggregate under an assertion of fair use for non-commercial educational use (17 U.S. Code ¬ß 107) as well as of fair dealing for the illustrations published in the UK (Copyright, Designs and Patent Act 1988 [UK]). The written permission of any copyright and other rights holders is required for distribution, reproduction, or other use that extends beyond what is authorized by fair use and other statutory exemptions. Responsibility for making an independent legal assessment of an item and securing any necessary permissions ultimately rests with persons desiring to use the item. TAMU Libraries would be interested in updating the copyright holder information on items displayed in these collections.  Please use the contact method provided below to help update these records for future researchers."
+    label: Rights Details
   sequence_id:
     definition: "The order an ADO appears in within a CreativeWorkSeries."
     min: 0
@@ -514,6 +559,7 @@ fields:
     type: int
     user info: "The order an ADO appears in within a CreativeWorkSeries."
     example: "4"
+    label: Sequence Id
   sponsorship:
     definition: "An agent that sponsored creation of the resource."
     mapping:
@@ -524,6 +570,7 @@ fields:
     min: 0
     type: str
     user info: "An agent that sponsored creation of the resource."
+    label: Sponsorship
   state_edition:
     definition: "The specific version of a map."
     mapping:
@@ -534,6 +581,7 @@ fields:
     min: 0
     type: str
     user info: "Specific version of a map. Use only for Map worktype."
+    label: State Edition
   subject_loc:
     definition: "A topic of the resource from a controlled vocabulary."
     mapping:
@@ -544,7 +592,8 @@ fields:
     min: 0
     type: object
     user info: "A topic of the resource."
-    example: {"value": "", "uri": ""} 
+    example: {"value": "", "uri": ""}
+    label: Library of Congress Subject Heading
   subject_local:
     definition: "A topic of the resource."
     mapping:
@@ -556,6 +605,7 @@ fields:
     type: str
     user info: "A topic of the resource."
     example: "Airports Texas--Maps|Aeronautical charts--Texas|Runways (Aeronautics)--Texas"
+    label: Local Subject
   table_of_contents:
     definition: "A list of subunits of the resource."
     mapping:
@@ -568,6 +618,7 @@ fields:
     type: str
     user info: "A list of subunits of the resource."
     example: "A. VETERINARY SCIENCE BLDG (1. Public Health, 2. Microbiology, 3. Physiology, 4. Anatomy) -- B. ADMINISTRATION BLDG. (1. College Admin. Offices and Library. 2. Pathology 3. Parasitology) --C. HOSPITAL, MEDICINE & SURGERY (1. Small Animal Clinic, 2. Large Animal Clinic, 3. Stables, 4. Feed Storage) -- D. SITE OF STATE DIAGNOSTIC LAB. (Future site of TVMDL, Texas Veterinary Medical Diagnostic Lab) -- E. LABORATORY ANIMAL BLDG. (Vivarium III) -- F. VETERINARY RESEARCH FARM -- G. toxicology laboratory ( U.S.D.A.) -- H. INSTITUTE OF TROPICAL VETERINARY MEDICINE AND ANIMAL ARIAL DRUG TOXICITY TESTING LABORATORY -- I. TEXAS FEVER BARN ( SITE OF DR. MARK FRANCIS' RESEARCH WITH PIROPLASMOSIS) -- J. VIRUS RESEARCH LABORATORY -- K. WILDLIFE DISEASE RESEARCH CENTER"
+    label: Table of Contents
   temporal_subject_loc:
     definition: "Temporal characteristics of the resource."
     mapping:
@@ -578,7 +629,8 @@ fields:
     min: 0
     type: object
     user info: "Temporal characteristics of the resource."
-    example: {"value": "", "uri": ""} 
+    example: {"value": "", "uri": ""}
+    label: Temporal Subject
   temporal_subject_local:
     definition: "Temporal characteristics of the resource."
     mapping:
@@ -590,6 +642,7 @@ fields:
     type: str
     user info: "Temporal characteristics of the resource."
     example: "1970s"
+    label: Temporal Subject
   title:
     definition: "A name given to the resource."
     mapping:
@@ -602,6 +655,7 @@ fields:
     type: str
     user info: "A name given to the resource."
     example: "Cat Placed in Special Containment Area, number 05"
+    label: Title
   title_alternative:
     definition: "An alternative name for the resource."
     mapping:
@@ -613,6 +667,7 @@ fields:
     type: str
     user info: "An alternative name for the resource."
     example: "Laon. Cave dwellers - the Creuttes"
+    label: Alternative Title
   type:
     definition: "The worktype Archipelago needs to use to display the ADO."
     min: 1
@@ -620,46 +675,54 @@ fields:
     type: str
     user info: "The worktype Archipelago needs to use to display the ADO."
     example: "Image"
+    label: ADO Type
   Image:
     definition: "Filename(s) of media"
     min: 0
     max: 1
     type: url
     user info: "Filename(s) of media"
+    label: Image File
   Audio:
     definition: "Filename(s) of media"
     min: 0
     max: 1
     type: url
     user info: "Filename(s) of media"
+    label: Audio File
   Video:
     definition: "Filename(s) of media"
     min: 0
     max: 1
     type: url
     user info: "Filename(s) of media"
+    label: Video File
   Document:
     definition: "Filename(s) of media"
     min: 0
     max: 1
     type: url
     user info: "Filename(s) of media"
+    label: Document File
   upload_associated_warcs:
     definition: "Filename(s) of media"
     min: 0
     max: 1
     type: url
     user info: "Filename(s) of media"
+    label: Web Archive File
   Transcript:
     definition: "Filename(s) of media"
     min: 0
     max: 1
     type: url
     user info: "Filename(s) of media"
+    label: Transcript
   Captions:
     definition: "Filename(s) of media"
     min: 0
     max: 1
     type: url
     user info: "Filename(s) of media"
+    label: Captions
   
