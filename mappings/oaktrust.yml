@@ -4,8 +4,8 @@
 #------------------------------
 
 profile:
-  date_modified: '2026-03-10'
-  version: 0.1
+  date_modified: '2026-03-18'
+  version: 0.2
 
 fields:
   abstract:
@@ -294,24 +294,6 @@ fields:
         - dc.type.genre[en]
       Wheelan:
         - dc.format.medium[en]
-  geographic_subject_local:
-    Collections:
-      Catalogs:
-        - dc.coverage.spatial[en]
-      Committee on South Asian Women:
-        - dcterms.spatial
-      Geologic Atlas:
-        - dc.coverage.spatial[en]
-      Historic Maps of Cuba:
-        - dc.coverage.spatial[en]
-      Raiford Stripling:
-        - dc.coverage.spatial[en]
-      Toward Better Living:
-        - dc.coverage.spatial[en]
-      World War I Postcards:
-        - dc.coverage.spatial[en]
-      Wheelan:
-        - dc.coverage.spatial[en]
   identifier:
     Collections:
       Austin 1830 Map: 
@@ -589,45 +571,49 @@ fields:
     Collections:
       Frederick Cuny:
         - dc.description.sponsorship[en]
-  subject_local:
+  subject_local:        
     Collections:
       Austin 1830 Map: 
         - dc.subject[en]
       Catalogs:
         - dc.subject.lcsh[en]
         - dc.subject[en]
+        - dc.coverage.spatial[en]
+        - dc.coverage.temporal[en]
       Committee on South Asian Women:
         - dc.subject
+        - dcterms.spatial
       Cushing Historical: 
         - dc.subject[en]
       Geologic Atlas:
         - dc.subject.lcsh[en]
         - dc.subject[en]
+        - dc.coverage.spatial[en]
       Historic Maps of Cuba:
         - dc.subject.lcsh[en]
         - dc.subject[en]
+        - dc.coverage.spatial[en]
       Primeros Libros: 
         - dc.subject.other[en]
         - dc.subject.other[es]
         - dc.subject[en]
       Raiford Stripling:
         - dc.subject[en]
+        - dc.coverage.spatial[en]
       Toward Better Living:
         - dc.subject.tgn[en]
+        - dc.coverage.spatial[en]
       World War I Postcards:
         - dc.subject[en]
+        - dc.coverage.spatial[en]
+        - dc.coverage.temporal[en]
       Wheelan:
         - dc.subject.tgm[en]
+        - dc.coverage.spatial[en]
   table_of_contents:
     Collections:
       World War I Postcards:
         - dc.description.tableOfContents[en]
-  temporal_subject_local:
-    Collections:
-      Catalogs:
-        - dc.coverage.temporal[en]
-      World War I Postcards:
-        - dc.coverage.temporal[en]
   title_alternative:
     Collections:
       Catalogs:

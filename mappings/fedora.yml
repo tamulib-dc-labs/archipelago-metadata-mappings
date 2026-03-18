@@ -4,8 +4,8 @@
 #------------------------------
 
 profile:
-  date_modified: '2026-03-11'
-  version: 0.3
+  date_modified: '2026-03-18'
+  version: 0.4
 
 fields:
   abstract:
@@ -661,62 +661,6 @@ fields:
         - dcterms_type
       batch-service-maps-tests:
         - dc_type
-  geographic_subject_local:
-    Collections:
-      alice_in_wonderland:
-        - tamudigital_localcountry
-      apfelbaum-ww1:
-        - dcterms_spatial
-      basbanes-texts:
-        - dcterms_coverage
-      BasbanesEternalPassion:
-        - dcterms_coverage
-      berger_cloonan:
-        - dcterms_spatial
-      berger_cloonan_batch_3:
-        - dcterms_spatial
-      berger_cloonan_batch_4:
-        - dcterms_spatial
-      berger_cloonan_batch_a:
-        - dcterms_spatial
-      berger_cloonan_batch_5:
-        - dcterms_spatial
-      berger_cloonan_batch_6:
-        - dcterms_spatial
-      berger_cloonan_batch_7:
-        - dcterms_spatial
-      berger_cloonan_batch_8:
-        - dcterms_spatial
-      brazos_maps:
-        - dcterms_spatial
-      bryan-150:
-        - dcterms_spatial
-      audrey-import:
-        - dcterms_spatial
-      charting_texas:
-        - dcterms_spatial
-      cherokee-freedmen-corrected:
-        - dcterms_spatial
-      cherokee-freedmen:
-        - dcterms_spatial
-      com_class_rosters:
-        - dcterms_spatial
-      cvm-batch-1:
-        - dcterms_spatial
-      cvm-batch-2:
-        - dcterms_spatial
-      cvm-batch-3:
-        - dcterms_spatial
-      london-maps-batch-2:
-        - dc_coverage
-      time_of_resolve:
-        - dcterms_spatial
-      woellhof:
-        - dcterms_spatial
-      woellhof-2:
-        - dcterms_spatial
-      woellhof-3:
-        - dcterms_spatial
   identifier:
     Collections:
       alice_in_wonderland:
@@ -909,6 +853,8 @@ fields:
         - dcterms_medium
   note:
     Collections:
+      alice_in_wonderland:
+        - tamudigital_localcountry
       sci_fi_initial:
         - dc_description
       sci_fi_temp_batch_2:
@@ -1109,44 +1055,73 @@ fields:
         - dc_subject
       apfelbaum-ww1:
         - dc_subject
+        - dcterms_spatial
+        - dcterms_temporal
+      audrey-import:
+        - dcterms_spatial
       basbanes-texts:
         - dc_subject
+        - dcterms_coverage
       BasbanesEternalPassion:
         - dc_subject
+        - dcterms_coverage
       berger_cloonan:
         - dc_subject
+        - dcterms_spatial
       berger_cloonan_batch_3:
         - dc_subject
+        - dcterms_spatial
       berger_cloonan_batch_4:
         - dc_subject
+        - dcterms_spatial
       berger_cloonan_batch_a:
         - dc_subject
+        - dcterms_spatial
+        - dcterms_temporal
       berger_cloonan_batch_5:
         - dc_subject
+        - dcterms_spatial
       berger_cloonan_batch_6:
         - dc_subject
+        - dcterms_spatial
       berger_cloonan_batch_7:
         - dc_subject
+        - dcterms_spatial
+        - dcterms_temporal
       berger_cloonan_batch_8:
         - dc_subject
+        - dcterms_spatial
+        - dcterms_temporal
       brazos_maps:
         - dc_subject
+        - dcterms_spatial
       bryan-150:
         - dc_subject
+        - dcterms_spatial
       charting_texas:
         - dc_subject
+        - dcterms_spatial
       cherokee-freedmen-corrected:
         - dc_subject
+        - dcterms_spatial
       cherokee-freedmen:
         - dc_subject
+        - dcterms_spatial
       com_class_rosters:
         - dc_subject
+        - dcterms_spatial
       cvm-batch-1:
         - dc_subject
+        - dcterms_spatial
+        - dcterms_temporal
       cvm-batch-2:
         - dc_subject
+        - dcterms_spatial
+        - dcterms_temporal
       cvm-batch-3:
         - dc_subject
+        - dcterms_spatial
+        - dcterms_temporal
       graydiary-saf:
         - dc_subject
       houston_oil_company_minutes:
@@ -1155,40 +1130,30 @@ fields:
         - dc_subject
       london-collection:
         - dc_subject # also includes LOC location
+      london-maps-batch-2:
+        - dc_coverage
       Stephen_Powys_Marks_London_Collection:
         - dc_subject
       scifi-exhibit-2021:
         - dc_subject
       time_of_resolve:
         - dc_subject
+        - dcterms_spatial
+        - dcterms_temporal
       woellhof:
         - dc_subject
+        - dcterms_spatial
+      woellhof-2:
+        - dcterms_spatial
       woellhof-3:
         - dc_subject
+        - dcterms_spatial
       batch-service-maps-tests:
         - dc_subject
   table_of_contents:
     Collections:
       cvm-batch-1:
         - dcterms_tableOfContents
-  temporal_subject_local:
-    Collections:
-      apfelbaum-ww1:
-        - dcterms_temporal
-      berger_cloonan_batch_a:
-        - dcterms_temporal
-      berger_cloonan_batch_7:
-        - dcterms_temporal
-      berger_cloonan_batch_8:
-        - dcterms_temporal
-      cvm-batch-1:
-        - dcterms_temporal
-      cvm-batch-2:
-        - dcterms_temporal
-      cvm-batch-3:
-        - dcterms_temporal
-      time_of_resolve:
-        - dcterms_temporal
   title_alternative:
     Collections:
       apfelbaum-ww1:
