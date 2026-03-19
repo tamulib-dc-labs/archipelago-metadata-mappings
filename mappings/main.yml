@@ -12,9 +12,9 @@ fields:
     definition: "A summary of the resource."
     mapping:
       OAI:
-        - dc: dc:description
-        - qdc: dcterms:abstract
-        - mods: <abstract>
+        dc: dc:description
+        qdc: dcterms:abstract
+        mods: <abstract>
     min: 0
     max: 1
     type: str
@@ -25,9 +25,9 @@ fields:
     definition: "Information about who access the resource or an indication of its security status."
     mapping:
       OAI:
-        - dc: dc:rights
-        - qdc: dcterms:accessRights
-        - mods: <accessCondition type="restriction on access">
+        dc: dc:rights
+        qdc: dcterms:accessRights
+        mods: <accessCondition type="restriction on access">
     min: 0
     type: str
     user info: "Information about who access the resource or an indication of its security status."
@@ -37,9 +37,12 @@ fields:
     definition: "An entity responsible for making the resource."
     mapping:
       OAI:
-        - dc: dc:creator
-        - qdc: dcterms:creator
-        - mods: <name type="personal/corporate" valueURI=""><namePart>, <role><roleTerm type="text" authority=marcrelator><roleTerm type="code" authority=marcrelator><roleTerm valueURI="">
+        dc: dc:creator
+        qdc: dcterms:creator
+        mods: <name type="personal/corporate" valueURI=""><namePart>, <role><roleTerm type="text" authority=marcrelator><roleTerm type="code" authority=marcrelator><roleTerm valueURI="">
+      facet: 
+        field: Creators & Contributors
+        jmes: agent[]
     min: 0
     type: object
     user info: "An entity responsible for making the resource. Map all creator/contributors that have a role other than creator or contributor here."
@@ -47,11 +50,14 @@ fields:
     label: Creators and Contributors
   agent_linked_data:
     definition: "An entity responsible for making the resource using a controlled vocabulary."
-    apping:
+    mapping:
       OAI:
-        - dc: dc:creator
-        - qdc: dcterms:creator
-        - mods: <name type="personal/corporate" valueURI=""><namePart>, <role><roleTerm type="text" authority=marcrelator><roleTerm type="code" authority=marcrelator><roleTerm valueURI="http://id.loc.gov/vocabulary/relators/cre">
+        dc: dc:creator
+        qdc: dcterms:creator
+        mods: <name type="personal/corporate" valueURI=""><namePart>, <role><roleTerm type="text" authority=marcrelator><roleTerm type="code" authority=marcrelator><roleTerm valueURI="http://id.loc.gov/vocabulary/relators/cre">
+      facet: 
+        field: Creators & Contributors
+        jmes: agent_linked_data[].value   
     min: 0
     type: object
     user info: "An entity responsible for making the resource using a controlled vocabulary."
@@ -61,8 +67,8 @@ fields:
     definition: "A class of agents for whom the resource is intended or useful."
     mapping:
       OAI:
-        - qdc: dcterms:audience
-        - mods: <targetAudience>
+        qdc: dcterms:audience
+        mods: <targetAudience>
     min: 0
     type: str
     user info: "A class of agents for whom the resource is intended or useful."
@@ -88,6 +94,9 @@ fields:
           dc: dc:relation
           qdc: dcterms:isPartOf
           mods: <relatedItem type="host">
+        facet: 
+          field: Collecting Area
+          jmes: collecting_area[]
     min: 0
     max: 1
     type: str # will become a clickable link using the ispartof and ismemberof Archipelago fields
@@ -98,9 +107,9 @@ fields:
     description: "Human readable spatial characteristics of the resource as represented by coordinates. Not machine actionable."
     mapping:
       OAI:
-        - dc: dc:coverage
-        - qdc: dcterms:spatial
-        - mods: <originInfo><place><cartographics><cartographicExtension>
+        dc: dc:coverage
+        qdc: dcterms:spatial
+        mods: <originInfo><place><cartographics><cartographicExtension>
     min: 0
     type: str
     user info: "Human readable spatial characteristics of the resource as represented by coordinates. Not machine actionable."
@@ -110,9 +119,9 @@ fields:
     definition: "The nature or genre of the resource."
     mapping:
       OAI:
-        - dc: dc:type
-        - qdc: dcterms:type
-        - mods: <typeOfResource>
+        dc: dc:type
+        qdc: dcterms:type
+        mods: <typeOfResource>
     min: 1
     type: str
     user info: "The nature or genre of the resource."
@@ -122,9 +131,12 @@ fields:
     description: "An entity responsible for making contributions to the resource."
     mapping:
       OAI:
-        - dc: dc:contributor
-        - qdc: dcterms:contributor
-        - mods: <name type="personal/corporate" valueURI=""><namePart>, <role><roleTerm type="text" authority=marcrelator><roleTerm type="code" authority=marcrelator><roleTerm valueURI="http://id.loc.gov/vocabulary/relators/ctb">
+        dc: dc:contributor
+        qdc: dcterms:contributor
+        mods: <name type="personal/corporate" valueURI=""><namePart>, <role><roleTerm type="text" authority=marcrelator><roleTerm type="code" authority=marcrelator><roleTerm valueURI="http://id.loc.gov/vocabulary/relators/ctb">
+      facet: 
+          field: Creators & Contributors
+          jmes: contributor[]
     min: 0
     type: str
     user info: "An entity responsible for making contributions to the resource."
@@ -134,9 +146,12 @@ fields:
     definition: "An entity primarily responsible for making the resource."
     mapping:
       OAI:
-        - dc: dc:creator
-        - qdc: dcterms:creator
-        - mods: <name type="personal/corporate" valueURI=""><namePart>, <role><roleTerm type="text" authority=marcrelator><roleTerm type="code" authority=marcrelator><roleTerm valueURI="http://id.loc.gov/vocabulary/relators/cre">
+        dc: dc:creator
+        qdc: dcterms:creator
+        mods: <name type="personal/corporate" valueURI=""><namePart>, <role><roleTerm type="text" authority=marcrelator><roleTerm type="code" authority=marcrelator><roleTerm valueURI="http://id.loc.gov/vocabulary/relators/cre">
+      facet: 
+          field: Creators & Contributors
+          jmes: creator[]
     min: 0
     type: str
     user info: "An entity primarily responsible for making the resource."
@@ -173,6 +188,9 @@ fields:
         dc: dc:date
         qdc: dcterms:created
         mods: <originInfo><dateCreated>
+      facet: 
+          field: Date of Original
+          jmes: date_created[]
     min: 0
     max: 1
     type: date
@@ -196,9 +214,12 @@ fields:
     definition: "Date of formal issuance of the resource."
     mapping:
       OAI:
-        - dc: dc:date
-        - qdc: dcterms:issued
-        - mods: <originInfo><dateIssued>
+        dc: dc:date
+        qdc: dcterms:issued
+        mods: <originInfo><dateIssued>
+      facet: 
+          field: Date of Original
+          jmes: date_issued[]
     min: 0
     max: 1
     type: date
@@ -239,17 +260,17 @@ fields:
           mods: <relatedItem type="host">, <relatedItem type="series">
     min: 0
     max: 1
-    type: str # will become a clickable link using the ispartof Archipelago field
+    type: object # will become a clickable link using the ispartof Archipelago field
     user info: "The parent digital collection or exhibit."
-    example: "'Who in the world am I? Ah, that's the great puzzle!': The Faces of Alice in Wonderland"
-    label: Digital Exhibit
+    example: {"value":"'Who in the world am I? Ah, that's the great puzzle!': The Faces of Alice in Wonderland", "uri": "https://spotlight.library.tamu.edu/spotlight/alice-in-wonderland"}
+    label: Part of Digital Exhibit
   digital_publisher:
     definition: "An entity responsible for making the digital resource available."
     mapping:
       OAI:
-        - dc: dc:publisher
-        - qdc: dcterms:publisher
-        - mods: <note>
+        dc: dc:publisher
+        qdc: dcterms:publisher
+        mods: <note>
     min: 1
     user info: "An entity responsible for making the digital resource available."
     example: "Texas A & M University. Libraries"
@@ -286,6 +307,9 @@ fields:
           dc: dc:type
           qdc: dcterms:type
           mods: <physicalDescription><form>, <genre>
+        facet: 
+          field: Genre
+          jmes: genre_form[]
     min: 0
     type: str
     user info: "Form and/or genre of the resource."
@@ -298,6 +322,9 @@ fields:
           dc: dc:type
           qdc: dcterms:type
           mods: <physicalDescription><form>, <genre>
+        facet: 
+          field: Genre
+          jmes: genre_form_linked_data[].value
     min: 0
     type: object
     user info: "Form and/or genre of the resource that uses a controlled vocabulary such as LCGFT or AAT."
@@ -310,10 +337,13 @@ fields:
         dc: dc:coverage
         qdc: dcterms:spatial
         mods: <subject><geographic>
+      facet: 
+          field: Subjects
+          jmes: geographic_subject[]
     min: 0
     type: str
     user info: "Geographic subjects and spatial characteristics of the resource."
-    example: "College Station (Tex.)"
+    example: "College Station, Texas"
     label: Geographic Subject
   geographic_subject_linked_data:
     definition: "Geographic subjects and spatial characteristics of the resource that uses a controlled vocabulary."
@@ -322,6 +352,9 @@ fields:
         dc: dc:coverage
         qdc: dcterms:spatial
         mods: <subject><geographic>
+      facet: 
+          field: Subjects
+          jmes: geographic_subject_linked_data[].value
     min: 0
     type: object
     user info: "Geographic subjects and spatial characteristics of the resource that uses a controlled vocabulary."
@@ -340,16 +373,19 @@ fields:
     example: {"value": "5406|12306", "authority": "local"}
     label: Identifier
   ismemberof:
-    definition: "The Archipelago node_uuid of the CreativeWorkSeries the item is a part of."
+    definition: "The Archipelago node_uuid of the Collection the item is a part of."
     mapping:
       OAI:
         dc: dc:related
         qdc: dcterms:isPartOf
         mods: <related item type="host">
+      facet: 
+          field: Part of Collection
+          jmes: ismemberof[]
     min: 0
     max: 1
     type: str (node_uuid)
-    user info: "The Archipelago node_uuid of the CreativeWorkSeries the item is a part of."
+    user info: "The Archipelago node_uuid of the Collection the item is a part of."
     label: Is Member Of
   ispartof:
     definition: "The Archipelago node_uuid of the Collection the item is a part of."
@@ -367,9 +403,9 @@ fields:
     definition: "A name given to the resource."
     mapping:
       OAI:
-        - dc: dc:title
-        - qdc: dcterms:title
-        - mods: <titleInfo><title>
+        dc: dc:title
+        qdc: dcterms:title
+        mods: <titleInfo><title>
     min: 1
     max: 1
     type: str
@@ -383,6 +419,9 @@ fields:
           dc: dc:language
           qdc: dcterms:language
           mods: <language>
+        facet: 
+          field: Language
+          jmes: language[]
     min: 0
     type: str
     user info: "A language of the resource."
@@ -402,9 +441,9 @@ fields:
   medium:
     definition: "The material or physical carrier of the resource."
     mapping:
-      - dc: dc:format
-      - qdc: dcterms:medium
-      - mods: <physicalDescription><form>
+      dc: dc:format
+      qdc: dcterms:medium
+      mods: <physicalDescription><form>
     min: 0
     type: str
     user info: "The material or physical carrier of the resource."
@@ -414,19 +453,19 @@ fields:
     definition: "The electronic format type, or the data representation, of the resource."
     mapping:
       OAI:
-        - dc: dc:format
-        - qdc: dcterms:format
-        - mods: <physicalDescription><internetMediaType>
+        dc: dc:format
+        qdc: dcterms:format
+        mods: <physicalDescription><internetMediaType>
     min: 0
     type: str
     user info: "The electronic format type, or the data representation, of the resource."
-    label: Mime Type
+    label: Mimetype
   note:
     definition: "Any details captured about the resource that do not fit elsewhere in the schema."
     mapping:
-      - dc: dc:description
-      - qdc: dcterms:description
-      - mods: <note>
+      dc: dc:description
+      qdc: dcterms:description
+      mods: <note>
     min: 0
     type: str
     user info: "An account of the resource."
@@ -448,9 +487,9 @@ fields:
     definition: "An entity responsible for making the original resource available."
     mapping:
       OAI:
-        - dc: dc:publisher
-        - qdc: dcterms:publisher
-        - mods: <originInfo><publisher>
+        dc: dc:publisher
+        qdc: dcterms:publisher
+        mods: <originInfo><publisher>
     min: 0
     max: 1
     user info: "An entity responsible for making the original resource available."
@@ -497,8 +536,8 @@ fields:
     definition: "A statement of any changes in ownership and custody of the resource since its creation that are significant for its authenticity, integrity, and interpretation."
     mapping:
       OAI:
-        - qdc: dcterms:provenance
-        - mods: <originInfo><dateCaptured>
+        qdc: dcterms:provenance
+        mods: <originInfo><dateCaptured>
     min: 0
     type: str
     user info: "A statement of any changes in ownership and custody of the resource since its creation that are significant for its authenticity, integrity, and interpretation."
@@ -508,9 +547,9 @@ fields:
     definition: "A related resource."
     mapping:
       OAI:
-        - dc: dc:relation
-        - qdc: dcterms:relation
-        - mods: <relatedItem type="otherFormat">
+        dc: dc:relation
+        qdc: dcterms:relation
+        mods: <relatedItem type="otherFormat">
     min: 0
     type: str
     user info: "A related resource, such as a catalog record. Do not map parent/child ADOs to this field."
@@ -520,9 +559,9 @@ fields:
     definition: "A url to a relevant item, such as the same digital object hosted on another platform."
     mapping:
       OAI:
-        - dc: dc:relation
-        - qdc: dcterms:relation
-        - mods: <relatedItem type="references">
+        dc: dc:relation
+        qdc: dcterms:relation
+        mods: <relatedItem type="references">
     min: 0
     max: 1
     type: url
@@ -533,9 +572,9 @@ fields:
     definition: "A historic url to a related item."
     mapping:
       OAI:
-        - dc: dc:relation
-        - qdc: dcterms:relation
-        - mods: <relatedItem type="references">
+        dc: dc:relation
+        qdc: dcterms:relation
+        mods: <relatedItem type="references">
     min: 0
     max: 1
     type: str
@@ -546,7 +585,7 @@ fields:
     definition: "A person or organization owning or managing rights over the resource."
     mapping:
       OAI:
-        - qdc: dcterms:rightsHolder
+        qdc: dcterms:rightsHolder
     min: 0
     user info: "A person or organization owning or managing rights over the resource."
     example: "Illustrator" # Is this a real example?  It just looks like a role.
@@ -555,22 +594,22 @@ fields:
     definition: "Information about rights held in and over the resource."
     mapping:
       OAI:
-        - dc: dc:rights
-        - qdc: dcterms:rights
-        - mods: <accessCondition type="use and reproduction">
+        dc: dc:rights
+        qdc: dcterms:rights
+        mods: <accessCondition type="use and reproduction">
     min: 1
     max: 1
     type: uri
     user info: "URI with information about rights held in and over the resource."
     example: "http://rightsstatements.org/vocab/NoC-US/1.0/"
     label: Rights Statement
-  rights_statement:
+  rights_details:
     definition: "Information about rights held in and over the resource."
     mapping:
       OAI:
-        - dc: dc:rights
-        - qdc: dcterms:rights
-        - mods: <accessCondition type="use and reproduction">
+        dc: dc:rights
+        qdc: dcterms:rights
+        mods: <accessCondition type="use and reproduction">
     min: 0
     max: 1
     type: str
@@ -589,9 +628,9 @@ fields:
     definition: "An agent that sponsored creation of the resource."
     mapping:
       OAI:
-        - dc: dc:description
-        - qdc: dcterms:description
-        - mods: <originInfo><agent>
+        dc: dc:description
+        qdc: dcterms:description
+        mods: <originInfo><agent>
     min: 0
     type: str
     user info: "An agent that sponsored creation of the resource."
@@ -600,9 +639,9 @@ fields:
     definition: "The specific version of a map."
     mapping:
       OAI:
-        - dc: dc:description
-        - qdc: dcterms:description
-        - mods: <note>
+        dc: dc:description
+        qdc: dcterms:description
+        mods: <note>
     min: 0
     type: str
     user info: "Specific version of a map. Use only for Map worktype."
@@ -614,6 +653,9 @@ fields:
         dc: dc:subject
         qdc: dcterms:subject
         mods: <subject><topic>
+      facet: 
+          field: Subjects
+          jmes: subject[]
     min: 0
     type: str
     user info: "A topic of the resource."
@@ -626,6 +668,9 @@ fields:
         dc: dc:subject
         qdc: dcterms:subject
         mods: <subject><topic>
+      facet: 
+          field: Subjects
+          jmes: subject_linked_data[].value
     min: 0
     type: object
     user info: "A topic of the resource that uses controlled vocabulary."
@@ -651,6 +696,9 @@ fields:
         dc: dc:coverage
         qdc: dcterms:temporal
         mods: <subject><temporal>
+      facet: 
+          field: Subjects
+          jmes: temporal_subject[]
     min: 0
     type: str
     user info: "Temporal characteristics or subjects of the resource."
@@ -663,6 +711,9 @@ fields:
         dc: dc:coverage
         qdc: dcterms:temporal
         mods: <subject><temporal>
+      facet: 
+          field: Subjects
+          jmes: temporal_subject_linked_data[].value
     min: 0
     type: object
     user info: "Temporal characteristics or subjects of the resource that uses a controlled vocabulary."
@@ -672,9 +723,9 @@ fields:
     definition: "An alternative name for the resource."
     mapping:
       OAI:
-        - dc: dc:title
-        - qdc: dcterms:alternative
-        - mods: <titleInfo type="alternative"><title>
+        dc: dc:title
+        qdc: dcterms:alternative
+        mods: <titleInfo type="alternative"><title>
     min: 0
     type: str
     user info: "An alternative name for the resource."
@@ -682,6 +733,10 @@ fields:
     label: Alternative Title
   type:
     definition: "The worktype Archipelago needs to use to display the ADO."
+    mapping:
+      facet: 
+        field: Object Type
+        jmes: type[]
     min: 1
     max: 1
     type: str
