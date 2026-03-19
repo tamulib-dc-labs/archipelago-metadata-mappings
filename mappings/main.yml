@@ -56,7 +56,7 @@ fields:
     type: object
     user info: "An entity responsible for making the resource using a controlled vocabulary."
     example: {"value": "McInnis, Louis Lowry, 1855-1933", "uri": "https://lccn.loc.gov/n2008161849", "role": "creator", "role_uri": "http://id.loc.gov/vocabulary/relators/cre"}
-    Label: Creators and Contributors
+    label: Creators and Contributors
   audience:
     definition: "A class of agents for whom the resource is intended or useful."
     mapping:
