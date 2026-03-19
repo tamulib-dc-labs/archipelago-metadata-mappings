@@ -44,7 +44,19 @@ fields:
     type: object
     user info: "An entity responsible for making the resource. Map all creator/contributors that have a role other than creator or contributor here."
     example: {"value": "Lastname, Firstname", "role": "interviewee"}
-    label: Agent # I don't love this label
+    label: Creators and Contributors
+  agent_linked_data:
+    definition: "An entity responsible for making the resource using a controlled vocabulary."
+    apping:
+      OAI:
+        - dc: dc:creator
+        - qdc: dcterms:creator
+        - mods: <name type="personal/corporate" valueURI=""><namePart>, <role><roleTerm type="text" authority=marcrelator><roleTerm type="code" authority=marcrelator><roleTerm valueURI="http://id.loc.gov/vocabulary/relators/cre">
+    min: 0
+    type: object
+    user info: "An entity responsible for making the resource using a controlled vocabulary."
+    example: {"value": "McInnis, Louis Lowry, 1855-1933", "uri": "https://lccn.loc.gov/n2008161849", "role": "creator", "role_uri": "http://id.loc.gov/vocabulary/relators/cre"}
+    Label: Creators and Contributors
   audience:
     definition: "A class of agents for whom the resource is intended or useful."
     mapping:
@@ -117,7 +129,7 @@ fields:
     type: str
     user info: "An entity responsible for making contributions to the resource."
     example: "Albert, Martha|Von Weise, Chas.|Knalls, Lula|Breckinridge, Clifton Rodes, 1846-1932|Hastings, William Wirt, 1866-1938"
-    label: Contributor
+    label: Creators and Contributors
   creator:
     definition: "An entity primarily responsible for making the resource."
     mapping:
@@ -129,7 +141,7 @@ fields:
     type: str
     user info: "An entity primarily responsible for making the resource."
     example: "United States. Commission to the Five Civilized Tribes."
-    label: Creator
+    label: Creators and Contributors
   date_available:
     definition: "Date the resource was originally made available in OAKTrust."
     mapping:
@@ -267,19 +279,7 @@ fields:
     user info: "The file format, physical medium, or dimensions of the resource."
     example: "reformatted digital"
     label: Format
-  genre_form_linked_data:
-    definition: "The nature or genre of the resource that uses a controlled vocabulary."
-    mapping:
-        OAI:
-          dc: dc:type
-          qdc: dcterms:type
-          mods: <physicalDescription><form>, <genre>
-    min: 0
-    type: object
-    user info: "Form and/or genre of the resource that uses a controlled vocabulary such as LCGFT or AAT."
-    example: {"value": "Personal correspondence", "uri": "https://lccn.loc.gov/gf2014026141 "}
-    label: Genre
-  genre_form_local:
+  genre_form:
     definition: "The nature or genre of the resource."
     mapping:
         OAI:
@@ -291,6 +291,42 @@ fields:
     user info: "Form and/or genre of the resource."
     example: "Correspondence"
     label: Genre
+  genre_form_linked_data:
+    definition: "The nature or genre of the resource that uses a controlled vocabulary."
+    mapping:
+        OAI:
+          dc: dc:type
+          qdc: dcterms:type
+          mods: <physicalDescription><form>, <genre>
+    min: 0
+    type: object
+    user info: "Form and/or genre of the resource that uses a controlled vocabulary such as LCGFT or AAT."
+    example: {"value": "Personal correspondence", "uri": "https://lccn.loc.gov/gf2014026141"}
+    label: Genre
+  geographic_subject:
+    definition: "Geographic subjects and spatial characteristics of the resource."
+    mapping:
+      OAI:
+        dc: dc:coverage
+        qdc: dcterms:spatial
+        mods: <subject><geographic>
+    min: 0
+    type: str
+    user info: "Geographic subjects and spatial characteristics of the resource."
+    example: "College Station (Tex.)"
+    label: Geographic Subject
+  geographic_subject_linked_data:
+    definition: "Geographic subjects and spatial characteristics of the resource that uses a controlled vocabulary."
+    mapping:
+      OAI:
+        dc: dc:coverage
+        qdc: dcterms:spatial
+        mods: <subject><geographic>
+    min: 0
+    type: object
+    user info: "Geographic subjects and spatial characteristics of the resource that uses a controlled vocabulary."
+    example: {"value": "College Station (Tex.)", "uri": "https://lccn.loc.gov/n79059553"}
+    label: Geographic Subject
   identifier:
     definition: "An unambiguous reference to the resource within a given context."
     mapping:
@@ -571,19 +607,7 @@ fields:
     type: str
     user info: "Specific version of a map. Use only for Map worktype."
     label: State Edition
-  subject_linked_data:
-    definition: "A topic of the resource that uses controlled vocabulary."
-    mapping:
-      OAI:
-        dc: dc:subject
-        qdc: dcterms:subject
-        mods: <subject><topic>
-    min: 0
-    type: object
-    user info: "A topic of the resource that uses controlled vocabulary such as LCNAF or LCSH."
-    example: {"value": "Agricultural and Mechanical College of Texas", "uri": "http://id.loc.gov/authorities/names/n84055172"}
-    label: Subject
-  subject_local:
+  subject:
     definition: "A topic of the resource."
     mapping:
       OAI:
@@ -594,6 +618,18 @@ fields:
     type: str
     user info: "A topic of the resource."
     example: "Airports Texas--Maps"
+    label: Subject
+  subject_linked_data:
+    definition: "A topic of the resource that uses controlled vocabulary."
+    mapping:
+      OAI:
+        dc: dc:subject
+        qdc: dcterms:subject
+        mods: <subject><topic>
+    min: 0
+    type: object
+    user info: "A topic of the resource that uses controlled vocabulary."
+    example: {"value": "Agricultural and Mechanical College of Texas", "uri": "http://id.loc.gov/authorities/names/n84055172"}
     label: Subject
   table_of_contents:
     definition: "A list of subunits of the resource."
@@ -608,6 +644,30 @@ fields:
     user info: "A list of subunits of the resource."
     example: "A. VETERINARY SCIENCE BLDG (1. Public Health, 2. Microbiology, 3. Physiology, 4. Anatomy) -- B. ADMINISTRATION BLDG. (1. College Admin. Offices and Library. 2. Pathology 3. Parasitology) --C. HOSPITAL, MEDICINE & SURGERY (1. Small Animal Clinic, 2. Large Animal Clinic, 3. Stables, 4. Feed Storage) -- D. SITE OF STATE DIAGNOSTIC LAB. (Future site of TVMDL, Texas Veterinary Medical Diagnostic Lab) -- E. LABORATORY ANIMAL BLDG. (Vivarium III) -- F. VETERINARY RESEARCH FARM -- G. toxicology laboratory ( U.S.D.A.) -- H. INSTITUTE OF TROPICAL VETERINARY MEDICINE AND ANIMAL ARIAL DRUG TOXICITY TESTING LABORATORY -- I. TEXAS FEVER BARN ( SITE OF DR. MARK FRANCIS' RESEARCH WITH PIROPLASMOSIS) -- J. VIRUS RESEARCH LABORATORY -- K. WILDLIFE DISEASE RESEARCH CENTER"
     label: Table of Contents
+  temporal_subject:
+    definition: "Temporal characteristics or subjects of the resource."
+    mapping:
+      OAI:
+        dc: dc:coverage
+        qdc: dcterms:temporal
+        mods: <subject><temporal>
+    min: 0
+    type: str
+    user info: "Temporal characteristics or subjects of the resource."
+    example: "Nineteen twenties"
+    label: Temporal Subject
+  temporal_subject_linked_data:
+    definition: "Temporal characteristics or subjects of the resource that uses a controlled vocabulary."
+    mapping:
+      OAI:
+        dc: dc:coverage
+        qdc: dcterms:temporal
+        mods: <subject><temporal>
+    min: 0
+    type: object
+    user info: "Temporal characteristics or subjects of the resource that uses a controlled vocabulary."
+    example: {"value": "Nineteen twenties", "uri": "https://lccn.loc.gov/sh96005517"}
+    label: Temporal Subject
   title_alternative:
     definition: "An alternative name for the resource."
     mapping:

@@ -174,7 +174,7 @@ fields:
         - Note # reads "reformatted digital"
       Veterans of the Valley:
         - Note # reads "reformatted digital"
-  genre_form_local:
+  genre_form:
     Collections: 
       Basbanes:
         - Genre # includes content_type and genre_form_local
@@ -192,6 +192,20 @@ fields:
         - Genre # includes content_type and genre_form_local
       Veterans of the Valley:
         - Genre # includes content_type and genre_form_local
+  geographic_subject:
+    Collections:
+      Basbanes:
+        - Geographic subject
+      Dallas Women's Gallery:
+        - Geographic subject
+      Los Palabristas:
+        - Geographic subject
+      NASA:
+        - Geographic subject
+      Science Fiction Radio Show:
+        - Geographic subject
+      Forest Service:
+        - Geographic subject
   identifier:
     Collections:  
       Basbanes:
@@ -367,32 +381,20 @@ fields:
         - Terms of Use # needs separation
       Veterans of the Valley:
         - Terms of Use # needs separation
-  subject_local:
+  subject:
     Collections: 
       Basbanes:
         - Subject
-        - Geographic subject
-        - Temporal Subject
       Dallas Women's Gallery:
         - Subject
-        - Geographic subject
-        - Temporal Subject
       Los Palabristas:
         - Subject
-        - Geographic subject
-        - Temporal Subject
       NASA:
         - Subject
-        - Geographic subject
-        - Temporal Subject
       Science Fiction Radio Show:
         - Subject
-        - Geographic subject
-        - Temporal Subject
       Forest Service:
         - Subject
-        - Geographic subject
-        - Temporal Subject
       Veterans of the Valley:
         - Subject
   table_of_contents:
@@ -400,3 +402,17 @@ fields:
         # find some way to extract the structure xml
       Owens:
         - Table of Contents
+  temporal_subject:
+    Collections: 
+      Basbanes:
+        - Temporal Subject
+      Dallas Women's Gallery:
+        - Temporal Subject
+      Los Palabristas:
+        - Temporal Subject
+      NASA:
+        - Temporal Subject
+      Science Fiction Radio Show:
+        - Temporal Subject
+      Forest Service:
+        - Temporal Subject
