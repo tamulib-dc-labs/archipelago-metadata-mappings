@@ -1061,7 +1061,7 @@ fields:
         - dc_rights
       batch-service-maps-tests:
         - dc_rights # uri
-  rights_statement:
+  rights_details:
     Collections:
       alice_in_wonderland:
         - dc_rights # copyright review information

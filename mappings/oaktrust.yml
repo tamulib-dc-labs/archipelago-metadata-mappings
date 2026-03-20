@@ -562,7 +562,7 @@ fields:
         - dc.rights.uri
       World War I Postcards:
         - dc.rights[en] # needs separation
-  rights_statement:
+  rights_details:
     Collections:
       Austin 1830 Map:
         - dc.rights[en]
