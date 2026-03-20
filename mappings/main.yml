@@ -400,7 +400,7 @@ fields:
     user info: "The Archipelago node_uuid of the Collection the item is a part of."
     label: Is Part Of
   label:
-    definition: "A name given to the resource."
+    definition: "A name given to the resource. This can be a supplied title if there is no existing title or if the existing title does not provide enough information for users to distinguish the item from others."
     mapping:
       OAI:
         dc: dc:title
@@ -409,7 +409,7 @@ fields:
     min: 1
     max: 1
     type: str
-    user info: "A name given to the resource."
+    user info: "A name given to the resource. This can be a supplied title if there is no existing title or if the existing title does not provide enough information for users to distinguish the item from others."
     example: "Cat Placed in Special Containment Area, number 05"
     label: Title
   language:
@@ -720,7 +720,7 @@ fields:
     example: {"value": "Nineteen twenties", "uri": "https://lccn.loc.gov/sh96005517"}
     label: Temporal Subject
   title_alternative:
-    definition: "An alternative name for the resource."
+    definition: "An alternative name for the resource. This may be the original title if a supplied title is used for label."
     mapping:
       OAI:
         dc: dc:title
@@ -728,7 +728,7 @@ fields:
         mods: <titleInfo type="alternative"><title>
     min: 0
     type: str
-    user info: "An alternative name for the resource."
+    user info: "An alternative name for the resource. This may be the original title if a supplied title is used for label."
     example: "Laon. Cave dwellers - the Creuttes"
     label: Alternative Title
   type:
