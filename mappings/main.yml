@@ -46,7 +46,7 @@ fields:
     min: 0
     type: object
     user info: "An entity responsible for making the resource. Map all creator/contributors that have a role other than creator or contributor here."
-    example: {"value": "Lastname, Firstname", "role": "interviewee"}
+    example: {"value": "Lastname, Firstname", "role": "interviewee", "role_uri": "http://id.loc.gov/vocabulary/relators/ive"}
     label: Creators and Contributors
   agent_linked_data:
     definition: "An entity responsible for making the resource using a controlled vocabulary."
@@ -167,7 +167,7 @@ fields:
     min: 0
     max: 1
     type: date
-    user info: "Date the resource was originally made available in OAKTrust."
+    user info: "Date the resource was originally made available in OAKTrust. Only use for items migrated from OAKTrust."
     label: Date Available
   date_built:
     definition: "The date the building in the photograph was constructed."
@@ -331,7 +331,7 @@ fields:
     example: {"value": "Personal correspondence", "uri": "https://lccn.loc.gov/gf2014026141"}
     label: Genre
   geographic_subject:
-    definition: "Geographic subjects and spatial characteristics of the resource."
+    definition: "Geographic topics and spatial characteristics of the resource."
     mapping:
       OAI:
         dc: dc:coverage
@@ -342,7 +342,7 @@ fields:
           jmes: geographic_subject[]
     min: 0
     type: str
-    user info: "Geographic subjects and spatial characteristics of the resource."
+    user info: "Geographic topics and spatial characteristics of the resource."
     example: "College Station, Texas"
     label: Geographic Subject
   geographic_subject_linked_data:
@@ -468,7 +468,7 @@ fields:
       mods: <note>
     min: 0
     type: str
-    user info: "An account of the resource."
+    user info: "Any details captured about the resource that do not fit elsewhere in the schema."
     example: "The source is a reel tape. The playback device was a TEAC A-3340S reel-to-reel tape deck playing at a speed of 7.5 ips. The audio was captured with Hammerfall DSP Multiface II A/D Converter hardware and Adobe Audition software. Editing and processing was also performed with Adobe Audition. For the access files, Normalize process was used to modify volume levels."
     label: Note
   original_publication:
@@ -480,7 +480,7 @@ fields:
           mods: <relatedItem type="otherFormat">
     min: 0
     type: str
-    user info: "If the physical object was originally published as part of another work, map that work here."
+    user info: "If the physical object was originally published as part of another work, enter that work here."
     example: "Lewis Carroll. Alice in Wonderland. Borders Press, 2002"
     label: Original Publication
   original_publisher:
