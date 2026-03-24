@@ -46,7 +46,7 @@ fields:
     min: 0
     type: object
     user info: "An entity responsible for making the resource. Map all creator/contributors that have a role other than creator or contributor here."
-    example: '[{"value": "Lastname, Firstname", "role": "interviewee", "role_uri": "http://id.loc.gov/vocabulary/relators/ive"}']
+    example: '[{"value": "Lastname, Firstname", "role": "interviewee", "role_uri": "http://id.loc.gov/vocabulary/relators/ive"}]'
     label: Creators and Contributors
   agent_linked_data:
     definition: "An entity responsible for making the resource using a controlled vocabulary."
