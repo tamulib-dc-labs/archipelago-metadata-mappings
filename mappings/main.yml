@@ -537,7 +537,7 @@ fields:
     mapping:
       OAI:
         qdc: dcterms:provenance
-        mods: <originInfo><dateCaptured>
+        mods: <note>
     min: 0
     type: str
     user info: "A statement of any changes in ownership and custody of the resource since its creation that are significant for its authenticity, integrity, and interpretation."
