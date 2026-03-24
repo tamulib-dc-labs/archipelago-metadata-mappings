@@ -31,7 +31,7 @@ fields:
     min: 0
     type: str
     user info: "Information about who access the resource or an indication of its security status."
-    example: "Openly accessible"
+    example: '["Openly accessible"]'
     label: Access Rights
   agent:
     definition: "An entity responsible for making the resource."
@@ -46,7 +46,7 @@ fields:
     min: 0
     type: object
     user info: "An entity responsible for making the resource. Map all creator/contributors that have a role other than creator or contributor here."
-    example: {"value": "Lastname, Firstname", "role": "interviewee", "role_uri": "http://id.loc.gov/vocabulary/relators/ive"}
+    example: '[{"value": "Lastname, Firstname", "role": "interviewee", "role_uri": "http://id.loc.gov/vocabulary/relators/ive"}']
     label: Creators and Contributors
   agent_linked_data:
     definition: "An entity responsible for making the resource using a controlled vocabulary."
@@ -61,7 +61,7 @@ fields:
     min: 0
     type: object
     user info: "An entity responsible for making the resource using a controlled vocabulary."
-    example: {"value": "McInnis, Louis Lowry, 1855-1933", "uri": "https://lccn.loc.gov/n2008161849", "role": "creator", "role_uri": "http://id.loc.gov/vocabulary/relators/cre"}
+    example: '[{"value": "McInnis, Louis Lowry, 1855-1933", "uri": "https://lccn.loc.gov/n2008161849", "role": "creator", "role_uri": "http://id.loc.gov/vocabulary/relators/cre"}]'
     label: Creators and Contributors
   audience:
     definition: "A class of agents for whom the resource is intended or useful."
@@ -72,7 +72,7 @@ fields:
     min: 0
     type: str
     user info: "A class of agents for whom the resource is intended or useful."
-    example: "Graduate||Undergraduate"
+    example: '["Graduate","Undergraduate"]'
     label: Audience
   classification:
     definition: "A designation applied to a resource that indicates the subject by applying a formal system of coding and organizing resources according to subject areas.."
@@ -792,4 +792,3 @@ fields:
     type: url
     user info: "Filename(s) of media"
     label: Captions
-  
