@@ -98,10 +98,9 @@ fields:
           field: Collecting Area
           jmes: collecting_area[]
     min: 0
-    max: 1
     type: str # will become a clickable link using the ispartof and ismemberof Archipelago fields
     user info: "The collecting area to which the ADO and corresponding physical item belong."
-    example: "Cushing Library. Children's Collection"
+    example: ["Cushing Library. Children's Collection"]
     label: Collecting Area
   coordinates:
     description: "Human readable spatial characteristics of the resource as represented by coordinates. Not machine actionable."
@@ -161,12 +160,11 @@ fields:
     definition: "Date the resource was originally made available in OAKTrust."
     mapping:
       OAI:
-        dc: dc:date
         qdc: dcterms:date
         mods: <dateOther>
     min: 0
     max: 1
-    type: date
+    type: str
     user info: "Date the resource was originally made available in OAKTrust. Only use for items migrated from OAKTrust."
     example: "2012-03-05T16:27:27Z"
     label: Date Available
@@ -203,12 +201,11 @@ fields:
     definition: "Date the digital version of the resource was created."
     mapping:
       OAI:
-        dc: dc:date
         qdc: dcterms:date
         mods: <note>
       min: 0
       max: 1
-      type: date
+      type: str
       user info: "Date the digital version of the resource was first created (in Fedora, OAKTrust, Avalon, or Archipelago). This may be fedora:created or dc.date.accessioned. Do not put the date of Archipelago ingest for ADOs migrated from another repository."
       example: "2019-05-13T20:23:22.608000+00:00"
       label: Date Available Online
