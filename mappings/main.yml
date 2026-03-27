@@ -4,8 +4,8 @@
 #------------------------------
 
 profile:
-  date_modified: '2026-03-18'
-  version: 0.2
+  date_modified: '2026-03-27'
+  version: 0.3
 
 fields:
   abstract:
@@ -68,6 +68,7 @@ fields:
     mapping:
       iiif_presentation: requiredStatement.value.en
     min: 0
+    max: 1
     type: str
     user info: "An optional field that is only mapped to the manifest to acknowledge the contributing institution."
     example: "This image was generously provided by Texas A&M University Marketing and Communications."
@@ -369,6 +370,16 @@ fields:
     user info: "Geographic subjects and spatial characteristics of the resource that uses a controlled vocabulary."
     example: [{"value": "College Station (Tex.)", "uri": "https://lccn.loc.gov/n79059553"}]
     label: Geographic Subject
+  geojson_feature:
+    definition: "A machine readable geojson feature for IIIF presentation navPlace and map views."
+    mapping:
+      iiif_presentation: navPlace.features[0]
+    min: 0
+    max: 1
+    type: object
+    user info: "A machine readable geojson feature for IIIF presentation navPlace and map views."
+    example: { "type": "Feature", "properties": {}, "geometry": { "coordinates": [ 28.0467783961887, 19.762650857683184 ], "type": "Point" } }
+    label: Geojson Feature
   identifier:
     definition: "An unambiguous reference to the resource within a given context."
     mapping:
