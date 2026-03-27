@@ -64,14 +64,13 @@ fields:
     example: [{"value": "McInnis, Louis Lowry, 1855-1933", "uri": "https://lccn.loc.gov/n2008161849", "role": "creator", "role_uri": "http://id.loc.gov/vocabulary/relators/cre"}]
     label: Creators and Contributors
   attribution:
-    definition: "A statement about the source of an item, typically crediting another individual or organization."
+    definition: "An optional field that includes attribution information that must be displayed when a resource is displayed in a viewer."
     mapping:
-      OAI:
-        qdc: dcterms:rightsHolder
+      iiif_presentation: requiredStatement.value.en
     min: 0
     type: str
-    user info: "A statement about the source of an item, typically crediting another individual or organization."
-    example: ["This image was generously provided by Texas A&M University Marketing and Communications."]
+    user info: "An optional field that is only mapped to the manifest to acknowledge the contributing institution."
+    example: "This image was generously provided by Texas A&M University Marketing and Communications."
     label: Attribution
   audience:
     definition: "A class of agents for whom the resource is intended or useful."
