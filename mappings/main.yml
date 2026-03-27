@@ -623,7 +623,7 @@ fields:
     type: url
     user info: "A url to a relevant item, such as the same digital object hosted on another platform."
     example: "https://avalon.library.tamu.edu/media_objects/00000005c"
-    label: Related URL
+    label: Related Item
   related_url_historic:
     definition: "A historic url to a related item."
     mapping:
@@ -636,7 +636,7 @@ fields:
     type: str
     user info: "A historic url to a related item. Map urls to archived websites and exhibits here."
     example: "https://aavptbiennial-ojs-tamu.tdl.org/aavptbiennial"
-    label: Related URL
+    label: Related Item
   rights:
     definition: "Information about rights held in and over the resource."
     mapping:
