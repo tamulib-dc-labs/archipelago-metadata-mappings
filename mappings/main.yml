@@ -39,7 +39,7 @@ fields:
       OAI:
         dc: dc:creator
         qdc: dcterms:creator
-        mods: <name><namePart>, <role><roleTerm type="text" authority=marcrelator><roleTerm type="code" authority=marcrelator><roleTerm valueURI="">
+        mods: <name><namePart><role><roleTerm type="text" authority=marcrelator><roleTerm type="code" authority=marcrelator><roleTerm valueURI="">
       facet: 
         field: Creators & Contributors
         jmes: agent[]
@@ -54,7 +54,7 @@ fields:
       OAI:
         dc: dc:creator
         qdc: dcterms:creator
-        mods: <name valueURI=""><namePart>, <role><roleTerm type="text" authority=marcrelator><roleTerm type="code" authority=marcrelator><roleTerm valueURI="http://id.loc.gov/vocabulary/relators/cre">
+        mods: <name valueURI=""><namePart><role><roleTerm type="text" authority=marcrelator><roleTerm type="code" authority=marcrelator><roleTerm valueURI="http://id.loc.gov/vocabulary/relators/cre">
       facet: 
         field: Creators & Contributors
         jmes: agent_linked_data[].value   
@@ -140,7 +140,7 @@ fields:
       OAI:
         dc: dc:contributor
         qdc: dcterms:contributor
-        mods: <name><namePart>, <role><roleTerm type="text" authority=marcrelator><roleTerm type="code" authority=marcrelator><roleTerm valueURI="http://id.loc.gov/vocabulary/relators/ctb">
+        mods: <name><namePart><role><roleTerm type="text" authority=marcrelator><roleTerm type="code" authority=marcrelator><roleTerm valueURI="http://id.loc.gov/vocabulary/relators/ctb">
       facet: 
           field: Creators & Contributors
           jmes: contributor[]
@@ -155,7 +155,7 @@ fields:
       OAI:
         dc: dc:creator
         qdc: dcterms:creator
-        mods: <name><namePart>, <role><roleTerm type="text" authority=marcrelator><roleTerm type="code" authority=marcrelator><roleTerm valueURI="http://id.loc.gov/vocabulary/relators/cre">
+        mods: <name><namePart><role><roleTerm type="text" authority=marcrelator><roleTerm type="code" authority=marcrelator><roleTerm valueURI="http://id.loc.gov/vocabulary/relators/cre">
       facet: 
           field: Creators & Contributors
           jmes: creator[]
@@ -254,8 +254,8 @@ fields:
     mapping:
       OAI:
         dc: dc:date
-        qdc: dcterms:created
-        mods: <originInfo><dateCreated>
+        qdc: dcterms:issued
+        mods: <originInfo><dateIssued>
       facet:
         field: Date of Original
         jmes: [date_issued_edtf][?"date_type" == 'date_range'][ join('/',[date_from,date_to])][]
@@ -533,7 +533,7 @@ fields:
         OAI:
           dc: dc:relation
           qdc: dcterms:isPartOf
-          mods: <relatedItem type="original"><titleInfo><title>
+          mods: <relatedItem type="host"><titleInfo><title>
     min: 0
     type: str
     user info: "If the physical object was originally published as part of another work, enter that work here."
@@ -610,7 +610,7 @@ fields:
     type: url
     user info: "A related record, such as a catalog record."
     example: ["https://libcat.tamu.edu/vwebv/holdingsInfo?bibId=4702618"]
-    label: Reference
+    label: Related Item
   related_url:
     definition: "A url to a relevant item, such as the same digital object hosted on another platform."
     mapping:
