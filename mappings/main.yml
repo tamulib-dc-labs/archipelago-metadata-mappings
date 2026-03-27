@@ -616,7 +616,7 @@ fields:
     mapping:
       OAI:
         dc: dc:relation
-        qdc: dcterms:relation
+        qdc: dcterms:references
         mods: <relatedItem type="references"><location><url>
     min: 0
     max: 1
@@ -629,7 +629,7 @@ fields:
     mapping:
       OAI:
         dc: dc:relation
-        qdc: dcterms:relation
+        qdc: dcterms:references
         mods: <relatedItem type="references"><location><url>
     min: 0
     max: 1
