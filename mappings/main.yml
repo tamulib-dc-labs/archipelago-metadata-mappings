@@ -116,7 +116,7 @@ fields:
       OAI:
         dc: dc:coverage
         qdc: dcterms:spatial
-        mods: <originInfo><place><cartographics><cartographicExtension>
+        mods: <subject><cartographics><cartographicExtension>
     min: 0
     type: str
     user info: "Human readable spatial characteristics of the resource as represented by coordinates. Not machine actionable."
@@ -168,7 +168,6 @@ fields:
     definition: "Date the resource was originally made available in OAKTrust."
     mapping:
       OAI:
-        qdc: dcterms:date
         mods: <dateOther>
     min: 0
     max: 1
@@ -180,9 +179,7 @@ fields:
     definition: "The date the building in the photograph was constructed."
     mapping:
       OAI:
-        dc: dc:description
-        qdc: dcterms:description
-        mods: <note>
+        mods: <note displayLabel="Date Built">
     min: 0
     max: 1
     type: str
@@ -225,7 +222,6 @@ fields:
     definition: "Date the digital version of the resource was created."
     mapping:
       OAI:
-        qdc: dcterms:date
         mods: <dateOther>
       min: 0
       max: 1
@@ -269,9 +265,7 @@ fields:
     definition: "The date the building in the photograph was destroyed."
     mapping:
       OAI:
-        dc: dc:description
-        qdc: dcterms:description
-        mods: <note>
+        mods: <note displayLabel="Date Razed">
     min: 0
     max: 1
     type: str
@@ -297,7 +291,7 @@ fields:
         OAI:
           dc: dc:relation
           qdc: dcterms:isPartOf
-          mods: <relatedItem type="host">, <relatedItem type="series">
+          mods: <relatedItem type="host">
     min: 0
     max: 1
     type: object
@@ -312,8 +306,9 @@ fields:
         qdc: dcterms:publisher
         mods: <note>
     min: 1
+    max: 1
     user info: "An entity responsible for making the digital resource available."
-    example: ["Texas A & M University. Libraries"]
+    example: "Texas A & M University. Libraries"
     label: Digital Publisher
   extent:
     definition: "The size or duration of the resource."
@@ -346,7 +341,7 @@ fields:
         OAI:
           dc: dc:type
           qdc: dcterms:type
-          mods: <physicalDescription><form>, <genre>
+          mods: <genre>
         facet: 
           field: Genre
           jmes: genre_form[]
@@ -361,7 +356,7 @@ fields:
         OAI:
           dc: dc:type
           qdc: dcterms:type
-          mods: <physicalDescription><form>, <genre>
+          mods: <genre>
         facet: 
           field: Genre
           jmes: genre_form_linked_data[].value
@@ -408,6 +403,7 @@ fields:
         qdc: dcterms:spatial
         mods: <originInfo><place><cartographics><cartographicExtension>
     min: 0
+    max: 1
     type: str
     user info: "Human readable spatial characteristics of the resource as represented by coordinates. Machine actionable."
     example: [{30.6157455971669, -96.3408614932671}]
@@ -487,7 +483,7 @@ fields:
       OAI:
         dc: dc:contributor, dc:description
         qdc: dcterms:contributor, dcterms:description
-        mods: <originInfo eventType="publication"><publisher>, <name><namePart><role><roleTerm>, <note>
+        mods: <name><namePart><role><roleTerm>
     min: 0
     type: str
     user info: "A&M department the item pertains to."
@@ -583,7 +579,7 @@ fields:
       OAI:
         dc: dc:description
         qdc: dcterms:description
-        mods: <note>
+        mods: <note displayLabel="Projection">
     min: 0
     type: str
     user info: "The projection of the map. Only use for Map worktype."
@@ -698,7 +694,7 @@ fields:
       OAI:
         dc: dc:description
         qdc: dcterms:description
-        mods: <note>
+        mods: <note displayLabel="State/Edition of Map">
     min: 0
     type: str
     user info: "The specific version of a map. Use only for Map worktype."
