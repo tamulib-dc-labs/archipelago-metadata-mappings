@@ -335,6 +335,13 @@ fields:
     user info: "The file format, physical medium, or dimensions of the resource."
     example: "reformatted digital"
     label: Format
+  generative_ai_details:
+    definition: "Includes details for how generative AI was used in the creation of this work."
+    min: 0
+    type: object
+    user info: Add details about how generative AI was used in the creation of this resource, its transcription, or metadata.
+    example: { "model": "gemini-pro-preview", "generator": "iiif-paleograph@v0.0.1", "date": "2026-01-05T16:27:27Z", "prompt": "**Role**: You are a professional transcriptionist specializing in high-accuracy document digitizing.\n\n**Task**: Transcribe all text from the attached image.\n\n## Guidelines:\n\n* **Reading Order**: Follow a natural top-to-bottom, left-to-right reading flow.\n* **Accuracy**: Preserve original spelling, punctuation, capitalization, and line breaks. Do not autocorrect historical spellings or shorthand.\n* **Handwriting**: Interpret handwritten text as accurately as possible. Use [?] for uncertain characters and [illegible] for unreadable text.\n* **Layout**: Maintain paragraph structures. For marginalia or floating text, insert it at the logically closest point in the transcript using [Margin: text].\n* **Non-Text Elements**: Label structural elements like [Header], [Footer], and [Signature] and wrap sections in HTML Markup Property values that are allowed by IIIF presentation version3:  a, b, br, i, img, p, small, span, sub and sup.\n* **Tabular Data**: Use Markdown tables for any lists or accounts. If a visual cell is empty, leave the Markdown cell empty.\n* **Only Use Approved HTML Properties**:  Only the following HTML elements are allowed in accordance with IIIF Presentation v3: a, b, br, i, img, p, small, span, sub and sup \n\n## Constraints:\n\n* Provide **ONLY** the transcribed text.\n* Do not include commentary, notes, or \"Here is the transcription.\"" }
+    label: Generative AI Details
   genre_form:
     definition: "The nature or genre of the resource."
     mapping:
@@ -395,19 +402,16 @@ fields:
     user info: "Geographic subjects and spatial characteristics of the resource that uses a controlled vocabulary."
     example: [{"value": "College Station (Tex.)", "uri": "https://lccn.loc.gov/n79059553"}]
     label: Geographic Subject
-  geojson:
-    definition: "Human readable spatial characteristics of the resource as represented by coordinates. Machine actionable."
+  geojson_feature:
+    definition: "A machine readable geojson feature for IIIF presentation navPlace and map views."
     mapping:
-      OAI:
-        dc: dc:coverage
-        qdc: dcterms:spatial
-        mods: <originInfo><place><cartographics><cartographicExtension>
+      iiif_presentation: navPlace.features[0]
     min: 0
     max: 1
-    type: str
-    user info: "Human readable spatial characteristics of the resource as represented by coordinates. Machine actionable."
-    example: [{30.6157455971669, -96.3408614932671}]
-    label: Geojson
+    type: object
+    user info: "A machine readable geojson feature for IIIF presentation navPlace and map views."
+    example: { "type": "Feature", "properties": { }, "geometry": { "coordinates": [ 28.0467783961887, 19.762650857683184 ], "type": "Point" } }
+    label: Geojson Feature
   identifier:
     definition: "An unambiguous reference to the resource within a given context."
     mapping:
