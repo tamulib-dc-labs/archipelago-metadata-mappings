@@ -70,7 +70,7 @@ fields:
     min: 0
     type: str
     user info: "An optional field that is only mapped to the manifest to acknowledge the contributing institution."
-    example: "This image was generously provided by Texas A&M University Marketing and Communications."
+    example: ["This image was generously provided by Texas A&M University Marketing and Communications."]
     label: Attribution
   audience:
     definition: "A class of agents for whom the resource is intended or useful."
@@ -215,7 +215,7 @@ fields:
     min: 0
     max: 1
     type: object
-    user info: "Date of formal issuance of the resource using EDTF."
+    user info: "Date of creation of the resource using EDTF."
     example: [{"date_type": "date_range", "date_from": "1900-08-02", "date_to": "1900-09-02", "date_free": ""}]
     label: Date Created
   date_digital_creation:
@@ -635,7 +635,7 @@ fields:
     min: 0
     max: 1
     type: str
-    user info: "A historic url to a related item. Map urls to archived websites and exhibits here."
+    user info: "A historic url to a related item. Enter urls to archived websites and exhibits here."
     example: "https://aavptbiennial-ojs-tamu.tdl.org/aavptbiennial"
     label: Related Item
   rights:
