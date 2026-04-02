@@ -42,7 +42,7 @@ fields:
         mods: <name><namePart><role><roleTerm valueURI="" type="text" authority=marcrelator>
       facet: 
         field: Creators & Contributors
-        jmes: agent[]
+        jmes: 'agent[]'
     min: 0
     type: object
     user info: "An entity responsible for making the resource. Map all creator/contributors that have a role other than creator or contributor here."
@@ -57,7 +57,7 @@ fields:
         mods: <name valueURI=""><namePart><role><roleTerm valueURI="" type="text" authority=marcrelator>
       facet: 
         field: Creators & Contributors
-        jmes: agent_linked_data[].value   
+        jmes: 'agent_linked_data[].value'
     min: 0
     type: object
     user info: "An entity responsible for making the resource using a controlled vocabulary."
@@ -104,7 +104,7 @@ fields:
           mods: <relatedItem type="host">
         facet: 
           field: Collecting Area
-          jmes: collecting_area[]
+          jmes: 'collecting_area[]'
     min: 0
     type: str 
     user info: "The collecting area to which a digital resource and/or corresponding physical item belong."
@@ -143,7 +143,7 @@ fields:
         mods: <name><namePart><role><roleTerm valueURI="http://id.loc.gov/vocabulary/relators/ctb" type="text" authority=marcrelator>
       facet: 
           field: Creators & Contributors
-          jmes: contributor[]
+          jmes: 'contributor[]'
     min: 0
     type: str
     user info: "An entity responsible for making contributions to the resource."
@@ -158,7 +158,7 @@ fields:
         mods: <name><namePart><role><roleTerm valueURI="http://id.loc.gov/vocabulary/relators/cre" type="text" authority=marcrelator>
       facet: 
           field: Creators & Contributors
-          jmes: creator[]
+          jmes: 'creator[]'
     min: 0
     type: str
     user info: "An entity primarily responsible for making the resource."
@@ -195,7 +195,7 @@ fields:
         mods: <originInfo><dateCreated>
       facet: 
           field: Date of Original
-          jmes: date_created[]
+          jmes: 'date_created[]'
     min: 0
     max: 1
     type: date
@@ -211,7 +211,7 @@ fields:
         mods: <originInfo><dateCreated>
       facet:
         field: Date of Original
-        jmes: [date_created_edtf][?"date_type" == 'date_range'][ join('/',[date_from,date_to])][]
+        jmes: '[date_created_edtf][?"date_type" == 'date_range'][ join('/',[date_from,date_to])][]'
     min: 0
     max: 1
     type: object
@@ -238,7 +238,7 @@ fields:
         mods: <originInfo><dateIssued>
       facet: 
           field: Date of Original
-          jmes: date_issued[]
+          jmes: 'date_issued[]'
     min: 0
     max: 1
     type: date
@@ -254,7 +254,7 @@ fields:
         mods: <originInfo><dateIssued>
       facet:
         field: Date of Original
-        jmes: [date_issued_edtf][?"date_type" == 'date_range'][ join('/',[date_from,date_to])][]
+        jmes: '[date_issued_edtf][?"date_type" == 'date_range'][ join('/',[date_from,date_to])][]'
     min: 0
     max: 1
     type: object
@@ -352,7 +352,7 @@ fields:
           mods: <genre>
         facet: 
           field: Genre
-          jmes: genre_form[]
+          jmes: 'genre_form[]'
     min: 0
     type: str
     user info: "Form and/or genre of the resource."
@@ -367,7 +367,7 @@ fields:
           mods: <genre>
         facet: 
           field: Genre
-          jmes: genre_form_linked_data[].value
+          jmes: 'genre_form_linked_data[].value'
     min: 0
     type: object
     user info: "Form and/or genre of the resource that uses a controlled vocabulary such as LCGFT or AAT."
@@ -382,7 +382,7 @@ fields:
         mods: <subject><geographic>
       facet: 
           field: Subjects
-          jmes: geographic_subject[]
+          jmes: 'geographic_subject[]'
     min: 0
     type: str
     user info: "Geographic topics and spatial characteristics of the resource."
@@ -397,7 +397,7 @@ fields:
         mods: <subject><geographic>
       facet: 
           field: Subjects
-          jmes: geographic_subject_linked_data[].value
+          jmes: 'geographic_subject_linked_data[].value'
     min: 0
     type: object
     user info: "Geographic subjects and spatial characteristics of the resource that uses a controlled vocabulary."
@@ -434,7 +434,7 @@ fields:
         mods: <related item type="host">
       facet: 
           field: Part of Collection
-          jmes: ismemberof[]
+          jmes: 'ismemberof[]'
     min: 0
     max: 1
     type: str (node_uuid)
@@ -476,7 +476,7 @@ fields:
           mods: <language><languageTerm>
         facet: 
           field: Language
-          jmes: language[]
+          jmes: 'language[]'
     min: 0
     type: str
     user info: "A language of the resource."
@@ -713,7 +713,7 @@ fields:
         mods: <subject><topic>
       facet: 
           field: Subjects
-          jmes: subject[]
+          jmes: 'subject[]'
     min: 0
     type: str
     user info: "A topic of the resource."
@@ -728,7 +728,7 @@ fields:
         mods: <subject><topic>
       facet: 
           field: Subjects
-          jmes: subject_linked_data[].value
+          jmes: 'subject_linked_data[].value'
     min: 0
     type: object
     user info: "A topic of the resource that uses controlled vocabulary."
@@ -756,7 +756,7 @@ fields:
         mods: <subject><temporal>
       facet: 
           field: Subjects
-          jmes: temporal_subject[]
+          jmes: 'temporal_subject[]'
     min: 0
     type: str
     user info: "Temporal characteristics or subjects of the resource."
@@ -771,7 +771,7 @@ fields:
         mods: <subject><temporal>
       facet: 
           field: Subjects
-          jmes: temporal_subject_linked_data[].value
+          jmes: 'temporal_subject_linked_data[].value'
     min: 0
     type: object
     user info: "Temporal characteristics or subjects of the resource that uses a controlled vocabulary."
@@ -794,7 +794,7 @@ fields:
     mapping:
       facet: 
         field: Object Type
-        jmes: type[]
+        jmes: 'type[]'
     min: 1
     max: 1
     type: str
