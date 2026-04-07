@@ -211,7 +211,7 @@ fields:
         mods: <originInfo><dateCreated>
       facet:
         field: Date of Original
-        jmes: '[date_created_edtf][?"date_type" == 'date_range'][ join('/',[date_from,date_to])][]'
+        jmes: "[date_created_edtf][?'date_type' == 'date_range'][ join('/',[date_from,date_to])][]"
     min: 0
     max: 1
     type: object
@@ -254,7 +254,7 @@ fields:
         mods: <originInfo><dateIssued>
       facet:
         field: Date of Original
-        jmes: '[date_issued_edtf][?"date_type" == 'date_range'][ join('/',[date_from,date_to])][]'
+        jmes: "[date_issued_edtf][?'date_type' == 'date_range'][ join('/',[date_from,date_to])][]"
     min: 0
     max: 1
     type: object
