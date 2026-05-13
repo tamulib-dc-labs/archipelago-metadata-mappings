@@ -663,8 +663,6 @@ fields:
         - dc_type
   geographic_subject:
     Collections:
-      alice_in_wonderland:
-        - tamudigital_localcountry
       apfelbaum-ww1:
         - dcterms_spatial
       basbanes-texts:
@@ -971,6 +969,10 @@ fields:
         - dcterms_isPartOf # Box and folder
       mcinnis:
         - dcterms_isPartOf # Box and folder
+  place_of_origin:
+    Collections:
+      alice_in_wonderland:
+        - tamudigital_localcountry
   provenance:
     Collections:
       berger_cloonan_batch_a:

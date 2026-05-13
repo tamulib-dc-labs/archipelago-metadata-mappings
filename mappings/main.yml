@@ -578,6 +578,18 @@ fields:
     user info: "Information about the physical location, such as the box and folder, from which the item was digitized."
     example: "1/20: Rowe Family. Joseph (R-360, D-1016), Parmelia (R-361, D-681). 1901, 1903-1904"
     label: Physical Location
+  place_of_origin:
+    definition: "Location where the item was created."
+    mapping:
+      OAI:
+        dc: dc:coverage
+        qdc: dcterms:spatial
+        mods: <originInfo><place><placeTerm>
+    min: 0
+    type: str
+    user info: "Location where the item was created."
+    example: "Amsterdam"
+    label: Place of Origin
   projection:
     definition: "The projection of the map"
     mapping:
