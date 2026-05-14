@@ -582,8 +582,6 @@ fields:
     definition: "Location where the item was created."
     mapping:
       OAI:
-        dc: dc:coverage
-        qdc: dcterms:spatial
         mods: <originInfo><place><placeTerm>
     min: 0
     type: str
