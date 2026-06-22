@@ -37,8 +37,8 @@ fields:
     definition: "An entity responsible for making the resource."
     mapping:
       OAI:
-        dc: dc:creator
-        qdc: dcterms:creator
+        dc: dc:ccontributor
+        qdc: dcterms:contributor
         mods: <name><namePart><role><roleTerm valueURI="" type="text" authority=marcrelator>
       facet: 
         field: Creators & Contributors
@@ -46,14 +46,14 @@ fields:
     min: 0
     type: object
     user info: "An entity responsible for making the resource. Map all creator/contributors that have a role other than creator or contributor here."
-    example: [{"value": "Lastname, Firstname", "role": "interviewee", "role_uri": "http://id.loc.gov/vocabulary/relators/ive"}]
+    example: [{"value": "Manuel, Hans Rudolf, 1525-1571", "role": "engraver"}]
     label: Creators and Contributors
   agent_linked_data:
     definition: "An entity responsible for making the resource using a controlled vocabulary."
     mapping:
       OAI:
-        dc: dc:creator
-        qdc: dcterms:creator
+        dc: dc:contributor
+        qdc: dcterms:contributor
         mods: <name valueURI=""><namePart><role><roleTerm valueURI="" type="text" authority=marcrelator>
       facet: 
         field: Creators & Contributors
@@ -61,7 +61,7 @@ fields:
     min: 0
     type: object
     user info: "An entity responsible for making the resource using a controlled vocabulary."
-    example: [{"value": "McInnis, Louis Lowry, 1855-1933", "uri": "https://lccn.loc.gov/n2008161849", "role": "creator", "role_uri": "http://id.loc.gov/vocabulary/relators/cre"}]
+    example: [{"value": "Braun, Georg, 1540 or 1541-1622", "uri": "https://id.oclc.org/worldcat/entity/E39PBJmTqBMWjtyCrqggt39Rrq", "role": "cartographer"}]
     label: Creators and Contributors
   attribution:
     definition: "An optional field that includes attribution information that must be displayed when a resource is displayed in a viewer."
@@ -149,6 +149,21 @@ fields:
     user info: "An entity responsible for making contributions to the resource."
     example: ["Albert, Martha", "Von Weise, Chas.", "Knalls, Lula", "Breckinridge, Clifton Rodes, 1846-1932", "Hastings, William Wirt, 1866-1938"]
     label: Creators and Contributors
+  contributor_linked_data:
+    definition: "An entity responsible for making contributions to the resource using a controlled vocabulary."
+    mapping:
+      OAI:
+        dc: dc:contributor
+        qdc: dcterms:contributor
+        mods: <name valueURI=""><namePart><role><roleTerm valueURI="" type="text" authority=marcrelator>
+      facet: 
+        field: Creators & Contributors
+        jmes: 'contributor_linked_data[].value'
+    min: 0
+    type: object
+    user info: "An entity responsible for making contributions to the resource using a controlled vocabulary."
+    example: [{"value": "Hogenberg, Frans, approximately 1539-1590", "uri": "https://id.oclc.org/worldcat/entity/E39PBJqBmKp6f4Wphh4jrTQQbd"}]
+    label: Creators and Contributors
   creator:
     definition: "An entity primarily responsible for making the resource."
     mapping:
@@ -163,6 +178,21 @@ fields:
     type: str
     user info: "An entity primarily responsible for making the resource."
     example: ["United States. Commission to the Five Civilized Tribes."]
+    label: Creators and Contributors
+  creator_linked_data:
+    definition: "An entity responsible for making contributions to the resource using a controlled vocabulary."
+    mapping:
+      OAI:
+        dc: dc:creator
+        qdc: dcterms:creator
+        mods: <name valueURI=""><namePart><role><roleTerm valueURI="" type="text" authority=marcrelator>
+      facet: 
+        field: Creators & Contributors
+        jmes: 'creator_linked_data[].value'
+    min: 0
+    type: object
+    user info: "An entity responsible for making contributions to the resource using a controlled vocabulary."
+    example: [{"value": "Münster, Sebastian, 1489-1552", "uri": "http://id.loc.gov/authorities/names/n88079882"}]
     label: Creators and Contributors
   date_available:
     definition: "Date the resource was originally made available in OAKTrust."
@@ -298,6 +328,19 @@ fields:
     user info: "The parent digital collection or exhibit if it is hosted outside Archipelago."
     example: [{"value":"'Who in the world am I? Ah, that's the great puzzle!': The Faces of Alice in Wonderland", "uri": "https://spotlight.library.tamu.edu/spotlight/alice-in-wonderland"}]
     label: Part of Digital Exhibit
+  digital_origin:
+    definition: "The method by which the resource acquired digital form."
+    mapping:
+        OAI:
+          dc: dc:format
+          qdc: dcterms:format
+          mods: <physicalDescription><digitalOrigin>
+    min: 1
+    max: 1
+    type: str
+    user info: "The method by which the resource acquired digital form."
+    example: "reformatted digital"
+    label: Digital Origin
   digital_publisher:
     definition: "An entity responsible for making the digital resource available."
     mapping:
@@ -334,7 +377,7 @@ fields:
     type: str
     user info: "The file format, physical medium, or dimensions of the resource."
     example: "reformatted digital"
-    label: Format
+    label: Digital Origin
   generative_ai_details:
     definition: "Includes details for how generative AI was used in the creation of this work."
     min: 0
