@@ -155,7 +155,7 @@ fields:
       OAI:
         dc: dc:contributor
         qdc: dcterms:contributor
-        mods: <name valueURI=""><namePart><role><roleTerm valueURI="" type="text" authority=marcrelator>
+        mods: <name valueURI=""><namePart><role><roleTerm valueURI="http://id.loc.gov/vocabulary/relators/ctb" type="text" authority=marcrelator>
       facet: 
         field: Creators & Contributors
         jmes: 'contributor_linked_data[].value'
@@ -180,18 +180,18 @@ fields:
     example: ["United States. Commission to the Five Civilized Tribes."]
     label: Creators and Contributors
   creator_linked_data:
-    definition: "An entity responsible for making contributions to the resource using a controlled vocabulary."
+    definition: "An entity primarily responsible for making the resource using a controlled vocabulary."
     mapping:
       OAI:
         dc: dc:creator
         qdc: dcterms:creator
-        mods: <name valueURI=""><namePart><role><roleTerm valueURI="" type="text" authority=marcrelator>
+        mods: <name valueURI=""><namePart><role><roleTerm valueURI="http://id.loc.gov/vocabulary/relators/cre" type="text" authority=marcrelator>
       facet: 
         field: Creators & Contributors
         jmes: 'creator_linked_data[].value'
     min: 0
     type: object
-    user info: "An entity responsible for making contributions to the resource using a controlled vocabulary."
+    user info: "An entity primarily responsible for making the resource using a controlled vocabulary."
     example: [{"value": "Münster, Sebastian, 1489-1552", "uri": "http://id.loc.gov/authorities/names/n88079882"}]
     label: Creators and Contributors
   date_available:
