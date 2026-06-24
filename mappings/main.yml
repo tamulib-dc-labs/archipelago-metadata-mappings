@@ -232,22 +232,6 @@ fields:
     user info: "Date of creation of the resource."
     example: "1889-11-30"
     label: Date Created
-  date_created_edtf:
-    definition: "Date of creation of the resource using EDTF."
-    mapping:
-      OAI:
-        dc: dc:date
-        qdc: dcterms:created
-        mods: <originInfo><dateCreated>
-      facet:
-        field: Date of Original
-        jmes: "[date_created_edtf][?'date_type' == 'date_range'][ join('/',[date_from,date_to])][]"
-    min: 0
-    max: 1
-    type: object
-    user info: "Date of creation of the resource using EDTF."
-    example: [{"date_type": "date_range", "date_from": "1900-08-02", "date_to": "1900-09-02", "date_free": ""}]
-    label: Date Created
   date_digital_creation:
     definition: "Date the digital version of the resource was created."
     mapping:
@@ -274,22 +258,6 @@ fields:
     type: date
     user info: "Date of formal issuance of the resource."
     example: "1983"
-    label: Date Issued
-  date_issued_edtf:
-    definition: "Date of formal issuance of the resource using EDTF."
-    mapping:
-      OAI:
-        dc: dc:date
-        qdc: dcterms:issued
-        mods: <originInfo><dateIssued>
-      facet:
-        field: Date of Original
-        jmes: "[date_issued_edtf][?'date_type' == 'date_range'][ join('/',[date_from,date_to])][]"
-    min: 0
-    max: 1
-    type: object
-    user info: "Date of formal issuance of the resource using EDTF."
-    example: [{"date_type": "date_range", "date_from": "1900-08-02", "date_to": "1900-09-02", "date_free": ""}]
     label: Date Issued
   date_razed:
     definition: "The date the building in the photograph was destroyed."
@@ -323,7 +291,6 @@ fields:
           qdc: dcterms:isPartOf
           mods: <relatedItem type="host">
     min: 0
-    max: 1
     type: object
     user info: "The parent digital collection or exhibit if it is hosted outside Archipelago."
     example: [{"value":"'Who in the world am I? Ah, that's the great puzzle!': The Faces of Alice in Wonderland", "uri": "https://spotlight.library.tamu.edu/spotlight/alice-in-wonderland"}]
@@ -349,7 +316,6 @@ fields:
         qdc: dcterms:publisher
         mods: <note displayLabel="Digital publisher">
     min: 1
-    max: 1
     user info: "An entity responsible for making the digital resource available."
     example: "Texas A & M University. Libraries"
     label: Digital Publisher
@@ -372,8 +338,7 @@ fields:
           dc: dc:format
           qdc: dcterms:format
           mods: <physicalDescription><digitalOrigin>
-    min: 1
-    max: 1
+    min: 0
     type: str
     user info: "The file format, physical medium, or dimensions of the resource."
     example: "reformatted digital"
@@ -591,7 +556,6 @@ fields:
         qdc: dcterms:publisher
         mods: <originInfo eventType="publication"><publisher>
     min: 0
-    max: 1
     user info: "An entity responsible for making the original resource available."
     example: "E.C. Kropp Co."
     label: Original Publisher
@@ -603,7 +567,6 @@ fields:
           qdc: dcterms:isPartOf
           mods: <relatedItem type="host"><titleInfo><title>
     min: 0
-    max: 1
     type: str
     user info: "The physical collection from which the item was digitized."
     example: "College of Veterinary Medicine Image Collection"
@@ -616,7 +579,6 @@ fields:
           qdc: dcterms:description
           mods: <location><holdingSimple><copyInformation><shelfLocator>
     min: 0
-    max: 1
     type: str
     user info: "Information about the physical location, such as the box and folder, from which the item was digitized."
     example: "1/20: Rowe Family. Joseph (R-360, D-1016), Parmelia (R-361, D-681). 1901, 1903-1904"
@@ -673,7 +635,6 @@ fields:
         qdc: dcterms:references
         mods: <relatedItem type="references"><location><url>
     min: 0
-    max: 1
     type: url
     user info: "A url to a relevant item, such as the same digital object hosted on another platform."
     example: "https://avalon.library.tamu.edu/media_objects/00000005c"
@@ -686,7 +647,6 @@ fields:
         qdc: dcterms:references
         mods: <relatedItem type="references"><location><url>
     min: 0
-    max: 1
     type: str
     user info: "A historic url to a related item. Enter urls to archived websites and exhibits here."
     example: "https://aavptbiennial-ojs-tamu.tdl.org/aavptbiennial"
@@ -712,7 +672,6 @@ fields:
         qdc: dcterms:rights
         mods: <accessCondition type="use and reproduction">
     min: 0
-    max: 1
     type: str
     user info: "Free text with information about rights held in and over the resource."
     example: "A copyright review process in August 2018 has determined that this particular item is in copyright, but the rights holder is unclear or unresponsive.  The Libraries provide access to the materials here as a digital aggregate under an assertion of fair use for non-commercial educational use (17 U.S. Code ¬ß 107) as well as of fair dealing for the illustrations published in the UK (Copyright, Designs and Patent Act 1988 [UK]). The written permission of any copyright and other rights holders is required for distribution, reproduction, or other use that extends beyond what is authorized by fair use and other statutory exemptions. Responsibility for making an independent legal assessment of an item and securing any necessary permissions ultimately rests with persons desiring to use the item. TAMU Libraries would be interested in updating the copyright holder information on items displayed in these collections.  Please use the contact method provided below to help update these records for future researchers."
@@ -795,7 +754,6 @@ fields:
         qdc: dcterms:tableOfContents
         mods: <tableOfContents>
     min: 0
-    max: 1
     type: str
     user info: "A list of subunits of the resource."
     example: "A. VETERINARY SCIENCE BLDG (1. Public Health, 2. Microbiology, 3. Physiology, 4. Anatomy) -- B. ADMINISTRATION BLDG. (1. College Admin. Offices and Library. 2. Pathology 3. Parasitology) --C. HOSPITAL, MEDICINE & SURGERY (1. Small Animal Clinic, 2. Large Animal Clinic, 3. Stables, 4. Feed Storage) -- D. SITE OF STATE DIAGNOSTIC LAB. (Future site of TVMDL, Texas Veterinary Medical Diagnostic Lab) -- E. LABORATORY ANIMAL BLDG. (Vivarium III) -- F. VETERINARY RESEARCH FARM -- G. toxicology laboratory ( U.S.D.A.) -- H. INSTITUTE OF TROPICAL VETERINARY MEDICINE AND ANIMAL ARIAL DRUG TOXICITY TESTING LABORATORY -- I. TEXAS FEVER BARN ( SITE OF DR. MARK FRANCIS' RESEARCH WITH PIROPLASMOSIS) -- J. VIRUS RESEARCH LABORATORY -- K. WILDLIFE DISEASE RESEARCH CENTER"
