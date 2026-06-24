@@ -317,7 +317,7 @@ fields:
         mods: <note displayLabel="Digital publisher">
     min: 1
     user info: "An entity responsible for making the digital resource available."
-    example: "Texas A & M University. Libraries"
+    example: ["Texas A & M University. Libraries"]
     label: Digital Publisher
   extent:
     definition: "The size or duration of the resource."
@@ -339,6 +339,7 @@ fields:
           qdc: dcterms:format
           mods: <physicalDescription><digitalOrigin>
     min: 0
+    max: 1
     type: str
     user info: "The file format, physical medium, or dimensions of the resource."
     example: "reformatted digital"
@@ -557,7 +558,7 @@ fields:
         mods: <originInfo eventType="publication"><publisher>
     min: 0
     user info: "An entity responsible for making the original resource available."
-    example: "E.C. Kropp Co."
+    example: ["E.C. Kropp Co."]
     label: Original Publisher
   physical_collection:
     definition: "The physical collection from which the item was digitized."
@@ -637,7 +638,7 @@ fields:
     min: 0
     type: url
     user info: "A url to a relevant item, such as the same digital object hosted on another platform."
-    example: "https://avalon.library.tamu.edu/media_objects/00000005c"
+    example: ["https://avalon.library.tamu.edu/media_objects/00000005c"]
     label: Related Item
   related_url_historic:
     definition: "A historic url to a related item."
@@ -649,7 +650,7 @@ fields:
     min: 0
     type: str
     user info: "A historic url to a related item. Enter urls to archived websites and exhibits here."
-    example: "https://aavptbiennial-ojs-tamu.tdl.org/aavptbiennial"
+    example: ["https://aavptbiennial-ojs-tamu.tdl.org/aavptbiennial"]
     label: Related Item
   rights:
     definition: "Information about rights held in and over the resource."
@@ -674,7 +675,7 @@ fields:
     min: 0
     type: str
     user info: "Free text with information about rights held in and over the resource."
-    example: "A copyright review process in August 2018 has determined that this particular item is in copyright, but the rights holder is unclear or unresponsive.  The Libraries provide access to the materials here as a digital aggregate under an assertion of fair use for non-commercial educational use (17 U.S. Code ¬ß 107) as well as of fair dealing for the illustrations published in the UK (Copyright, Designs and Patent Act 1988 [UK]). The written permission of any copyright and other rights holders is required for distribution, reproduction, or other use that extends beyond what is authorized by fair use and other statutory exemptions. Responsibility for making an independent legal assessment of an item and securing any necessary permissions ultimately rests with persons desiring to use the item. TAMU Libraries would be interested in updating the copyright holder information on items displayed in these collections.  Please use the contact method provided below to help update these records for future researchers."
+    example: ["A copyright review process in August 2018 has determined that this particular item is in copyright, but the rights holder is unclear or unresponsive.  The Libraries provide access to the materials here as a digital aggregate under an assertion of fair use for non-commercial educational use (17 U.S. Code ¬ß 107) as well as of fair dealing for the illustrations published in the UK (Copyright, Designs and Patent Act 1988 [UK]). The written permission of any copyright and other rights holders is required for distribution, reproduction, or other use that extends beyond what is authorized by fair use and other statutory exemptions. Responsibility for making an independent legal assessment of an item and securing any necessary permissions ultimately rests with persons desiring to use the item. TAMU Libraries would be interested in updating the copyright holder information on items displayed in these collections.  Please use the contact method provided below to help update these records for future researchers."]
     label: Rights Details
   rights_holder:
     definition: "A person or organization owning or managing rights over the resource."
@@ -756,7 +757,7 @@ fields:
     min: 0
     type: str
     user info: "A list of subunits of the resource."
-    example: "A. VETERINARY SCIENCE BLDG (1. Public Health, 2. Microbiology, 3. Physiology, 4. Anatomy) -- B. ADMINISTRATION BLDG. (1. College Admin. Offices and Library. 2. Pathology 3. Parasitology) --C. HOSPITAL, MEDICINE & SURGERY (1. Small Animal Clinic, 2. Large Animal Clinic, 3. Stables, 4. Feed Storage) -- D. SITE OF STATE DIAGNOSTIC LAB. (Future site of TVMDL, Texas Veterinary Medical Diagnostic Lab) -- E. LABORATORY ANIMAL BLDG. (Vivarium III) -- F. VETERINARY RESEARCH FARM -- G. toxicology laboratory ( U.S.D.A.) -- H. INSTITUTE OF TROPICAL VETERINARY MEDICINE AND ANIMAL ARIAL DRUG TOXICITY TESTING LABORATORY -- I. TEXAS FEVER BARN ( SITE OF DR. MARK FRANCIS' RESEARCH WITH PIROPLASMOSIS) -- J. VIRUS RESEARCH LABORATORY -- K. WILDLIFE DISEASE RESEARCH CENTER"
+    example: ["A. VETERINARY SCIENCE BLDG (1. Public Health, 2. Microbiology, 3. Physiology, 4. Anatomy) -- B. ADMINISTRATION BLDG. (1. College Admin. Offices and Library. 2. Pathology 3. Parasitology) --C. HOSPITAL, MEDICINE & SURGERY (1. Small Animal Clinic, 2. Large Animal Clinic, 3. Stables, 4. Feed Storage) -- D. SITE OF STATE DIAGNOSTIC LAB. (Future site of TVMDL, Texas Veterinary Medical Diagnostic Lab) -- E. LABORATORY ANIMAL BLDG. (Vivarium III) -- F. VETERINARY RESEARCH FARM -- G. toxicology laboratory ( U.S.D.A.) -- H. INSTITUTE OF TROPICAL VETERINARY MEDICINE AND ANIMAL ARIAL DRUG TOXICITY TESTING LABORATORY -- I. TEXAS FEVER BARN ( SITE OF DR. MARK FRANCIS' RESEARCH WITH PIROPLASMOSIS) -- J. VIRUS RESEARCH LABORATORY -- K. WILDLIFE DISEASE RESEARCH CENTER"]
     label: Table of Contents
   temporal_subject:
     definition: "Temporal characteristics or subjects of the resource."
