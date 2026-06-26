@@ -43,9 +43,17 @@ class CSVValidator:
                     if not re.match(r'^\d{4}(-\d{2}){0,2}$', value):
                         raise ValueError
             elif expected_type in ['url', 'uri']:
-                result = urlparse(value)
-                if not all([result.scheme, result.netloc]):
-                    raise ValueError
+                # Value may be a plain URL string or a JSON array of URL strings
+                # for fields that are 0-n (no max: 1 constraint).
+                try:
+                    decoded = json.loads(value)
+                    urls = decoded if isinstance(decoded, list) else [decoded]
+                except json.JSONDecodeError:
+                    urls = [value]
+                for url in urls:
+                    result = urlparse(str(url))
+                    if not all([result.scheme, result.netloc]):
+                        raise ValueError
             elif expected_type == 'object':
                 data = json.loads(value)
                 if not isinstance(data, (dict, list)):
