@@ -248,7 +248,6 @@ fields:
         - dcterms.extent
       Cushing Historical: 
         - dc.format.extent[en]
-        - dc.format.medium[en]
       Geologic Atlas:
         - dc.format.extent[en]
       Raiford Stripling:
@@ -416,6 +415,8 @@ fields:
       Catalogs:
         - dc.format.medium[en]
       Frederick Cuny:
+        - dc.format.medium[en]
+      Cushing Historical: 
         - dc.format.medium[en]
       London Maps:
         - dcterms_medium
