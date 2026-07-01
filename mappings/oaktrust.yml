@@ -329,7 +329,6 @@ fields:
         - id # local to OAKTrust
         - dc.identifier # 4 digit number
         - dc.identifier.other # Image file name, Flickr link, PhotosetID, Physical Photograph Location
-        - dc.identifier.uri # OAKTrust handle
       Frederick Cuny:
         - id # local to OAKTrust
         - dc.identifier.uri # OAKTrust handle
