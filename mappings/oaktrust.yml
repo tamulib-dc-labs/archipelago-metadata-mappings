@@ -299,6 +299,8 @@ fields:
         - dc.coverage.spatial[en]
       Committee on South Asian Women:
         - dcterms.spatial
+      Cushing Historical: 
+        - dcterms.spatial
       Geologic Atlas:
         - dc.coverage.spatial[en]
       Historic Maps of Cuba:
