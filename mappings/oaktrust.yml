@@ -220,6 +220,18 @@ fields:
   digital_exhibit:
     Collections:
       # Although not indicated in OAKTrust, COSAW has a corresponding Spotlight exhibit that should be recorded.
+  digital_origin:
+    Collections:
+      Catalogs:
+        - dc.format.digitalOrigin[en]
+      Committee on South Asian Women:
+        - dc.format
+      Cushing Historical:
+        - dc.format.digitalOrigin
+      Frederick Cuny:
+        - dc.format.digitalOrigin[en]
+      Toward Better Living:
+        - dc.format.medium[en]
   digital_publisher:
     Collections:
       Catalogs:
@@ -259,16 +271,6 @@ fields:
         - dc.format[en]
       Wheelan:
         - dc.format[en]
-  format:
-    Collections:
-      Catalogs:
-        - dc.format.digitalOrigin[en]
-      Committee on South Asian Women:
-        - dc.format
-      Frederick Cuny:
-        - dc.format.digitalOrigin[en]
-      Toward Better Living:
-        - dc.format.medium[en]
   genre_form:
     Collections:
       Austin 1830 Map: 
