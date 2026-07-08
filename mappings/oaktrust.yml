@@ -499,6 +499,8 @@ fields:
         - dc.relation.ispartof[en]
   physical_location:
     Collections:
+      Cushing Historical: 
+        - dc.identifier.other
       Library Events:
         - dc.relation.ispartof
       Raiford Stripling:
