@@ -54,6 +54,8 @@ fields:
         - dcterms.type # includes DCMI and OAKTrust type (ie volume, issue)
       Cushing Historical: 
         - dc.type[en]
+      Library Events:
+        - dcterms.type
       Frederick Cuny:
         - dc.type.material[en]
       Raiford Stripling:
@@ -85,6 +87,8 @@ fields:
         - dc.creator
         - dc.creator[]
       Cushing Historical: 
+        - dc.creator
+      Library Events:
         - dc.creator
       Frederick Cuny:
         - dc.creator
@@ -135,6 +139,8 @@ fields:
         - dc.date.created
       Frederick Cuny:
         - dc.date.created
+      Library Events:
+        - dcterms.created
       Primeros Libros: 
         - dc.date.created
       Raiford Stripling:
@@ -161,6 +167,8 @@ fields:
       Geologic Atlas:
         - dc.date.accessioned
       Historic Maps of Cuba:
+        - dc.date.accessioned
+      Library Events:
         - dc.date.accessioned
       Primeros Libros: 
         - dc.date.accessioned
@@ -209,6 +217,8 @@ fields:
         - dc.description[en] # Columbia folio, Tennessee
       Historic Maps of Cuba:
         - dc.description[en] # Includes comparative area map and insets of "Central Havana" and "U.S. Naval Base Guantanamo Bay."||1 map (2 views showing front and back)
+      Library Events:
+        - dc.description
       Raiford Stripling:
         - dc.description # Drawing from a set of 6 sheets of architectural drawings of the Singson residence project, showing front elevation and floor plan.||Pencil on vellum
       Toward Better Living:
@@ -237,13 +247,15 @@ fields:
       Catalogs:
         - dc.publisher # physical publisher
       Cushing Historical: 
-        - dc.publisher # digital and physical publishers
+        - dc.publisher.digital # digital publishers
       Frederick Cuny:
         - dc.publisher # physical publisher
       Geologic Atlas:
         - dc.publisher # physical publisher
       Historic Maps of Cuba:
         - dc.publisher # physical publisher
+      Library Events:
+        - dc.publisher.digital
       Primeros Libros: 
         - dc.publisher # physical publisher
       Raiford Stripling:
@@ -377,6 +389,8 @@ fields:
         - dc.title[en]
       Historic Maps of Cuba:
         - dc.title[en]
+      Library Events:
+        - dc.title
       Primeros Libros: 
         - dc.title
         - dc.title[en]
@@ -461,6 +475,8 @@ fields:
         - dc.publisher
       Historic Maps of Cuba:
         - dc.publisher
+      Library Events:
+        - dc.publisher
       Primeros Libros: 
         - dc.publisher
       Raiford Stripling:
@@ -483,6 +499,8 @@ fields:
         - dc.relation.ispartof[en]
   physical_location:
     Collections:
+      Library Events:
+        - dc.relation.ispartof
       Raiford Stripling:
         - dc.identifier.other # physical location and filename
       Toward Better Living:
@@ -564,6 +582,8 @@ fields:
         - dc.rights.uri
       Historic Maps of Cuba:
         - dc.rights.uri
+      Library Events:
+        - dc.rights
       World War I Postcards:
         - dc.rights[en] # needs separation
   rights_details:
@@ -593,7 +613,7 @@ fields:
     Collections:
       Frederick Cuny:
         - dc.description.sponsorship[en]
-  subject_local:        
+  subject:        
     Collections:
       Austin 1830 Map: 
         - dc.subject[en]
@@ -610,6 +630,8 @@ fields:
       Historic Maps of Cuba:
         - dc.subject.lcsh[en]
         - dc.subject[en]
+      Library Events:
+        - dc.subject
       Primeros Libros: 
         - dc.subject.other[en]
         - dc.subject.other[es]
@@ -637,6 +659,8 @@ fields:
       Catalogs:
         - dc.title.alternative[en]
       Cushing Historical: 
+        - dcterms.alternative
+      Library Events:
         - dcterms.alternative
       Primeros Libros: 
         - dc.title.alternative[en]
