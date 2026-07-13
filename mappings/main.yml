@@ -383,7 +383,7 @@ fields:
     example: [{"value": "Personal correspondence", "uri": "https://lccn.loc.gov/gf2014026141"}]
     label: Genre
   geographic_subject:
-    definition: "Geographic topics and spatial characteristics of the resource."
+    definition: "The spatial or temporal topic of the resource, spatial applicability of the resource, or jurisdiction under which the resource is relevant."
     mapping:
       OAI:
         dc: dc:coverage
@@ -394,11 +394,11 @@ fields:
           jmes: 'geographic_subject[]'
     min: 0
     type: str
-    user info: "Geographic topics and spatial characteristics of the resource."
+    user info: "The spatial or temporal topic of the resource, spatial applicability of the resource, or jurisdiction under which the resource is relevant."
     example: ["Austin, Texas"]
     label: Geographic Subject
-  geographic_subject_linked_data:
-    definition: "Geographic subjects and spatial characteristics of the resource that uses a controlled vocabulary."
+  spatial_linked_data:
+    definition: "Geographic subjects and spatial characteristics of the resource that has a dereferenceable URI."
     mapping:
       OAI:
         dc: dc:coverage
@@ -409,7 +409,7 @@ fields:
           jmes: 'geographic_subject_linked_data[].value'
     min: 0
     type: object
-    user info: "Geographic subjects and spatial characteristics of the resource that uses a controlled vocabulary."
+    user info: "Geographic subjects and spatial characteristics of the resource that has a dereferenceable URI."
     example: [{"value": "College Station (Tex.)", "uri": "https://lccn.loc.gov/n79059553"}]
     label: Geographic Subject
   geojson_feature:
