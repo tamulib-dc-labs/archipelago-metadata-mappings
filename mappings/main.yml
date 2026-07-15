@@ -95,6 +95,15 @@ fields:
     user info: "Classification information, such as LCC call number"
     example: [{"value": "G4031 .E424 1763 .P5", "authority": "lcc"}]
     label: Classification
+  canvas_labels:
+    definition: "This only applies to digital_objects (not digital_object_collections). This property prescribes label names for images in a work when necessary since images in a digital_object can't have metadata like in a digital_object_collection."
+    mapping:
+      iiif_presentation: items.X.label.en.0
+    min: 0
+    type: array[str]
+    user info: "Prescribes canvas labels for images in a digital_object."
+    example: [ "Recto", "Verso", "Watermark" ]
+    label: Collecting Area
   collecting_area: # if ADO does not have this field already, it needs to be created
     definition: "The collecting area to which a digital resource and/or corresponding physical item belong."
     mapping:
@@ -862,4 +871,3 @@ fields:
     type: url
     user info: "Filename(s) of media"
     label: Captions
-  
