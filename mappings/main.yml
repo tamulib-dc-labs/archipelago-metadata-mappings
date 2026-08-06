@@ -203,17 +203,6 @@ fields:
     user info: "An entity primarily responsible for making the resource using a controlled vocabulary."
     example: [{"value": "Münster, Sebastian, 1489-1552", "uri": "http://id.loc.gov/authorities/names/n88079882"}]
     label: Creators and Contributors
-  date_available:
-    definition: "Date the resource was originally made available in OAKTrust."
-    mapping:
-      OAI:
-        mods: <dateOther>
-    min: 0
-    max: 1
-    type: str
-    user info: "Date the resource was originally made available in OAKTrust. Only use for items migrated from OAKTrust."
-    example: "2012-03-05T16:27:27Z"
-    label: Date Available
   date_built:
     definition: "The date the building in the photograph was constructed."
     mapping:
@@ -406,7 +395,7 @@ fields:
     user info: "The spatial or temporal topic of the resource, spatial applicability of the resource, or jurisdiction under which the resource is relevant."
     example: ["Austin, Texas"]
     label: Geographic Subject
-  spatial_linked_data:
+  geographic_subject_linked_data:
     definition: "Geographic subjects and spatial characteristics of the resource that has a dereferenceable URI."
     mapping:
       OAI:
@@ -523,18 +512,6 @@ fields:
     user info: "The material or physical carrier of the resource."
     example: ["Paper", "Leather"]
     label: Medium
-  mimetype:
-    definition: "The electronic format type, or the data representation, of the resource."
-    mapping:
-      OAI:
-        dc: dc:format
-        qdc: dcterms:format
-        mods: <physicalDescription><internetMediaType>
-    min: 0
-    type: str
-    user info: "The electronic format type, or the data representation, of the resource."
-    example: ["application/pdf"]
-    label: Mimetype
   note:
     definition: "Any details captured about the resource that do not fit elsewhere in the schema."
     mapping:
@@ -579,7 +556,7 @@ fields:
     min: 0
     type: str
     user info: "The physical collection from which the item was digitized."
-    example: "College of Veterinary Medicine Image Collection"
+    example: ["College of Veterinary Medicine Image Collection"]
     label: Physical Collection
   physical_location:
     definition: "Information about the physical location, such as the box and folder, from which the item was digitized."
@@ -591,7 +568,7 @@ fields:
     min: 0
     type: str
     user info: "Information about the physical location, such as the box and folder, from which the item was digitized."
-    example: "1/20: Rowe Family. Joseph (R-360, D-1016), Parmelia (R-361, D-681). 1901, 1903-1904"
+    example: ["1/20: Rowe Family. Joseph (R-360, D-1016), Parmelia (R-361, D-681). 1901, 1903-1904"]
     label: Physical Location
   place_of_origin:
     definition: "Location where the item was created."
@@ -601,7 +578,7 @@ fields:
     min: 0
     type: str
     user info: "Location where the item was created."
-    example: "Amsterdam"
+    example: ["Amsterdam"]
     label: Place of Origin
   projection:
     definition: "The projection of the map"
@@ -623,7 +600,7 @@ fields:
     min: 0
     type: str
     user info: "A statement of any changes in ownership and custody of the resource since its creation that are significant for its authenticity, integrity, and interpretation."
-    example: "This nineteenth century photograph is an 'Ebay' purchase made by librarian Trenton Boyd and donated to the Medical Sciences Library."
+    example: ["This nineteenth century photograph is an 'Ebay' purchase made by librarian Trenton Boyd and donated to the Medical Sciences Library."]
     label: Provenance
   related_record:
     definition: "A related record, such as a catalog record."
