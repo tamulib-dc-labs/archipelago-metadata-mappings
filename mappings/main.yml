@@ -8,6 +8,14 @@ profile:
   version: 0.3
 
 fields:
+  about_collection:
+    definition: "Valid only on Collection ADOs, this adds a tab on object display before description that includes custom web page content."
+    label: About Collection
+    min: 0
+    max: 1
+    type: str
+    user info: "This is only valid in Collection ADOs and is used to pass raw html to the display."
+    example: "<div class=\u0022about-collection\u0022>\n  <p>The Agricultural and Mechanical College of Texas Yell Book Online Collection consists of bound Yell Books dating from 1904-1905 through 1931-1932. Included in the booklets are yells and songs that reflect the unique experience of cadets during this period, and the businesses that supported the printing of the booklets.</p>\n\n  <p>Most of the booklets in this collection were owned by former students, so names, doodles, and in some cases homemade yells can be seen on the covers and within the booklets' pages.</p>\n\n  <p>Digitizing this collection preserves and makes these treasures accessible for future generations who can enhance their education outside of the classroom and learn not only about the university's past, but how the Bryan-College Station community has supported the institution as well.</p>\n\n  <p>The Agricultural and Mechanical College of Texas Yell Book Collection is part of the University Archives and the original Yell Books can be viewed at the Cushing Memorial Library and Archives at Texas A&M University.</p>\n\n  <h4>Acknowledgements</h4>\n  <p>The \u0022Something to Yell About: Yell Book Digitization Project\u0022 was generously funded in honor of our 2022-23 Friends of the Texas A&M University Libraries President Cindy Craigen '88 by her husband Taylor Craigen '92. This gift supported the work of Libraries' Student Technician Aileen Gonzalez '24 (Anthropology), who completed the digitization and preservation of this historic collection.</p>\n\n  <h4>Disclaimer</h4>\n  <p>Cushing Memorial Library and Archives strives to make collection resources available and useful to our faculty, staff, students, alumni, researchers and the general public. The Libraries offer public access to a wide range of information, including historical materials that may contain offensive language, stereotypes and opinions. Such materials must be viewed in the context of the relevant time period. Texas A&M University does not endorse the views expressed in such materials.</p>\n\n  <h4>Contact Information</h4>\n  <p>For more information regarding the Agricultural and Mechanical College of Texas Yell Book Collection of the history of the University, please contact Cushing Memorial Library and Archives at 979-845-1951, or email: <a href=\u0022mailto:cushing-library@tamu.edu\u0022>cushing-library@tamu.edu</a>.</p>\n</div>\n"
   abstract:
     definition: "A summary of the resource."
     mapping:
