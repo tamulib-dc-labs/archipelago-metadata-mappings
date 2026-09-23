@@ -387,7 +387,7 @@ fields:
     min: 0
     type: array[object]
     user info: "Form and/or genre of the resource that uses a controlled vocabulary such as LCGFT or AAT."
-    example: [{"value": "Personal correspondence", "uri": "https://lccn.loc.gov/gf2014026141"}]
+    example: [{"value": "Personal correspondence", "uri": "https://lccn.loc.gov/gf2014026141", "authority": "lcgft"}]
     label: Genre
   geographic_subject:
     definition: "The spatial or temporal topic of the resource, spatial applicability of the resource, or jurisdiction under which the resource is relevant."
